@@ -2,22 +2,21 @@ import { NatipayMemberRulesEnum } from '../enums/member-rules.enum';
 import { NatipayMemberTypeEnum } from '../enums/member-type.enum';
 
 export interface INatipayMember {
-  // #region Properties (9)
   active: boolean;
+  companyId: string;
+  companyName: string | null;
+  containerId: string;
+  containerName: string | null;
   createdAt: Date;
-  upadatedAt: Date;
-  id: string;
-  companyName: string;
-  containerName: string;
   email: string | null;
-  name: string;
-  internationalCode: string;
-  phoneNumber: string;
+  id: string;
   imageUrl: string | null;
+  internationalCode: string;
+  name: string;
+  phoneNumber: string;
   rule: NatipayMemberRulesEnum;
-  type: NatipayMemberTypeEnum | null;
   tags: string[];
+  type: NatipayMemberTypeEnum | null;
+  upadatedAt: Date;
   userId: string;
-
-  // #endregion Properties (9)
 }

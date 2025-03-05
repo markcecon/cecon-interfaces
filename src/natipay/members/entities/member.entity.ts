@@ -4,8 +4,10 @@ import { INatipayMember } from '../interfaces';
 
 export class NatipayMemberEntity implements INatipayMember {
   public active: boolean = true;
+  public companyId: string = '';
   public companyName: string = '';
-  public containerName: string = '';
+  public containerId: string = '';
+  public containerName: string | null = '';
   public createdAt: Date = new Date();
   public email: string = '';
   public id: string = '';
