@@ -2,8 +2,6 @@ import { EBarcodeFormat, EPayioChefOperationMode, EPayioChefTabMode } from '../e
 import { IPayioChefConfigOperation } from '../interfaces';
 
 export class PayioChefConfigOperationEntity implements IPayioChefConfigOperation {
-  // #region Properties (17)
-
   public barcodeFormat: EBarcodeFormat = EBarcodeFormat.CODE_6_PRICE_6;
   public barcodeInitialFlag: string = '2';
   public bipOnPrint: boolean = true;
@@ -20,11 +18,8 @@ export class PayioChefConfigOperationEntity implements IPayioChefConfigOperation
   public startOrderIn: number = 1;
   public tabFormat: string | null = '';
   public tabMode: EPayioChefTabMode = EPayioChefTabMode.MANUAL;
+  public tabRegistered: boolean = false;
   public urlLogo: string = '';
-
-  // #endregion Properties (17)
-
-  // #region Constructors (1)
 
   constructor(data?: Partial<PayioChefConfigOperationEntity>) {
     if (data) {
@@ -35,6 +30,5 @@ export class PayioChefConfigOperationEntity implements IPayioChefConfigOperation
       }
     }
   }
-
-  // #endregion Constructors (1)
+  tabRegistred: boolean;
 }

@@ -1,6 +1,6 @@
 {
     "name": "cecon-interfaces",
-    "version": "1.7.29",
+    "version": "1.7.32",
     "description": "Interfaces de Projetos Cecon",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

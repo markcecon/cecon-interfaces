@@ -26,6 +26,7 @@ export interface IPayioChefConfigOperation {
   // iniciar comanda em
   startOrderIn: number;
   tabFormat: string | null;
+  tabRegistered: boolean;
   tabMode: EPayioChefTabMode;
   urlLogo: string;
 
