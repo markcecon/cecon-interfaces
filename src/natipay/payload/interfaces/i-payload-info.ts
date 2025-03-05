@@ -1,10 +1,10 @@
 export interface INatipayJwtPayloadInfo {
   // #region Properties (4)
 
-  companyId: string;
-  companyName: string;
+  companyId: string | null;
+  companyName?: string | null;
   containerId: string | null;
-  containerName: string | null;
+  containerName?: string | null;
 
   // #endregion Properties (4)
 }
