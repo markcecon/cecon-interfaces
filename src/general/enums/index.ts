@@ -17,7 +17,7 @@ export { EPaymentMode } from './payment-mode.enum';
 export { EPaymentStatus } from './payment-status.enum';
 export { EPaymentType } from './payment-type.enum';
 export { ELegalEntiy } from './person-type.enum';
-export { EPixKey } from './pix-key.enum';
+export { EPixKeyType } from './pix-key.enum';
 export { EPlatform } from './platform.enum';
 export { EPaymentProvider } from './providers.enum';
 export { EPubSub } from './pubsub.enum';

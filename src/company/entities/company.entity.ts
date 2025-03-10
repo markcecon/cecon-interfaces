@@ -6,9 +6,9 @@ import { MessagerChannelEntity } from '../../general/entities/messager-channel.e
 import { MobyoApiConfigEntity } from '../../general/entities/mobyo-apiconfig.entity';
 import { OriginEntity } from '../../general/entities/origin.entity';
 import { PaymentProviderEntity } from '../../general/entities/payment-provider.entity';
+import { EPixKeyType } from '../../general/enums';
 import { IInstallation } from '../../installation';
 import { IFee } from '../../transaction';
-import { EPixKeyTypes } from '../enums';
 import { ICompany, ICompanyContact, ICompanyTrialPlansUsed } from '../interfaces';
 import { CompanyCustomDataEntity } from './company-custom-data.entity';
 
@@ -43,7 +43,7 @@ export class CompanyEntity implements ICompany {
   public phoneNumber: string = '';
   public phoneNumbersNotification: string[] = [];
   public pixKey: string = '';
-  public pixKeyType: EPixKeyTypes = EPixKeyTypes.RANDOM_KEY
+  public pixKeyType: EPixKeyType = EPixKeyType.RANDOM_KEY;
   public sandbox: boolean = false;
   public tags: string[] = [];
   public updatedAt: Date = new Date();

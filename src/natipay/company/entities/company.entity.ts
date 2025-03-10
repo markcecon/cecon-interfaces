@@ -1,5 +1,4 @@
-import { EDocType, IPaymentProvider } from '../../../general';
-import { IPixKey } from '../../../general/interfaces/i-pix-key';
+import { EDocType, IPaymentProvider, PixKeyEntity } from '../../../general';
 import { IDesenfila } from '../../desenfila/interfaces';
 import { INatipayCompany } from '../interfaces/i-company';
 import { NatiapyAddressEntity } from './address.entity';
@@ -23,7 +22,7 @@ export class NatipayCompanyEntity implements INatipayCompany {
   public natipay: IDesenfila | null = null;
   public paymentProvider: IPaymentProvider | null = null;
   public phoneNumber: string = '';
-  public pixKeys: IPixKey[] = [];
+  public pixKeys: PixKeyEntity[] = [];
   public sandbox: boolean = false;
   public shortName: string = '';
   public tags: string[] = [];

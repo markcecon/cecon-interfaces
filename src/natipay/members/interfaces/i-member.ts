@@ -17,6 +17,6 @@ export interface INatipayMember {
   rule: NatipayMemberRulesEnum;
   tags: string[];
   type: NatipayMemberTypeEnum | null;
-  upadatedAt: Date;
+  updatedAt: Date;
   userId: string;
 }

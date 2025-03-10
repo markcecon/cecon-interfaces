@@ -1,17 +1,13 @@
+import { NatipayMemberRulesEnum } from '../../members';
 import { INatipayJwtPayloadUser } from '../interfaces/i-payload-user';
 
 export class NatipayJwtPayloadUserEntity implements INatipayJwtPayloadUser {
-  // #region Properties (6)
-
   public email: string | null = null;
   public id: string = '';
   public internationalCode: string = '';
+  public memberRule: NatipayMemberRulesEnum | null = null;
   public name: string = '';
   public phoneNumber: string = '';
-
-  // #endregion Properties (6)
-
-  // #region Constructors (1)
 
   constructor(data?: Partial<NatipayJwtPayloadUserEntity>) {
     if (data) {
@@ -22,6 +18,4 @@ export class NatipayJwtPayloadUserEntity implements INatipayJwtPayloadUser {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

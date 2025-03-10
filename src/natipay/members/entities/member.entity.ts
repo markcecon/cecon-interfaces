@@ -18,7 +18,7 @@ export class NatipayMemberEntity implements INatipayMember {
   public rule: NatipayMemberRulesEnum = NatipayMemberRulesEnum.USER;
   public tags: string[] = [];
   public type: NatipayMemberTypeEnum | null = NatipayMemberTypeEnum.CLIENT;
-  public upadatedAt: Date = new Date();
+  public updatedAt: Date = new Date();
   public userId: string = '';
 
   constructor(data?: Partial<NatipayMemberEntity>) {
