@@ -1,10 +1,11 @@
+import { IPayioChefConfigWebhookHeader } from './i-chef-config-webhook-header';
+
 export interface IPayioChefConfigWebhook {
   // #region Properties (4)
 
   active: boolean;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE';
-  authToken: string | null;
-  secret: string | null;
+  headers: IPayioChefConfigWebhookHeader[];
   url: string;
   type:
     | 'PING'
@@ -15,7 +16,7 @@ export interface IPayioChefConfigWebhook {
     | 'GET_ORDER_STATUS'
     | 'VISION_SEND_IMG'
     | 'VISION_ASSIGN_POSITION';
-  response: string | null; // Resposta do webhook
+  response: any; // Resposta do webhook
   locked: boolean; // Trava caso não esteja respondendo
 
   // #endregion Properties (4)

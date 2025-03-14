@@ -1,16 +1,14 @@
 import { IPayioChefConfigWebhook } from '../interfaces';
+import { IPayioChefConfigWebhookHeader } from '../interfaces/i-chef-config-webhook-header';
 
 export class PayioChefConfigWebhookEntity implements IPayioChefConfigWebhook {
-  // #region Properties (9)
-
   public active: boolean = true;
-  public authToken: string | null = null;
+  public headers: IPayioChefConfigWebhookHeader[] = [];
   public locked: boolean = false;
   public method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'POST';
-  // Travar caso não esteja respondendo
-  public response: string | null = null;
-  public secret: string | null = null;
 
+  // Travar caso não esteja respondendo
+  public response: any;
   public type:
     | 'PING'
     | 'GET_PRODUCT'
@@ -22,10 +20,6 @@ export class PayioChefConfigWebhookEntity implements IPayioChefConfigWebhook {
     | 'VISION_ASSIGN_POSITION' = 'SEND_ORDER';
   public url: string = '';
 
-  // #endregion Properties (9)
-
-  // #region Constructors (1)
-
   constructor(data?: Partial<PayioChefConfigWebhookEntity>) {
     if (data) {
       for (let key in data) {
@@ -35,6 +29,4 @@ export class PayioChefConfigWebhookEntity implements IPayioChefConfigWebhook {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

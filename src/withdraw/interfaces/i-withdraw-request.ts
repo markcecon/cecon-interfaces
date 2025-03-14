@@ -9,6 +9,7 @@ export interface IWithdrawRequest {
   aprovedAt: Date | null;
   id: string;
   liveMode: boolean;
+  pixKey: string | null;
   status: EWithdrawRequestStatus;
   refusalReason: string | null;
   transactionId: string | null;

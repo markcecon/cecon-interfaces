@@ -10,6 +10,7 @@ export class WithDrawRequestEntity implements IWithdrawRequest {
   public createdAt: Date = new Date();
   public id: string = '';
   public liveMode: boolean = false;
+  public pixKey: string | null = null;
   public status: EWithdrawRequestStatus = EWithdrawRequestStatus.PENDING;
   public transactionId: string | null = null;
   public transferDocumentUrl: string | null = null;
