@@ -1,22 +1,21 @@
-import { IDesenfilaInfo, IInfo, IMobyoInfo } from '../../general';
-import { EWithdrawRequestStatus } from '../enums';
+import { IDesenfilaInfo, IInfo, IMobyoInfo } from "../../general";
+import { EWithdrawRequestStatus } from "../enums";
 
 export interface IWithdrawRequest {
-  // #region Properties (12)
-
   amount: number;
+  approvedAt: Date | null;
   createdAt: Date;
-  aprovedAt: Date | null;
+  desenfilaInfo: IDesenfilaInfo;
   id: string;
   liveMode: boolean;
+  mobyoInfo: IMobyoInfo;
+  name: string;
+  natiInfo: IInfo;
   pixKey: string | null;
-  status: EWithdrawRequestStatus;
   refusalReason: string | null;
+  rejectedAt: Date | null;
+  status: EWithdrawRequestStatus;
   transactionId: string | null;
   transferDocumentUrl: string | null;
   updatedAt: Date;
-  name: string;
-  natiInfo: IInfo;
-  mobyoInfo: IMobyoInfo;
-  desenfilaInfo: IDesenfilaInfo;
 }
