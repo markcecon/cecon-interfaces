@@ -1,5 +1,5 @@
-import { IDesenfilaInfo, IInfo, IMobyoInfo } from "../../general";
-import { EWithdrawRequestStatus } from "../enums";
+import { IDesenfilaInfo, IInfo, IMobyoInfo, IPixKey } from '../../general';
+import { EWithdrawRequestStatus } from '../enums';
 
 export interface IWithdrawRequest {
   amount: number;
@@ -11,9 +11,9 @@ export interface IWithdrawRequest {
   mobyoInfo: IMobyoInfo;
   name: string;
   natiInfo: IInfo;
-  pixKey: string | null;
+  pixKey: IPixKey | null;
   refusalReason: string | null;
-  rejectedAt: Date | null;
+  refusedAt: Date | null;
   status: EWithdrawRequestStatus;
   transactionId: string | null;
   transferDocumentUrl: string | null;

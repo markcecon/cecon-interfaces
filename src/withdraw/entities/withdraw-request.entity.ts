@@ -1,4 +1,4 @@
-import { DesenfilaInfoEntity, IDesenfilaInfo, IInfo, IMobyoInfo, InfoEntity, MobyoInfoEntity } from '../../general';
+import { DesenfilaInfoEntity, IDesenfilaInfo, IInfo, IMobyoInfo, InfoEntity, MobyoInfoEntity, PixKeyEntity } from '../../general';
 import { EWithdrawRequestStatus } from '../enums';
 import { IWithdrawRequest } from '../interfaces/i-withdraw-request';
 
@@ -12,9 +12,9 @@ export class WithDrawRequestEntity implements IWithdrawRequest {
   public mobyoInfo: IMobyoInfo = new MobyoInfoEntity();
   public name: string = '';
   public natiInfo: IInfo = new InfoEntity();
-  public pixKey: string | null = null;
+  public pixKey: PixKeyEntity | null = null;
   public refusalReason: string | null = null;
-  public rejectedAt: Date | null = null;
+  public refusedAt: Date | null = null;
   public status: EWithdrawRequestStatus = EWithdrawRequestStatus.PENDING;
   public transactionId: string | null = null;
   public transferDocumentUrl: string | null = null;
