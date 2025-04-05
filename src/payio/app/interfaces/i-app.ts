@@ -1,18 +1,22 @@
 import { EPayuioAppSlug } from '../enums';
 
 export interface IPayioApp {
-  // #region Properties (10)
-
   active: boolean;
+  clientKey: string | null;
+  clientSecret: string | null;
+  createdAt: Date;
   description: string;
   downloadUrl: string;
+  expiresAt: Date | null;
+  expiresIn: number | null;
   id: string;
   name: string;
-  slug: EPayuioAppSlug;
   price: number;
+  refreshToken: string | null;
   secret: string;
-  version: string;
+  slug: EPayuioAppSlug;
   tags: string[];
-
-  // #endregion Properties (10)
+  accessToken: string | null;
+  updatedAt: Date;
+  version: string;
 }

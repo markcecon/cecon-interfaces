@@ -33,6 +33,7 @@ export * from './master';
 export * from './meli';
 export * from './member';
 export * from './member-access';
+export * from './mercado-pago/interfaces';
 export * from './mobyo';
 export * from './monitor';
 export * from './mottu';

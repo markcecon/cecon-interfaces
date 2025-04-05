@@ -10,6 +10,7 @@ export interface IPayioGlobalProduct {
   lastPrices: number[];
   maxPrice: number;
   ncm: string | null;
+  cest: string | null;
   minPrice: number;
   name: string;
   quantityPackaging: number;

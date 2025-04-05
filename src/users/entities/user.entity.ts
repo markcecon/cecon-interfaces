@@ -1,3 +1,4 @@
+import { NatipayMemberTypeEnum } from '../../natipay';
 import { PayioUserTypeEnum } from '../enums';
 import { IUser } from '../interfaces';
 
@@ -18,7 +19,7 @@ export class UserEntity implements IUser {
   public name: string = '';
   public phoneNumber: string = '';
   public tags: string[] = [];
-  public type: PayioUserTypeEnum = PayioUserTypeEnum.NONE;
+  public type: PayioUserTypeEnum | NatipayMemberTypeEnum = PayioUserTypeEnum.NONE;
   public updatedAt: Date = new Date();
 
   // #endregion Properties (16)

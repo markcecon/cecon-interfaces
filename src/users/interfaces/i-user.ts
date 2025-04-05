@@ -1,3 +1,4 @@
+import { NatipayMemberTypeEnum } from '../../natipay';
 import { PayioUserTypeEnum } from '../enums';
 
 export interface IUser {
@@ -17,7 +18,7 @@ export interface IUser {
   code: string | null; // Caso seja um usuário do tipo TESTER, esse campo será preenchido quando solicitar o código de verificação do telefone
   phoneNumber: string;
   tags: string[];
-  type: PayioUserTypeEnum;
+  type: PayioUserTypeEnum | NatipayMemberTypeEnum;
   updatedAt: Date;
 
   // #endregion Properties (15)
