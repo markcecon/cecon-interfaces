@@ -1,15 +1,9 @@
 import { EFrom } from '../../../general';
-import {
-  IOrderAdditionalFee,
-  IOrderBenefits,
-  IOrderCancellation,
-  IOrderCustomer,
-  IOrderItem,
-  IOrderPayment,
-  OrderTotalEntity,
-} from '../../../order';
-import { ENatipayOrderStatus } from '../enums';
+import { IOrderAdditionalFee, IOrderBenefits, IOrderCancellation, IOrderCustomer, IOrderPayment, OrderTotalEntity } from '../../../order';
+import { ENatipayOrderStatus, ENatipaySaleChannel } from '../enums';
 import { INatipayOrder } from '../interfaces/i-order';
+import { NatipayOrderItemEntity } from './item.entity';
+import { NatipayMercadoPagoEntity } from './mercado-pago.entity';
 
 export class NatipayOrderEntity implements INatipayOrder {
   public additionalFees: IOrderAdditionalFee[] = [];
@@ -23,14 +17,15 @@ export class NatipayOrderEntity implements INatipayOrder {
   public from: EFrom = EFrom.NATIPAY;
   public id: string = '';
   public invoiceId: string | null = null;
-  public items: IOrderItem[] = [];
+  public items: NatipayOrderItemEntity[] = [];
+  public mercadoPago: NatipayMercadoPagoEntity | null = null;
   public payments: IOrderPayment | null = null;
-  public preferenceId: string = '';
-  public reference: string | null = null;
-  public salesChannel: string = '';
+  public reference: string = '';
+  public saleChannel: ENatipaySaleChannel = ENatipaySaleChannel.NATI_PDV;
   public sandbox: boolean = false;
   public status: ENatipayOrderStatus = ENatipayOrderStatus.PLACED;
   public total: OrderTotalEntity = new OrderTotalEntity();
+  public transactionId: string | null = null;
   public updatedAt: Date = new Date();
   public version: string = '';
 

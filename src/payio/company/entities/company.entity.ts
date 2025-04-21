@@ -1,14 +1,15 @@
 import { EIntDocType, IPaymentProvider } from '../../../general';
 import { IPayioCompany } from '../interfaces/i-company';
 import { PayioAddressEntity } from './address.entity';
+import { PayioCompanyNatipayCredentialEntity } from './natipay-credential.entity';
 
 export class PayioCompanyEntity implements IPayioCompany {
   public active: boolean = false;
   public address: PayioAddressEntity = new PayioAddressEntity();
   public containerId: string = '';
+  public country: string = 'BR';
   public createdAt: Date = new Date();
   public currency: string = 'BRL';
-  public country: string = 'BR';
   public doc: string = '';
   public docType: EIntDocType = EIntDocType.CNPJ;
   public email: string = '';
@@ -17,6 +18,7 @@ export class PayioCompanyEntity implements IPayioCompany {
   public internationalCode: string = '55';
   public logoUrl: string | null = null;
   public name: string = '';
+  public natipayCredential: PayioCompanyNatipayCredentialEntity = new PayioCompanyNatipayCredentialEntity();
   public paymentProvider: IPaymentProvider | null = null;
   public phoneNumber: string = '';
   public sandbox: boolean = false;

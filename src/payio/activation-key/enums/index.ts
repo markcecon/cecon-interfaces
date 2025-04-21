@@ -1,1 +1,1 @@
-export { EPayuioFeatureType } from './activation-key-status.enum';
+export { EPayuioActivationStatus } from './activation-key-status.enum';

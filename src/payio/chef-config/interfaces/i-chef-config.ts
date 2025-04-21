@@ -1,8 +1,7 @@
 import { IPayioChefConfigOperation } from './i-chef-config-operation';
 import { IPayioChefConfigPrinter } from './i-chef-config-printer';
 import { IPayioChefConfigScale } from './i-chef-config-scale';
-import { IPayioChefConfigTabs } from './i-chef-config-tabs';
-import { IPayioChefConfigWebhook } from './i-chef-config-webhook';
+import { IPayioWebhook } from './i-webhook';
 
 export interface IPayioChefConfig {
   // #region Properties (9)
@@ -14,8 +13,7 @@ export interface IPayioChefConfig {
   printer: IPayioChefConfigPrinter | null;
   scale: IPayioChefConfigScale;
   updatedAt: Date;
-  tabs: IPayioChefConfigTabs[];
-  webhook: IPayioChefConfigWebhook[];
+  webhook: IPayioWebhook[];
 
   // #endregion Properties (9)
 }

@@ -14,6 +14,8 @@ export enum EOperationType {
   FEE_SHIPPING = 'Taxa de Entrega',
   FEE_CONVENIENCE = 'Taxa de Conveniencia',
   NATI_PAY = 'Nati Pay',
+  NATIPAY = 'Natipay',
+  NATIPAY_PIX = 'Natipay-PIX',
   GOLIVE = 'Go Live',
   FIN_TAX = 'Taxa Financeira',
   WITHDRAW = 'Saque em Conta',

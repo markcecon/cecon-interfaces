@@ -1,3 +1,5 @@
+import { EPaymentMethodId, EPaymentTypeId, EReleaseStatus } from '../../../transaction';
+
 export interface IMercadoPagoPaymentCamelCase {
   additionalInfo: {}; // Pode tipar mais especificamente se necessário
   card: {}; // Pode tipar mais especificamente se necessário
@@ -5,7 +7,6 @@ export interface IMercadoPagoPaymentCamelCase {
   couponAmount: number;
   currencyId: string;
   dateApproved: string;
-  moneyReleaseStatus: string;
   dateCreated: string;
   dateLastUpdated: string;
   description: string;
@@ -13,7 +14,8 @@ export interface IMercadoPagoPaymentCamelCase {
   id: number;
   installments: number;
   metadata: {}; // Pode tipar mais especificamente se necessário
-  moneyReleaseDate: string;
+  moneyReleaseDate: Date;
+  moneyReleaseStatus: EReleaseStatus;
   payer: {
     id: number;
     email: string;
@@ -24,6 +26,11 @@ export interface IMercadoPagoPaymentCamelCase {
     type: string;
   };
   paymentMethodId: string;
+  paymentMethods: {
+    issuerId: string;
+    id: EPaymentMethodId;
+    type: EPaymentTypeId;
+  };
   paymentTypeId: string;
   status: string;
   statusDetail: string;

@@ -21,6 +21,18 @@ export interface IMercadoPagoPayment {
     };
     type: string;
   };
+  payment_methods: {
+    excluded_payment_methods: [
+      {
+        id: string;
+      }
+    ];
+    excluded_payment_types: [
+      {
+        id: string;
+      }
+    ];
+  };
   metadata: {}; // Pode tipar mais especificamente se necessário
   additional_info: {}; // Pode tipar mais especificamente se necessário
   external_reference?: string; // Adicionado como opcional

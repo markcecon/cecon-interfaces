@@ -20,6 +20,7 @@ export class PayioChefConfigOperationEntity implements IPayioChefConfigOperation
   public tabMode: EPayioChefTabMode = EPayioChefTabMode.MANUAL;
   public tabRegistered: boolean = false;
   public urlLogo: string = '';
+  public tabRegistred: boolean = false;
 
   constructor(data?: Partial<PayioChefConfigOperationEntity>) {
     if (data) {
@@ -30,5 +31,4 @@ export class PayioChefConfigOperationEntity implements IPayioChefConfigOperation
       }
     }
   }
-  tabRegistred: boolean;
 }
