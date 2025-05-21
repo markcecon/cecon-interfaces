@@ -1,4 +1,4 @@
-export enum EPayioCatalogTemplate {
+export enum EPayioCategoryTemplate {
   // #region Properties (1)
   DEFAULT = 'DEFAULT',
   PIZZA = 'PIZZA',

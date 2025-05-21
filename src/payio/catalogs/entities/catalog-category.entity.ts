@@ -1,4 +1,4 @@
-import { EPayioCatalogStatus, EPayioCatalogTemplate } from '../enums';
+import { EPayioCatalogStatus, EPayioCategoryTemplate } from '../enums';
 import { IPayioCatalogCategory, IPayioCatalogItem, IPayioCatalogPizza } from '../interfaces';
 import { PayioCatalogPizzaEntity } from './catalog-pizza.entity';
 
@@ -10,7 +10,7 @@ export class PayioCatalogCategoryEntity implements IPayioCatalogCategory {
   public pizza?: IPayioCatalogPizza = new PayioCatalogPizzaEntity();
   public sequence: number = 0;
   public status: EPayioCatalogStatus = EPayioCatalogStatus.AVAILABLE;
-  public template: EPayioCatalogTemplate = EPayioCatalogTemplate.DEFAULT;
+  public template: EPayioCategoryTemplate = EPayioCategoryTemplate.DEFAULT;
 
   constructor(data?: Partial<PayioCatalogCategoryEntity>) {
     if (data) {

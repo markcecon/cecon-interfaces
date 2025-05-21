@@ -1,4 +1,4 @@
-import { EPayioCatalogStatus } from '../enums';
+import { EPayioCatalogContext, EPayioCatalogStatus } from '../enums';
 import { IPayioCatalogCategory } from './i-catalog-category';
 
 export interface IPayioCatalog {
@@ -11,9 +11,10 @@ export interface IPayioCatalog {
   id: string;
   name: string;
   sandbox: boolean;
+  tags: string[];
   updatedAt: Date;
   status: EPayioCatalogStatus;
-  context: 'INDOOR' | 'DEFAULT'[];
+  context: EPayioCatalogContext[];
   categories?: IPayioCatalogCategory[];
 
   // #endregion Properties (13)
