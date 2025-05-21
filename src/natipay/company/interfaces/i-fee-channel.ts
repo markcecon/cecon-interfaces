@@ -5,7 +5,8 @@ import { EFeePayer } from '../../../transaction/enums/fee-payer.enum';
 export interface IFeeSaleChannel {
   amount: number;
   amountMode: EAmountMode;
+  feePayer: EFeePayer;
+  id: string;
   operationType: EOperationType;
   saleChannel: ENatipaySaleChannel;
-  feePayer: EFeePayer;
 }

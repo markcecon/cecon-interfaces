@@ -5,7 +5,6 @@ Compilar & publicar:
 npm run packagr
 npm run build
 npm publish
-npm publish
 
 
 *Não esqueça de dar push no github*

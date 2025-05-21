@@ -10,6 +10,7 @@ export class NatipayOrderEntity implements INatipayOrder {
   public benefits: IOrderBenefits[] = [];
   public cancellation: IOrderCancellation | null = null;
   public companyId: string = '';
+  public companyName: string = '';
   public containerId: string = '';
   public createdAt: Date = new Date();
   public customer: IOrderCustomer | null = null;

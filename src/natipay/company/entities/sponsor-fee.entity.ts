@@ -4,6 +4,7 @@ import { NatipayFeeEntity } from './natipay-fee.entity';
 export class NatipaySponsorFeeEntity extends NatipayFeeEntity implements INatipaySponsorFee {
   public companyId: string = '';
   public containerId: string = '';
+  public id: string = '';
   public sponsorName: string | null = null;
 
   constructor(data?: Partial<NatipaySponsorFeeEntity>) {

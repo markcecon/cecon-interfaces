@@ -1,3 +1,5 @@
+import { EPayioUserType } from '../enums/user-type.enum';
+
 export interface IPayioJwtPayloadUser {
   // #region Properties (3)
 
@@ -6,5 +8,6 @@ export interface IPayioJwtPayloadUser {
   email: string | null;
   id: string;
   name: string;
+  type: EPayioUserType | null;
   // #endregion Properties (3)
 }

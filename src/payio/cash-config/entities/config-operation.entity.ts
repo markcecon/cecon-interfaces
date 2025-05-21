@@ -6,7 +6,8 @@ export class PayioCashConfigOperationEntity implements IPayioCashConfigOperation
   public balanceMethod: EBarcodeFormat = EBarcodeFormat.CODE_6_PRICE_6;
   public tabFormat: string | null = null;
   public tef: IPayioCashConfigOperationTef = new PayioCashConfigOperationTefEntity();
-
+  public pdvId: string = '';
+  public visionDeviceId: string = '';
   constructor(data?: Partial<PayioCashConfigOperationEntity>) {
     if (data) {
       for (let key in data) {
@@ -22,5 +23,7 @@ export class PayioCashConfigOperationTefEntity implements IPayioCashConfigOperat
   public companyNumber: string = '';
   public provider: ETefProvider = ETefProvider.FISERV;
   public terminal: string = '';
+  public tokenOtp: string = '';
+  public tokenRegister: string = '';
   public url: string = '';
 }

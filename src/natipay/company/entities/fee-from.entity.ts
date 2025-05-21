@@ -1,13 +1,14 @@
-import { EFrom } from "../../../general";
-import { EAmountMode, EOperationType } from "../../../transaction";
-import { EFeePayer } from "../../../transaction/enums/fee-payer.enum";
-import { IFeeFrom } from "../interfaces";
+import { EFrom } from '../../../general';
+import { EAmountMode, EOperationType } from '../../../transaction';
+import { EFeePayer } from '../../../transaction/enums/fee-payer.enum';
+import { IFeeFrom } from '../interfaces';
 
 export class FeeFromEntity implements IFeeFrom {
   public amount: number = -1;
   public amountMode: EAmountMode = EAmountMode.PERCENTAGE;
   public feePayer: EFeePayer = EFeePayer.PLATFORM;
   public from: EFrom = EFrom.DEFAULT;
+  public id: string = '';
   public operationType: EOperationType = EOperationType.NATIPAY;
 
   constructor(data?: Partial<FeeFromEntity>) {

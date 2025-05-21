@@ -12,8 +12,6 @@ import { OrderPaymentEntity } from './payment.entity';
 import { OrderTotalEntity } from './total.entity';
 
 export class OrderEntity implements IOrder {
-  // #region Properties (25)
-
   public additionalFees: OrderAdditionalFeeEntity[] = [];
   public benefits: OrderBenefitsEntity[] = [];
   public cancellation: OrderCancellationEntity | null = new OrderCancellationEntity();
@@ -32,16 +30,13 @@ export class OrderEntity implements IOrder {
   public orderType: EOrderType | null = null;
   public payments: OrderPaymentEntity = new OrderPaymentEntity();
   public reference: string | null = null;
-  public salesChannel: string = '';
+  public saleChannel: string = '';
+  public salesChannel?: string = '';
   public sandbox: boolean = false;
   public status: EOrderStatus = EOrderStatus.PENDING;
   public total: OrderTotalEntity = new OrderTotalEntity();
   public updatedAt: Date = new Date();
   public version: string = '';
-
-  // #endregion Properties (25)
-
-  // #region Constructors (1)
 
   constructor(data?: Partial<OrderEntity>) {
     if (data) {
@@ -52,6 +47,4 @@ export class OrderEntity implements IOrder {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

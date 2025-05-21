@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 export enum ETransactionProvider {
-  MERCADO_PAGO = 'MERCADO-PAGO',
-  FIRE_BANK = 'FIRE-BANK',
+  MERCADOPAGO = 'MERCADOPAGO',
+  FIREBANK = 'FIREBANK',
   DEFAULT = 'DEFAULT',
 }

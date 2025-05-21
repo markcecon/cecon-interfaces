@@ -20,7 +20,7 @@ export class PayioChefConfigOperationEntity implements IPayioChefConfigOperation
   public tabMode: EPayioChefTabMode = EPayioChefTabMode.MANUAL;
   public tabRegistered: boolean = false;
   public urlLogo: string = '';
-  public tabRegistred: boolean = false;
+  public visionDeviceId: string = '';
 
   constructor(data?: Partial<PayioChefConfigOperationEntity>) {
     if (data) {

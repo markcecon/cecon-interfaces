@@ -6,4 +6,4 @@ export { IPayioChefConfigPrinter } from './i-chef-config-printer';
 
 export { IPayioChefConfigScale } from './i-chef-config-scale';
 
-export { IPayioWebhook, IPayioWebhookHeader } from './i-webhook';
+export { IPayioWebhook } from './i-webhook';

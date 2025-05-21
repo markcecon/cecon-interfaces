@@ -30,7 +30,11 @@ export interface IOrder {
   orderType: EOrderType | null;
   payments: IOrderPayment | null;
   reference: string | null;
-  salesChannel: string;
+  /**
+   * @deprecated Use saleChannel instead
+   */
+  salesChannel?: string;
+  saleChannel: string;
   sandbox: boolean;
   status: EOrderStatus;
   total: IOrderTotal;

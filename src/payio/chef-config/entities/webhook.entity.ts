@@ -1,14 +1,9 @@
 import { EWebhookMethod, EWebhookType } from '../../..';
-import { IPayioWebhook, IPayioWebhookHeader } from '../interfaces';
+import { IPayioWebhook } from '../interfaces';
 
 export class PayioWebhookEntity implements IPayioWebhook {
-  public active: boolean = true;
-  public headers: PayioWebhookHeaderEntity[] = [];
-  public locked: boolean = false;
+  public id: string = '';
   public method: EWebhookMethod = EWebhookMethod.POST;
-
-  // Travar caso não esteja respondendo
-  public response: any;
   public type: EWebhookType = EWebhookType.SEND_ORDER;
   public url: string = '';
 
@@ -21,9 +16,5 @@ export class PayioWebhookEntity implements IPayioWebhook {
       }
     }
   }
-}
-
-export class PayioWebhookHeaderEntity implements IPayioWebhookHeader {
-  public key: string = '';
-  public value: string = '';
+  response: any;
 }

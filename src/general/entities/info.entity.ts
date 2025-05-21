@@ -6,6 +6,8 @@ export class InfoEntity implements IInfo {
   // #region Properties (6)
   public companyId: string = '';
   public containerId: string = '';
+  public containerName: string = '';
+  public companyName: string = '';
 
   constructor(data?: Partial<InfoEntity>) {
     if (data) {

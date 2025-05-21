@@ -1,8 +1,6 @@
 export interface IOrderPaymentPix {
-    // #region Properties (2)
-
-    pixKey: string;
-    urlQrImage: string;
-
-    // #endregion Properties (2)
+  imageBase64: string;
+  paymentLink: string;
+  pixKey: string;
+  urlQrImage: string;
 }

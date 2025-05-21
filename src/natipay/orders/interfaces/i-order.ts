@@ -9,6 +9,7 @@ export interface INatipayOrder {
   benefits: IOrderBenefits[];
   cancellation: IOrderCancellation | null;
   companyId: string;
+  companyName: string;
   containerId: string;
   createdAt: Date;
   customer: IOrderCustomer | null;

@@ -8,4 +8,5 @@ export enum PayioUserTypeEnum {
   DEVELOPER = 'DEVELOPER',
   TESTER = 'TESTER',
   DISTRIBUTOR = 'DISTRIBUTOR',
+  SUPER_ADMIN = 'SUPER_ADMIN',
 }

@@ -7,15 +7,12 @@ export interface IUser {
   accessCount: number;
   active: boolean;
   createdAt: Date;
-  currentCompanyId: string | null;
-  currentCompanyName: string | null;
   email: string | null;
   id: string;
   imageUrl: string | null;
   internationalCode: string;
   lastAccessAt: Date;
   name: string;
-  code: string | null; // Caso seja um usuário do tipo TESTER, esse campo será preenchido quando solicitar o código de verificação do telefone
   phoneNumber: string;
   tags: string[];
   type: PayioUserTypeEnum | NatipayMemberTypeEnum;

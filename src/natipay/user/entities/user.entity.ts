@@ -2,6 +2,8 @@ import { UserEntity } from '../../../users';
 import { INatipayUser } from '../interfaces/i-user';
 
 export class NatipayUserEntity extends UserEntity implements INatipayUser {
+  public currentCompanyId: string | null = null;
+  public currentCompanyName: string | null = null;
   public currentContainerId?: string | null | undefined = null;
   public currentContainerName?: string | null | undefined = null;
 

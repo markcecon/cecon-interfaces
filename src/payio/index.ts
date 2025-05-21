@@ -4,7 +4,11 @@ export * from './admins';
 
 export * from './app';
 
+export * from './cash-config';
+
 export * from './chef-config';
+
+export * from './catalogs';
 
 export * from './company';
 
@@ -38,4 +42,6 @@ export * from './tabs';
 
 export * from './tokens';
 
-export * from './cash-config';
+export * from './user';
+
+export * from './vision-terminal';
