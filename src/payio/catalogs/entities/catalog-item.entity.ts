@@ -1,16 +1,18 @@
-import { EPayioCatalogStatus } from '../enums';
-import { IPayioCatalogItem } from '../interfaces';
-import { PayioCatalogOptionGroupEntity } from './catalog-option-group.entity';
-import { PayioCatalogShiftEntity } from './catalog-shift.entity';
+import { EPayioCatalogStatus } from "../enums";
+import { IPayioCatalogItem } from "../interfaces";
+import { PayioCatalogOptionGroupEntity } from "./catalog-option-group.entity";
+import { PayioCatalogShiftEntity } from "./catalog-shift.entity";
 
 export class PayioCatalogItemEntity implements IPayioCatalogItem {
   public contextModifiers: string[] = [];
+  public createdAt: Date = new Date();
   public customizationModifiers: string[] = [];
   public description: string = '';
   public dietaryRestrictions: string[] = [];
   public externalCode: string = '';
   public hasOptionGroups: boolean = false;
   public id: string = '';
+  public ifoodId: string | null = null;
   public imagePath: string = '';
   public index: number = 0;
   public name: string = '';
@@ -22,6 +24,7 @@ export class PayioCatalogItemEntity implements IPayioCatalogItem {
   public shifts: PayioCatalogShiftEntity[] = [];
   public status: EPayioCatalogStatus = EPayioCatalogStatus.AVAILABLE;
   public tags: string[] = [];
+  public updatedAt: Date = new Date();
 
   constructor(data?: Partial<PayioCatalogItemEntity>) {
     if (data) {

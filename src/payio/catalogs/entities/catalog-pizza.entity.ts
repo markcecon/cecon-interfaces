@@ -6,12 +6,15 @@ import { PayioCatalogPizzaToppingEntity } from './catalog-pizza-topping.entity';
 import { PayioCatalogShiftEntity } from './catalog-shift.entity';
 
 export class PayioCatalogPizzaEntity implements IPayioCatalogPizza {
+  public createdAt: Date = new Date();
   public crusts: PayioCatalogPizzaCrustEntity[] = [];
   public edges: PayioCatalogPizzaEdgeEntity[] = [];
   public id: string = '';
+  public ifoodId: string | null = null;
   public shifts: PayioCatalogShiftEntity[] = [];
   public sizes: PayioCatalogPizzaSizeEntity[] = [];
   public toppings: PayioCatalogPizzaToppingEntity[] = [];
+  public updatedAt: Date = new Date();
 
   constructor(data?: Partial<PayioCatalogPizzaEntity>) {
     if (data) {

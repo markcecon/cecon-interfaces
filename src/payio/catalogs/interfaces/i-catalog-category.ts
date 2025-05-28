@@ -3,17 +3,16 @@ import { IPayioCatalogItem } from './i-catalog-item';
 import { IPayioCatalogPizza } from './i-catalog-pizza';
 
 export interface IPayioCatalogCategory {
-  // #region Properties (13)
-
+  createdAt: Date;
   id: string;
-  name: string;
-  status: EPayioCatalogStatus;
-  sequence: number;
+  ifoodId: string | null;
   index: number;
-  template: EPayioCategoryTemplate;
-  pizza?: IPayioCatalogPizza;
   items?: IPayioCatalogItem[];
+  name: string;
+  pizza?: IPayioCatalogPizza;
+  sequence: number;
+  status: EPayioCatalogStatus;
   tags: string[];
-
-  // #endregion Properties (13)
+  template: EPayioCategoryTemplate;
+  updatedAt: Date;
 }
