@@ -7,7 +7,8 @@ export interface IPayioCatalogOptionGroup {
   max: number;
   min: number;
   name: string;
+  options: IPayioCatalogOption[];
   sequence: number;
   status: EPayioCatalogStatus;
-  options: IPayioCatalogOption[];
+  tags: string[];
 }

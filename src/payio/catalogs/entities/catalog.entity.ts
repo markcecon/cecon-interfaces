@@ -4,7 +4,7 @@ import { PayioCatalogCategoryEntity } from './catalog-category.entity';
 
 export class PayioCatalogEntity implements IPayioCatalog {
   public active: boolean = true;
-  public categories?: PayioCatalogCategoryEntity[] | undefined;
+  public categories: PayioCatalogCategoryEntity[] = [];
   public companyId: string = '';
   public containerId: string | null = null;
   public context: EPayioCatalogContext[] = [EPayioCatalogContext.DEFAULT];

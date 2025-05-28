@@ -21,6 +21,7 @@ export class PayioCatalogItemEntity implements IPayioCatalogItem {
   public serving: string = '';
   public shifts: PayioCatalogShiftEntity[] = [];
   public status: EPayioCatalogStatus = EPayioCatalogStatus.AVAILABLE;
+  public tags: string[] = [];
 
   constructor(data?: Partial<PayioCatalogItemEntity>) {
     if (data) {

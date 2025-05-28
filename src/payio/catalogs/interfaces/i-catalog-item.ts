@@ -23,4 +23,5 @@ export interface IPayioCatalogItem {
   serving: string;
   shifts: IPayioCatalogShift[];
   status: EPayioCatalogStatus;
+  tags: string[];
 }

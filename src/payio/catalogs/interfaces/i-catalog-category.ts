@@ -13,6 +13,7 @@ export interface IPayioCatalogCategory {
   template: EPayioCategoryTemplate;
   pizza?: IPayioCatalogPizza;
   items?: IPayioCatalogItem[];
+  tags: string[];
 
   // #endregion Properties (13)
 }

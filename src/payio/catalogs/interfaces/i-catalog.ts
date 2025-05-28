@@ -16,7 +16,7 @@ export interface IPayioCatalog {
   updatedAt: Date;
   status: EPayioCatalogStatus;
   context: EPayioCatalogContext[];
-  categories?: IPayioCatalogCategory[];
+  categories: IPayioCatalogCategory[];
 
   // #endregion Properties (13)
 }

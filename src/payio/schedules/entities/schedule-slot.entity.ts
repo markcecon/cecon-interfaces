@@ -1,14 +1,10 @@
 import { IPayioScheduleSlot } from '../interfaces';
 
 export class PayioScheduleSlotEntity implements IPayioScheduleSlot {
-  // #region Properties (2)
-
+  public catalogId: string = '';
   public productCode: string = '';
+  public productId?: string | undefined;
   public time: string = '';
-
-  // #endregion Properties (2)
-
-  // #region Constructors (1)
 
   constructor(data?: Partial<PayioScheduleSlotEntity>) {
     if (data) {
@@ -19,6 +15,4 @@ export class PayioScheduleSlotEntity implements IPayioScheduleSlot {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

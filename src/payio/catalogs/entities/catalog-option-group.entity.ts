@@ -11,6 +11,7 @@ export class PayioCatalogOptionGroupEntity implements IPayioCatalogOptionGroup {
   public options: PayioCatalogOptionEntity[] = [];
   public sequence: number = 0;
   public status: EPayioCatalogStatus = EPayioCatalogStatus.AVAILABLE;
+  public tags: string[] = [];
 
   constructor(data?: Partial<PayioCatalogOptionGroupEntity>) {
     if (data) {

@@ -11,6 +11,7 @@ export class PayioCatalogCategoryEntity implements IPayioCatalogCategory {
   public sequence: number = 0;
   public status: EPayioCatalogStatus = EPayioCatalogStatus.AVAILABLE;
   public template: EPayioCategoryTemplate = EPayioCategoryTemplate.DEFAULT;
+  public tags: string[] = [];
 
   constructor(data?: Partial<PayioCatalogCategoryEntity>) {
     if (data) {
@@ -21,4 +22,5 @@ export class PayioCatalogCategoryEntity implements IPayioCatalogCategory {
       }
     }
   }
+  tags: string[];
 }
