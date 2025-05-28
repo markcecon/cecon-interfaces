@@ -22,5 +22,4 @@ export class PayioCatalogCategoryEntity implements IPayioCatalogCategory {
       }
     }
   }
-  tags: string[];
 }
