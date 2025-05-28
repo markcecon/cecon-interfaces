@@ -8,6 +8,9 @@ export class PayioChefConfigOperationEntity implements IPayioChefConfigOperation
   public headerMessages: string[] = [];
   public listItems: string[] = [];
   public multiOrder: boolean = false;
+  /**@deprecated
+   * Use SCALE mode default
+   */
   public operationMode: EPayioChefOperationMode = EPayioChefOperationMode.SCALE;
   public printFormat: 'simple' | 'tabular' = 'simple';
   public showBarCode: boolean = true;

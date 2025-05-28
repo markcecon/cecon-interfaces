@@ -12,6 +12,7 @@ export interface IPayioCatalog {
   name: string;
   sandbox: boolean;
   tags: string[];
+  groupId: string | null;
   updatedAt: Date;
   status: EPayioCatalogStatus;
   context: EPayioCatalogContext[];

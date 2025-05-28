@@ -1,0 +1,12 @@
+export enum BinanceSymbol {
+  BTCBRL = 'BTCBRL',
+  BTCUSDT = 'BTCUSDT',
+  ETHBRL = 'ETHBRL',
+  ETHUSDT = 'ETHUSDT',
+  SOLBRL = 'SOLBRL',
+  SOLUSDT = 'SOLUSDT',
+  XRPBRL = 'XRPBRL',
+  XRPUSDT = 'XRPUSDT',
+  BNBUSDT = 'BNBUSDT',
+  BNBBR = 'BNBBR',
+}

@@ -7,6 +7,7 @@ export class PayioJwtPayloadInfoEntity implements IPayioJwtPayloadInfo {
   public companyName: string = '';
   public containerId: string | null = null;
   public containerName: string | null = null;
+  public sandbox: boolean = false;
 
   // #endregion Properties (4)
 

@@ -11,6 +11,10 @@ export interface IPayioChefConfigOperation {
   headerMessages: string[];
   listItems: string[];
   multiOrder: boolean;
+
+  /**@deprecated
+   * Use SCALE mode default
+   */
   operationMode: EPayioChefOperationMode;
   printFormat: 'simple' | 'tabular';
 

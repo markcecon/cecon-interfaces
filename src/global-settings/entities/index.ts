@@ -1,4 +1,7 @@
+export * from './global-setting-binance.entity';
+export * from './global-setting-blockchain.entity';
 export { GlobalSettingFirebankEntity } from './global-setting-firebank.entity';
+export * from './global-setting-ifood.entity';
 export { GlobalSettingIuguEntity } from './global-setting-iugu.entity';
 export { GlobalSettingMasterEntity } from './global-setting-master.entity';
 export { GlobalSettingMercadoPagoEntity } from './global-setting-mercado-pago.entity';

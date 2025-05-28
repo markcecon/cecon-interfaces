@@ -1,6 +1,6 @@
 export enum EPayioTabStatus {
-  ACTIVE = 'active',
-  INACTIVE = 'inactive',
+  AVAILABLE = 'available',
+  UNAVAILABLE = 'unavailable',
   BLOCKED = 'blocked',
   SUSPENDED = 'suspended',
   LOST = 'lost',

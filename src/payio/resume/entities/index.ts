@@ -1,3 +1,3 @@
-export { GeneralPayioResumeTotalEntity } from './general-resume-total.entity';
-export { PayioResumeChildEntity } from './resume-child.entity';
+export { PayioResumeItemEntity } from './resume-item.entity';
+export { PayioResumeTotalEntity } from './resume-totals.entity';
 export { PayioResumeEntity } from './resume.entity';

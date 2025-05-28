@@ -14,6 +14,7 @@ export class PayioCompanyEntity implements IPayioCompany {
   public docType: EIntDocType = EIntDocType.CNPJ;
   public email: string = '';
   public id: string = '';
+  public ifoodMerchantId: string | null = null;
   public imageUrl: string | null = null;
   public internationalCode: string = '55';
   public logoUrl: string | null = null;

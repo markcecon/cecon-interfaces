@@ -1,28 +1,24 @@
-import { EResumeIntervalType } from "../enums";
-import { IPayioResume, IPayioResumeChild } from "../interfaces";
-import { IGeneralPayioResumeTotal } from "../interfaces/i-resume-general";
-import { GeneralPayioResumeTotalEntity } from "./general-resume-total.entity";
+import { EResumeIntervalType } from '../enums';
+import { IPayioResume } from '../interfaces';
+import { PayioResumeItemEntity } from './resume-item.entity';
+import { PayioResumeTotalEntity } from './resume-totals.entity';
 
 export class PayioResumeEntity implements IPayioResume {
-  public child: IPayioResumeChild[] = [];
-  public childByType: IPayioResumeChild[] = [];
   public createdAt: Date = new Date();
   public id: string = '';
   public info: {
-    companyId: string | null;
+    companyId: string;
+    companyName: string;
     containerId: string | null;
-    deviceId: string | null;
-    appId: string | null;
-    appSlug: string | null;
   } = {
-    companyId: null,
+    companyId: '',
+    companyName: '',
     containerId: null,
-    deviceId: null,
-    appId: null,
-    appSlug: null,
   };
   public interval: EResumeIntervalType = EResumeIntervalType.YEAR;
-  public totals: IGeneralPayioResumeTotal = new GeneralPayioResumeTotalEntity();
+  public items: PayioResumeItemEntity[] = [];
+  public resumeVersion: string = '1.0.0';
+  public totals: PayioResumeTotalEntity[] = [];
   public updatedAt: Date = new Date();
 
   constructor(data?: Partial<PayioResumeEntity>) {

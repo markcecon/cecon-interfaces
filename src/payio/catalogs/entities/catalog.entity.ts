@@ -10,6 +10,7 @@ export class PayioCatalogEntity implements IPayioCatalog {
   public context: EPayioCatalogContext[] = [EPayioCatalogContext.DEFAULT];
   public createdAt: Date = new Date();
   public id: string = '';
+  public groupId: string | null = null;
   public name: string = '';
   public sandbox: boolean = false;
   public status: EPayioCatalogStatus = EPayioCatalogStatus.AVAILABLE;

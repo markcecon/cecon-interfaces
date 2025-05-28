@@ -5,6 +5,7 @@ export interface IPayioJwtPayloadInfo {
   companyName: string;
   containerId: string | null;
   containerName: string | null;
+  sandbox: boolean;
 
   // #endregion Properties (4)
 }

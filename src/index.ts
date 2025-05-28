@@ -137,3 +137,5 @@ export * from './wa-server';
 export * from './withdraw';
 
 export * from './firebank';
+
+export * from './binance';

@@ -6,7 +6,7 @@ export class PayioTabEntity implements IPayioTab {
   public createdAt: Date = new Date();
   public id: string = '';
   public name: string = '';
-  public status: EPayioTabStatus = EPayioTabStatus.ACTIVE;
+  public status: EPayioTabStatus = EPayioTabStatus.AVAILABLE;
   public statusReason: string | null = null;
   public tags: string[] = [];
   public updatedAt: Date = new Date();

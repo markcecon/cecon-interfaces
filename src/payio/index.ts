@@ -45,3 +45,5 @@ export * from './tokens';
 export * from './user';
 
 export * from './vision-terminal';
+
+export * from './big-chef-config';

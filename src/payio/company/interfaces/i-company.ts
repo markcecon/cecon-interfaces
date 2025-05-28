@@ -22,6 +22,7 @@ export interface IPayioCompany {
   paymentProvider: IPaymentProvider | null;
   phoneNumber: string;
   sandbox: boolean;
+  ifoodMerchantId: string | null;
   shortName: string; //Nome comercial ou fantasia
   tags: string[];
   updatedAt: Date;

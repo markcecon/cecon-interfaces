@@ -11,7 +11,7 @@ export class OrderPaymentMethodEntity implements IOrderPaymentMethod {
   card?: OrderPaymentCardEntity | null = null;
   cash?: OrderPaymentCashEntity | null = null;
   public code: string = '';
-  public currency: 'BRL' = 'BRL';
+  public currency: 'BRL' | 'BTC' = 'BRL';
   public id: string = '';
   public method: EPaymentType = EPaymentType.CASH;
   pix?: OrderPaymentPixEntity | null = null;

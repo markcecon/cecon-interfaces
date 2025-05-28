@@ -1,20 +1,18 @@
 import { EResumeIntervalType } from '../enums/interval-type.enum';
-import { IGeneralPayioResumeTotal } from './i-resume-general';
-import { IPayioResumeChild } from './i-resume-total';
+import { IPayioResumeItem } from './i-resume-item';
+import { IPayioResumeTotals } from './i-resume-totals';
 
 export interface IPayioResume {
-  child: IPayioResumeChild[];
-  childByType: IPayioResumeChild[];
   createdAt: Date;
-  id: string;
+  id: string; // YYYY | YYYYMM | YYYYMMDD
   info: {
-    companyId: string | null;
+    companyId: string;
+    companyName: string;
     containerId: string | null;
-    deviceId: string | null;
-    appId: string | null;
-    appSlug: string | null;
   };
   interval: EResumeIntervalType;
-  totals: IGeneralPayioResumeTotal;
+  items: IPayioResumeItem[];
+  resumeVersion: string;
+  totals: IPayioResumeTotals[];
   updatedAt: Date;
 }

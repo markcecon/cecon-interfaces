@@ -1,3 +1,3 @@
 export { IPayioResume } from './i-resume';
-export { IGeneralPayioResumeTotal } from './i-resume-general';
-export { IPayioResumeChild } from './i-resume-total';
+export { IPayioResumeItem } from './i-resume-item';
+export { IPayioResumeTotals } from './i-resume-totals';
