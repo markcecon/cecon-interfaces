@@ -3,7 +3,7 @@ import { ETefProvider } from '../enums';
 import { IPayioCashConfigOperation, IPayioCashConfigOperationTef } from '../interfaces/i-cash-config-operation';
 
 export class PayioCashConfigOperationEntity implements IPayioCashConfigOperation {
-  public balanceMethod: EBarcodeFormat = EBarcodeFormat.CODE_6_PRICE_6;
+  public barcodeFormat: EBarcodeFormat = EBarcodeFormat.CODE_6_PRICE_6;
   public tabFormat: string | null = null;
   public tef: IPayioCashConfigOperationTef = new PayioCashConfigOperationTefEntity();
   public pdvId: string = '';

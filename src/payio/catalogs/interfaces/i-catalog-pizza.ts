@@ -10,6 +10,8 @@ export interface IPayioCatalogPizza {
   edges: IPayioCatalogPizzaEdge[];
   id: string;
   ifoodId: string | null;
+  catalogId: string;
+  categoryId: string;
   shifts: IPayioCatalogShift[];
   sizes: IPayioCatalogPizzaSize[];
   toppings: IPayioCatalogPizzaTopping[];

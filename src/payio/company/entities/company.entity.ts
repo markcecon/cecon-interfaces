@@ -6,6 +6,8 @@ import { PayioCompanyNatipayCredentialEntity } from './natipay-credential.entity
 export class PayioCompanyEntity implements IPayioCompany {
   public active: boolean = false;
   public address: PayioAddressEntity = new PayioAddressEntity();
+  public clientId: string = '';
+  public clientSecret: string = '';
   public containerId: string = '';
   public country: string = 'BR';
   public createdAt: Date = new Date();

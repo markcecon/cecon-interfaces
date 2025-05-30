@@ -1,8 +1,11 @@
-import { EPayioCatalogStatus } from "../enums";
-import { IPayioCatalogOptionGroup } from "./i-catalog-option-group";
-import { IPayioCatalogShift } from "./i-catalog-shift";
+import { EPayioCatalogStatus, EPayioImportStatus } from '../enums';
+import { IPayioCatalogOptionGroup } from './i-catalog-option-group';
+import { IPayioCatalogShift } from './i-catalog-shift';
 
 export interface IPayioCatalogItem {
+  autoImportStatus: EPayioImportStatus;
+  catalogId: string;
+  categoryId: string;
   contextModifiers: string[];
   createdAt: Date;
   customizationModifiers: string[];

@@ -2,7 +2,7 @@ import { EBarcodeFormat } from '../../chef-config';
 import { ETefProvider } from '../enums';
 
 export interface IPayioCashConfigOperation {
-  balanceMethod: EBarcodeFormat | null; // Balança etiquetadora
+  barcodeFormat: EBarcodeFormat | null; // Balança etiquetadora
   /** @deprecated */
   tabFormat: string | null;
   tef: IPayioCashConfigOperationTef;

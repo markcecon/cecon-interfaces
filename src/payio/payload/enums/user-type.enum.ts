@@ -4,4 +4,6 @@ export enum EPayioUserType {
   DISTRIBUTOR = 'distributor',
   MERCHANT = 'merchant',
   TESTER = 'tester',
+  APP = 'app',
+  DEVICE = 'device',
 }

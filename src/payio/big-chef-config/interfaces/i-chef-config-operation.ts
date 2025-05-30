@@ -23,5 +23,5 @@ export interface IPayioBigChefConfigOperation {
   tabStartOrderIn: number;
   tabMode: EPayioChefTabMode;
   tabUrlLogo: string;
-  VisionDeviceId: string;
+  visionDeviceId: string;
 }

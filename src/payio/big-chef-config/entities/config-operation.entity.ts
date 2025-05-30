@@ -16,7 +16,7 @@ export class PayioBigChefConfigOperationEntity implements IPayioBigChefConfigOpe
   public tabStartOrderIn: number = 1;
   public tabMode: EPayioChefTabMode = EPayioChefTabMode.MANUAL;
   public tabUrlLogo: string = '';
-  public VisionDeviceId: string = '';
+  public visionDeviceId: string = '';
 
   constructor(data?: Partial<PayioBigChefConfigOperationEntity>) {
     if (data) {

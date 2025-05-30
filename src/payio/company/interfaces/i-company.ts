@@ -6,6 +6,8 @@ import { IPayioCompanyNatipayCredential } from './i-natipay-credential';
 export interface IPayioCompany {
   active: boolean;
   address: IPayioAddress;
+  clientId: string;
+  clientSecret: string;
   containerId: string;
   country: string;
   createdAt: Date;
@@ -14,6 +16,7 @@ export interface IPayioCompany {
   docType: EIntDocType;
   email: string;
   id: string;
+  ifoodMerchantId: string | null;
   imageUrl: string | null;
   internationalCode: string;
   logoUrl: string | null;
@@ -22,7 +25,6 @@ export interface IPayioCompany {
   paymentProvider: IPaymentProvider | null;
   phoneNumber: string;
   sandbox: boolean;
-  ifoodMerchantId: string | null;
   shortName: string; //Nome comercial ou fantasia
   tags: string[];
   updatedAt: Date;

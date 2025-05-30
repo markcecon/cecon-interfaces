@@ -1,22 +1,20 @@
-import { EPayioCatalogContext, EPayioCatalogStatus } from '../enums';
-import { IPayioCatalogCategory } from './i-catalog-category';
+import { EPayioCatalogContext, EPayioCatalogStatus } from "../enums";
+import { EPayioImportStatus } from "../enums/import-status.enum";
+import { IPayioCatalogCategory } from "./i-catalog-category";
 
 export interface IPayioCatalog {
-  // #region Properties (13)
-
   active: boolean;
+  autoImportStatus: EPayioImportStatus;
+  categories: IPayioCatalogCategory[];
   companyId: string;
   containerId: string | null;
+  context: EPayioCatalogContext[];
   createdAt: Date;
   id: string;
+  ifoodId: string | null;
   name: string;
   sandbox: boolean;
-  tags: string[];
-  ifoodId: string | null;
-  updatedAt: Date;
   status: EPayioCatalogStatus;
-  context: EPayioCatalogContext[];
-  categories: IPayioCatalogCategory[];
-
-  // #endregion Properties (13)
+  tags: string[];
+  updatedAt: Date;
 }
