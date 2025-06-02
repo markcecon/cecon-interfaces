@@ -1,14 +1,15 @@
-import { EPayioCatalogStatus, EPayioImportStatus } from '../enums';
-import { IPayioCatalogOptionGroup } from '../interfaces';
-import { PayioCatalogOptionEntity } from './catalog-option.entity';
+import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus } from "../enums";
+import { IPayioCatalogOptionGroup } from "../interfaces";
+import { PayioCatalogOptionEntity } from "./catalog-option.entity";
 
 export class PayioCatalogOptionGroupEntity implements IPayioCatalogOptionGroup {
   public autoImportStatus: EPayioImportStatus = EPayioImportStatus.DISABLED;
   public catalogId: string = '';
   public categoryId: string = '';
   public createdAt: Date = new Date();
+  public engine: EPayioEngines = EPayioEngines.NONE;
+  public externalReference: string | null = null;
   public id: string = '';
-  public ifoodId: string | null = null;
   public index: number = 0;
   public itemId: string = '';
   public max: number = 0;

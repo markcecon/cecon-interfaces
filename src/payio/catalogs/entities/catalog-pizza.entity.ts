@@ -1,3 +1,4 @@
+import { EPayioEngines } from "../enums";
 import { IPayioCatalogPizza } from "../interfaces";
 import { PayioCatalogPizzaCrustEntity } from "./catalog-pizza-crust.entity";
 import { PayioCatalogPizzaEdgeEntity } from "./catalog-pizza-edge.entity";
@@ -11,8 +12,9 @@ export class PayioCatalogPizzaEntity implements IPayioCatalogPizza {
   public createdAt: Date = new Date();
   public crusts: PayioCatalogPizzaCrustEntity[] = [];
   public edges: PayioCatalogPizzaEdgeEntity[] = [];
+  public engine: EPayioEngines = EPayioEngines.NONE;
+  public externalReference: string | null = null;
   public id: string = '';
-  public ifoodId: string | null = null;
   public shifts: PayioCatalogShiftEntity[] = [];
   public sizes: PayioCatalogPizzaSizeEntity[] = [];
   public toppings: PayioCatalogPizzaToppingEntity[] = [];

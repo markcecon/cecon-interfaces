@@ -1,7 +1,7 @@
-import { EPayioCatalogStatus, EPayioImportStatus } from '../enums';
-import { IPayioCatalogItem } from '../interfaces';
-import { PayioCatalogOptionGroupEntity } from './catalog-option-group.entity';
-import { PayioCatalogShiftEntity } from './catalog-shift.entity';
+import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus } from "../enums";
+import { IPayioCatalogItem } from "../interfaces";
+import { PayioCatalogOptionGroupEntity } from "./catalog-option-group.entity";
+import { PayioCatalogShiftEntity } from "./catalog-shift.entity";
 
 export class PayioCatalogItemEntity implements IPayioCatalogItem {
   public autoImportStatus: EPayioImportStatus = EPayioImportStatus.DISABLED;
@@ -12,10 +12,11 @@ export class PayioCatalogItemEntity implements IPayioCatalogItem {
   public customizationModifiers: string[] = [];
   public description: string = '';
   public dietaryRestrictions: string[] = [];
+  public engine: EPayioEngines = EPayioEngines.NONE;
   public externalCode: string = '';
+  public externalReference: string | null = null;
   public hasOptionGroups: boolean = false;
   public id: string = '';
-  public ifoodId: string | null = null;
   public imagePath: string = '';
   public index: number = 0;
   public name: string = '';

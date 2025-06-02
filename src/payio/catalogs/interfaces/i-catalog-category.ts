@@ -1,13 +1,14 @@
-import { EPayioCatalogStatus, EPayioCategoryTemplate, EPayioImportStatus } from '../enums';
-import { IPayioCatalogItem } from './i-catalog-item';
-import { IPayioCatalogPizza } from './i-catalog-pizza';
+import { EPayioCatalogStatus, EPayioCategoryTemplate, EPayioEngines, EPayioImportStatus } from "../enums";
+import { IPayioCatalogItem } from "./i-catalog-item";
+import { IPayioCatalogPizza } from "./i-catalog-pizza";
 
 export interface IPayioCatalogCategory {
   autoImportStatus: EPayioImportStatus;
-  createdAt: Date;
-  id: string;
-  ifoodId: string | null;
   catalogId: string;
+  createdAt: Date;
+  engine: EPayioEngines;
+  externalReference: string | null;
+  id: string;
   index: number;
   items?: IPayioCatalogItem[];
   name: string;

@@ -1,3 +1,4 @@
+import { EPayioEngines } from '../enums';
 import { IPayioCatalogPizzaCrust } from './i-catalog-pizza-crust';
 import { IPayioCatalogPizzaEdge } from './i-catalog-pizza-edge';
 import { IPayioCatalogPizzaSize } from './i-catalog-pizza-size';
@@ -5,13 +6,14 @@ import { IPayioCatalogPizzaTopping } from './i-catalog-pizza-topping';
 import { IPayioCatalogShift } from './i-catalog-shift';
 
 export interface IPayioCatalogPizza {
+  catalogId: string;
+  categoryId: string;
   createdAt: Date;
   crusts: IPayioCatalogPizzaCrust[];
   edges: IPayioCatalogPizzaEdge[];
+  engine: EPayioEngines;
+  externalReference: string | null;
   id: string;
-  ifoodId: string | null;
-  catalogId: string;
-  categoryId: string;
   shifts: IPayioCatalogShift[];
   sizes: IPayioCatalogPizzaSize[];
   toppings: IPayioCatalogPizzaTopping[];

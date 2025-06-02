@@ -1,4 +1,4 @@
-import { EPayioCatalogContext, EPayioCatalogStatus } from "../enums";
+import { EPayioCatalogContext, EPayioCatalogStatus, EPayioEngines } from "../enums";
 import { EPayioImportStatus } from "../enums/import-status.enum";
 import { IPayioCatalogCategory } from "./i-catalog-category";
 
@@ -10,8 +10,9 @@ export interface IPayioCatalog {
   containerId: string | null;
   context: EPayioCatalogContext[];
   createdAt: Date;
+  engine: EPayioEngines;
+  externalReference: string | null;
   id: string;
-  ifoodId: string | null;
   name: string;
   sandbox: boolean;
   status: EPayioCatalogStatus;

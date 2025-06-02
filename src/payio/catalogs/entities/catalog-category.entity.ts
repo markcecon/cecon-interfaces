@@ -1,17 +1,18 @@
-import { EPayioCatalogStatus, EPayioCategoryTemplate, EPayioImportStatus } from '../enums';
-import { IPayioCatalogCategory, IPayioCatalogItem, IPayioCatalogPizza } from '../interfaces';
-import { PayioCatalogPizzaEntity } from './catalog-pizza.entity';
+import { EPayioCatalogStatus, EPayioCategoryTemplate, EPayioEngines, EPayioImportStatus } from "../enums";
+import { IPayioCatalogCategory, IPayioCatalogItem } from "../interfaces";
+import { PayioCatalogPizzaEntity } from "./catalog-pizza.entity";
 
 export class PayioCatalogCategoryEntity implements IPayioCatalogCategory {
   public autoImportStatus: EPayioImportStatus = EPayioImportStatus.DISABLED;
   public catalogId: string = '';
   public createdAt: Date = new Date();
+  public engine: EPayioEngines = EPayioEngines.NONE;
+  public externalReference: string | null = null;
   public id: string = '';
-  public ifoodId: string | null = null;
   public index: number = 0;
   public items?: IPayioCatalogItem[] = [];
   public name: string = '';
-  public pizza?: IPayioCatalogPizza = new PayioCatalogPizzaEntity();
+  public pizza?: PayioCatalogPizzaEntity = new PayioCatalogPizzaEntity();
   public sequence: number = 0;
   public status: EPayioCatalogStatus = EPayioCatalogStatus.AVAILABLE;
   public tags: string[] = [];

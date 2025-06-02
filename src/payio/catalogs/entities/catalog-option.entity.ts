@@ -1,5 +1,5 @@
-import { EPayioCatalogStatus } from '../enums';
-import { IPayioCatalogOption } from '../interfaces/i-catalog-option';
+import { EPayioCatalogStatus } from "../enums";
+import { IPayioCatalogOption } from "../interfaces/i-catalog-option";
 
 export class PayioCatalogOptionEntity implements IPayioCatalogOption {
   public description: string = '';
