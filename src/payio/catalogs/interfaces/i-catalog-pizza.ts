@@ -6,8 +6,6 @@ import { IPayioCatalogPizzaTopping } from './i-catalog-pizza-topping';
 import { IPayioCatalogShift } from './i-catalog-shift';
 
 export interface IPayioCatalogPizza {
-  catalogId: string;
-  categoryId: string;
   createdAt: Date;
   crusts: IPayioCatalogPizzaCrust[];
   edges: IPayioCatalogPizzaEdge[];

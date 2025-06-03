@@ -1,12 +1,14 @@
-import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus } from "../enums";
-import { IPayioCatalogItem } from "../interfaces";
-import { PayioCatalogOptionGroupEntity } from "./catalog-option-group.entity";
-import { PayioCatalogShiftEntity } from "./catalog-shift.entity";
+import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus } from '../enums';
+import { IPayioCatalogItem } from '../interfaces';
+import { PayioCatalogOptionGroupEntity } from './catalog-option-group.entity';
+import { PayioCatalogShiftEntity } from './catalog-shift.entity';
 
 export class PayioCatalogItemEntity implements IPayioCatalogItem {
   public autoImportStatus: EPayioImportStatus = EPayioImportStatus.DISABLED;
   public catalogId: string = '';
   public categoryId: string = '';
+  public companyId: string = '';
+  public containerId: string | null = null;
   public contextModifiers: string[] = [];
   public createdAt: Date = new Date();
   public customizationModifiers: string[] = [];

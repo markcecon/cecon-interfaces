@@ -1,10 +1,12 @@
-import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus } from "../enums";
-import { IPayioCatalogOption } from "./i-catalog-option";
+import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus } from '../enums';
+import { IPayioCatalogOption } from './i-catalog-option';
 
 export interface IPayioCatalogOptionGroup {
   autoImportStatus: EPayioImportStatus;
   catalogId: string;
   categoryId: string;
+  companyId: string;
+  containerId: string | null;
   createdAt: Date;
   engine: EPayioEngines;
   externalReference: string | null;

@@ -6,6 +6,8 @@ export interface IPayioCatalogItem {
   autoImportStatus: EPayioImportStatus;
   catalogId: string;
   categoryId: string;
+  companyId: string;
+  containerId: string | null;
   contextModifiers: string[];
   createdAt: Date;
   customizationModifiers: string[];

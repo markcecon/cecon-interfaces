@@ -1,10 +1,12 @@
-import { EPayioCatalogStatus, EPayioCategoryTemplate, EPayioEngines, EPayioImportStatus } from '../enums';
-import { IPayioCatalogCategory, IPayioCatalogItem } from '../interfaces';
-import { PayioCatalogPizzaEntity } from './catalog-pizza.entity';
+import { EPayioCatalogStatus, EPayioCategoryTemplate, EPayioEngines, EPayioImportStatus } from "../enums";
+import { IPayioCatalogCategory, IPayioCatalogItem } from "../interfaces";
+import { PayioCatalogPizzaEntity } from "./catalog-pizza.entity";
 
 export class PayioCatalogCategoryEntity implements IPayioCatalogCategory {
   public autoImportStatus: EPayioImportStatus = EPayioImportStatus.DISABLED;
   public catalogId: string = '';
+  public companyId: string = '';
+  public containerId: string | null = null;
   public createdAt: Date = new Date();
   public engine: EPayioEngines = EPayioEngines.NONE;
   public externalReference: string | null = null;
