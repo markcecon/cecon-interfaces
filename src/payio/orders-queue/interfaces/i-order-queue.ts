@@ -6,6 +6,7 @@ export interface IPayioOrderQueue {
   attempts: number;
   createdAt: Date;
   reference: string;
+  deviceId?: string;
   companyId: string;
   companyName: string;
   appId: string;

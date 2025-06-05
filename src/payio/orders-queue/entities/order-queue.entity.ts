@@ -2,6 +2,7 @@ import { PayioOrderQueueStatusEnum } from '../enums';
 import { IPayioOrderQueue } from '../interfaces/i-order-queue';
 
 export class PayioOrderQueueEntity implements IPayioOrderQueue {
+  public deviceId?: string;
   public appId: string = '';
   public attempts: number = 0;
   public companyId: string = '';
