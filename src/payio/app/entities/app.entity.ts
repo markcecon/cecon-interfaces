@@ -1,4 +1,4 @@
-import { EPayuioAppSlug } from '../enums';
+import { EPayioAppSlug } from '../enums';
 import { IPayioApp } from '../interfaces/i-app';
 
 export class PayioAppEntity implements IPayioApp {
@@ -15,7 +15,7 @@ export class PayioAppEntity implements IPayioApp {
   public price: number = 0;
   public refreshToken: string | null = null;
   public secret: string = '';
-  public slug: EPayuioAppSlug = EPayuioAppSlug.none;
+  public slug: EPayioAppSlug = EPayioAppSlug.none;
   public tags: string[] = [];
   public accessToken: string | null = null;
   public updatedAt: Date = new Date();

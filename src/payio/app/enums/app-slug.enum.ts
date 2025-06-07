@@ -1,4 +1,4 @@
-export enum EPayuioAppSlug {
+export enum EPayioAppSlug {
   payio_cash = 'payio-cash',
   payio_chef = 'payio-chef',
   payio_big_chef = 'payio-big-chef',

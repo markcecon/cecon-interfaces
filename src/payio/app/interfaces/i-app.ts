@@ -1,4 +1,4 @@
-import { EPayuioAppSlug } from '../enums';
+import { EPayioAppSlug } from '../enums';
 
 export interface IPayioApp {
   active: boolean;
@@ -14,7 +14,7 @@ export interface IPayioApp {
   price: number;
   refreshToken: string | null;
   secret: string;
-  slug: EPayuioAppSlug;
+  slug: EPayioAppSlug;
   tags: string[];
   accessToken: string | null;
   updatedAt: Date;

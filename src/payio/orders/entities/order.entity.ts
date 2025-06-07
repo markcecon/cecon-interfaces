@@ -1,11 +1,11 @@
-import { OrderEntity } from "../../../order";
-import { EPayuioAppSlug } from "../../app";
-import { IPayioOrder } from "../interfaces";
-import { PayioOrderIndoorEntity } from "./indoor.entity";
+import { OrderEntity } from '../../../order';
+import { EPayioAppSlug } from '../../app';
+import { IPayioOrder } from '../interfaces';
+import { PayioOrderIndoorEntity } from './indoor.entity';
 
 export class PayioOrderEntity extends OrderEntity implements IPayioOrder {
   public appId: string | null = null;
-  public appSlug: EPayuioAppSlug = EPayuioAppSlug.none;
+  public appSlug: EPayioAppSlug = EPayioAppSlug.none;
   public deviceId: string | null = null;
   public indoor: PayioOrderIndoorEntity | null = null;
   public resumeVersion: string = '';

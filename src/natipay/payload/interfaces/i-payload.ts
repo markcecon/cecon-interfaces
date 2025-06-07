@@ -9,8 +9,9 @@ export interface INatipayJwtPayload {
   app: INatipayJwtPayloadApp | null;
   /**
    * (Audiência): Identifica os destinatários pretendidos do JWT (sua aplicação).
+   * Pode ser uma string única ou um array de strings para múltiplas audiências.
    */
-  aud: string;
+  aud: string | string[];
   device: INatipayJwtPayloadDevice | null;
   /**
    * (Expiração): Timestamp de quando o JWT expira

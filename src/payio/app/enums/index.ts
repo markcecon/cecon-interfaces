@@ -1,1 +1,1 @@
-export { EPayuioAppSlug } from './app-slug.enum';
+export { EPayioAppSlug } from './app-slug.enum';

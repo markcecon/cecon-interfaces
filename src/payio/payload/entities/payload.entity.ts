@@ -11,7 +11,7 @@ export class PayioJwtPayloadEntity implements IPayioJwtPayload {
 
   public activationStatus: EPayuioActivationStatus = EPayuioActivationStatus.NONE;
   public app: IPayioJwtPayloadApp | null = null;
-  public aud: string = '';
+  public aud: string | string[] = '';
   public device: PayioJwtPayloadDeviceEntity | null = null;
   public distributorId: string | null = null;
   public exp?: number = 0;
