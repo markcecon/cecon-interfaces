@@ -1,6 +1,7 @@
 export enum EPayuioActivationStatus {
   NONE = 'NONE',
   PENDING = 'PENDING',
+  IN_DISTRIBUTION = 'IN_DISTRIBUTION',
   ACTIVE = 'ACTIVE',
   EXPIRED = 'EXPIRED',
   CANCELLED = 'CANCELLED',

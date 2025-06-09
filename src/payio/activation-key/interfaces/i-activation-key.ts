@@ -1,7 +1,7 @@
 import { EPayuioActivationStatus } from '../enums/activation-key-status.enum';
 
 export interface IPayioActivationKey {
-  // #region Properties (18)
+  // #region Properties (20)
 
   // Data em que a chave foi usada (se já foi ativada)
   activationDate: Date | null;
@@ -16,6 +16,10 @@ export interface IPayioActivationKey {
   createdAt: Date;
   // Data de geração da chave
   createdBy: string | null;
+  // Data em que foi liberada para distribuição
+  distributionDate: Date | null;
+  // Quem liberou para distribuição
+  distributedBy: string | null;
   sandbox: boolean;
   deviceId: string | null;
   // ID do distribuidor que adquiriu o pacote (se aplicável)
@@ -35,6 +39,6 @@ export interface IPayioActivationKey {
   // Quantidade de vezes que a chave já foi usada
   usedCount: number;
 
-  // #endregion Properties (18)
+  // #endregion Properties (20)
   // Usuário ou sistema que gerou a chave
 }
