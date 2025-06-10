@@ -1,3 +1,4 @@
+import { EDocType } from '../../../general';
 import { IPayioJwtPayloadInfo } from '../interfaces/i-payload-info';
 
 export class PayioJwtPayloadInfoEntity implements IPayioJwtPayloadInfo {
@@ -8,6 +9,8 @@ export class PayioJwtPayloadInfoEntity implements IPayioJwtPayloadInfo {
   public containerId: string | null = null;
   public containerName: string | null = null;
   public sandbox: boolean = false;
+  public docType: EDocType | null = null;
+  public doc: string | null = null;
 
   // #endregion Properties (4)
 

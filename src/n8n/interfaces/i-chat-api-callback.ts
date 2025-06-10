@@ -86,4 +86,4 @@ export interface IN8nChatApiCallback {
   };
 
   // #endregion Properties (12)
-} 
+}

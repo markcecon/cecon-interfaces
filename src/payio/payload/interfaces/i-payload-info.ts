@@ -1,7 +1,11 @@
+import { EDocType } from '../../../general';
+
 export interface IPayioJwtPayloadInfo {
   // #region Properties (4)
 
   companyId: string;
+  docType: EDocType | null;
+  doc: string | null;
   companyName: string;
   containerId: string | null;
   containerName: string | null;
