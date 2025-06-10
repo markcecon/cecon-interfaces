@@ -76,6 +76,17 @@ export * from './monitor';
 
 export * from './mottu';
 
+export * from './n8n';
+
+export * from './n8n/entities/chat-api-callback.entity';
+export * from './n8n/entities/chat-context.entity';
+export * from './n8n/entities/chat-response.entity';
+export * from './n8n/entities/chat-trigger.entity';
+export * from './n8n/interfaces/i-chat-api-callback';
+export * from './n8n/interfaces/i-chat-context';
+export * from './n8n/interfaces/i-chat-response';
+export * from './n8n/interfaces/i-chat-trigger';
+
 export * from './nati-v1';
 
 export * from './nati-v2';
