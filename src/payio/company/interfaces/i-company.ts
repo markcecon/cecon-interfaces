@@ -1,4 +1,4 @@
-import { EIntDocType } from '../../../general';
+import { EDocType } from '../../../general';
 import { IPaymentProvider } from '../../../general/interfaces/i-payment-provider';
 import { IPayioAddress } from './i-address';
 import { IPayioCompanyNatipayCredential } from './i-natipay-credential';
@@ -13,7 +13,7 @@ export interface IPayioCompany {
   createdAt: Date;
   currency: string;
   doc: string;
-  docType: EIntDocType;
+  docType: EDocType;
   email: string;
   id: string;
   ifoodMerchantId: string | null;

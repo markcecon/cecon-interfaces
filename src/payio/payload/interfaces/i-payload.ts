@@ -1,5 +1,6 @@
 import { EPayuioActivationStatus } from '../../activation-key/enums/activation-key-status.enum';
 import { IPayioPermission } from '../../permissions';
+import { EPayioJwtTokenType } from '../enums';
 import { IPayioJwtPayloadApp } from './i-payload-app';
 import { IPayioJwtPayloadDevice } from './i-payload-device';
 import { IPayioJwtPayloadInfo } from './i-payload-info';
@@ -33,7 +34,7 @@ export interface IPayioJwtPayload {
   jti: string;
   permissions: IPayioPermission[];
   sub: string;
-  type: string | null;
+  type: EPayioJwtTokenType | null;
   user: IPayioJwtPayloadUser | null;
 
   // #endregion Properties (15)
