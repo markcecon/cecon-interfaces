@@ -4,9 +4,12 @@ Compilar & publicar:
 
 ATENÇAO, sempre mudar a versão do package.json 
 
-npm run packagr // primeiro 
-npm run build // segundo
-npm publish // terceiro
+// primeiro 
+npm run packagr 
+// segundo
+npm run build
+// terceiro
+npm publish 
 
 
 *Não esqueça de dar push no github*

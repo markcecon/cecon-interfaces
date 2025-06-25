@@ -1,5 +1,6 @@
 export enum EPayioScheduleSkill {
-  ALL_YOU_CAN_EAT = 'all_you_can_eat',
-  PRODUCT_BY_WEIGHT = 'product_by_weight',
-  PRODUCT = 'product',
+  COMA_A_VONTADE = 'all_you_can_eat', // Coma a vontade
+  POR_PESO = 'by_weight',
+  NORMAL = 'default',
+  PRECO_MANUAL = 'manual_price',
 }
