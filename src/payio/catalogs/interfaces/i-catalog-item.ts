@@ -1,6 +1,6 @@
-import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus } from "../enums";
-import { IPayioCatalogOptionGroup } from "./i-catalog-option-group";
-import { IPayioCatalogShift } from "./i-catalog-shift";
+import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus, EPayioMeasure } from '../enums';
+import { IPayioCatalogOptionGroup } from './i-catalog-option-group';
+import { IPayioCatalogShift } from './i-catalog-shift';
 
 export interface IPayioCatalogItem {
   autoImportStatus: EPayioImportStatus;
@@ -18,14 +18,13 @@ export interface IPayioCatalogItem {
   externalReference: string | null;
   hasOptionGroups: boolean;
   id: string;
-  imagePath: string;
+  imageUrl: string;
   index: number;
   name: string;
+  measure: EPayioMeasure;
+  productionPlaceId: string;
   optionGroups: IPayioCatalogOptionGroup[];
-  price: {
-    value: number;
-    originalValue: number;
-  };
+  price: number;
   productId: string;
   sequence: number;
   serving: string;

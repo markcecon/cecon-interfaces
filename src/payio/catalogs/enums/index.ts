@@ -7,3 +7,5 @@ export { EPayioCategoryTemplate } from './category-template.enum';
 export { EPayioImportStatus } from './import-status.enum';
 
 export { EPayioEngines } from './engines.enum';
+
+export { EPayioMeasure } from './measure.enum';

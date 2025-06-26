@@ -1,4 +1,4 @@
-import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus } from '../enums';
+import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus, EPayioMeasure } from '../enums';
 import { IPayioCatalogItem } from '../interfaces';
 import { PayioCatalogOptionGroupEntity } from './catalog-option-group.entity';
 import { PayioCatalogShiftEntity } from './catalog-shift.entity';
@@ -19,12 +19,14 @@ export class PayioCatalogItemEntity implements IPayioCatalogItem {
   public externalReference: string | null = null;
   public hasOptionGroups: boolean = false;
   public id: string = '';
-  public imagePath: string = '';
+  public imageUrl: string = '';
   public index: number = 0;
+  public measure: EPayioMeasure = EPayioMeasure.UN;
   public name: string = '';
   public optionGroups: PayioCatalogOptionGroupEntity[] = [];
-  public price: { value: number; originalValue: number } = { value: 0, originalValue: 0 };
+  public price: number = 0;
   public productId: string = '';
+  public productionPlaceId: string = '';
   public sequence: number = 0;
   public serving: string = '';
   public shifts: PayioCatalogShiftEntity[] = [];

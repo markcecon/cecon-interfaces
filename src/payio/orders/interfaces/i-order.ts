@@ -8,4 +8,5 @@ export interface IPayioOrder extends IOrder {
   deviceId: string | null;
   indoor: IPayioOrderIndoor | null;
   resumeVersion: string;
+  tags: string[];
 }
