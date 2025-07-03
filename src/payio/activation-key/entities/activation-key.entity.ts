@@ -1,35 +1,30 @@
-import { EPayuioActivationStatus } from '../enums/activation-key-status.enum';
+import { EPayioActivationKeyStatus } from '../enums/activation-key-status.enum';
 import { IPayioActivationKey } from '../interfaces/i-activation-key';
 
 export class PayioActivationKeyEntity implements IPayioActivationKey {
-  // #region Properties (22)
-
   public activationDate: Date | null = null;
-  public activationReleasedId: string = '';
   public appId: string | null = null;
   public appSlug: string | null = null;
-  public clientKey: string | null = null;
+  public batchId: string = '';
   public companyId: string | null = null;
   public companyName: string | null = null;
   public createdAt: Date = new Date();
   public createdBy: string | null = null;
-  public distributionDate: Date | null = null;
-  public distributedBy: string | null = null;
   public deviceId: string | null = null;
+  public distributedBy: string | null = null;
+  public distributionDate: Date | null = null;
   public distributorId: string | null = null;
   public distributorKey: string | null = null;
   public distributorName: string | null = null;
   public expirationDate: Date | null = null;
   public id: string = '';
+  public key: string | null = null;
   public logs: string[] = [];
+  public partnerName: string | null = null;
+  public partnerReference: string | null = null;
   public sandbox: boolean = false;
-  public status: EPayuioActivationStatus = EPayuioActivationStatus.PENDING;
-  public usageLimit: number = 0;
-  public usedCount: number = 0;
-
-  // #endregion Properties (22)
-
-  // #region Constructors (1)
+  public status: EPayioActivationKeyStatus = EPayioActivationKeyStatus.PENDING;
+  public tags: string[] = [];
 
   constructor(data?: Partial<PayioActivationKeyEntity>) {
     if (data) {
@@ -40,6 +35,4 @@ export class PayioActivationKeyEntity implements IPayioActivationKey {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

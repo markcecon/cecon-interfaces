@@ -1,4 +1,4 @@
-import { EPayuioActivationStatus } from '../../activation-key/enums/activation-key-status.enum';
+import { EPayioActivationKeyStatus } from '../../activation-key/enums/activation-key-status.enum';
 import { PayioPermissionEntity } from '../../permissions';
 import { EPayioJwtTokenType } from '../enums';
 import { IPayioJwtPayload } from '../interfaces/i-payload';
@@ -10,7 +10,7 @@ import { PayioJwtPayloadUserEntity } from './payload-user.entity';
 export class PayioJwtPayloadEntity implements IPayioJwtPayload {
   // #region Properties (16)
 
-  public activationStatus: EPayuioActivationStatus = EPayuioActivationStatus.NONE;
+  public activationStatus: EPayioActivationKeyStatus = EPayioActivationKeyStatus.NONE;
   public app: IPayioJwtPayloadApp | null = null;
   public aud: string | string[] = '';
   public device: PayioJwtPayloadDeviceEntity | null = null;

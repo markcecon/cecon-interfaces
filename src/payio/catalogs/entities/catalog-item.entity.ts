@@ -1,3 +1,4 @@
+import { EPayioScheduleSkill } from '../../schedules';
 import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus, EPayioMeasure } from '../enums';
 import { IPayioCatalogItem } from '../interfaces';
 import { PayioCatalogOptionGroupEntity } from './catalog-option-group.entity';
@@ -30,6 +31,7 @@ export class PayioCatalogItemEntity implements IPayioCatalogItem {
   public sequence: number = 0;
   public serving: string = '';
   public shifts: PayioCatalogShiftEntity[] = [];
+  public skill: EPayioScheduleSkill = EPayioScheduleSkill.NORMAL;
   public status: EPayioCatalogStatus = EPayioCatalogStatus.AVAILABLE;
   public tags: string[] = [];
   public updatedAt: Date = new Date();

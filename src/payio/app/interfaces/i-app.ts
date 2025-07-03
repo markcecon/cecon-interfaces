@@ -1,7 +1,8 @@
-import { EPayioAppSlug } from '../enums';
+import { EAppActivationMode, EPayioAppSlug } from '../enums';
 
 export interface IPayioApp {
   active: boolean;
+  activationMode: EAppActivationMode;
   clientKey: string | null;
   clientSecret: string | null;
   createdAt: Date;

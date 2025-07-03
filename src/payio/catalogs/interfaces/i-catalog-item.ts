@@ -1,3 +1,4 @@
+import { EPayioScheduleSkill } from '../../schedules';
 import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus, EPayioMeasure } from '../enums';
 import { IPayioCatalogOptionGroup } from './i-catalog-option-group';
 import { IPayioCatalogShift } from './i-catalog-shift';
@@ -28,6 +29,7 @@ export interface IPayioCatalogItem {
   productId: string;
   sequence: number;
   serving: string;
+  skill: EPayioScheduleSkill;
   shifts: IPayioCatalogShift[];
   status: EPayioCatalogStatus;
   tags: string[];

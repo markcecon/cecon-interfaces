@@ -1,4 +1,4 @@
-import { EPayuioActivationStatus } from '../../activation-key/enums/activation-key-status.enum';
+import { EPayioActivationKeyStatus } from '../../activation-key/enums/activation-key-status.enum';
 import { IPayioPermission } from '../../permissions';
 import { EPayioJwtTokenType } from '../enums';
 import { IPayioJwtPayloadApp } from './i-payload-app';
@@ -26,7 +26,7 @@ export interface IPayioJwtPayload {
    */
   iat: number;
   info: IPayioJwtPayloadInfo | null;
-  activationStatus: EPayuioActivationStatus;
+  activationStatus: EPayioActivationKeyStatus;
   /**
    * (Emissor): Identifica quem emitiu o JWT (o domínio da sua aplicação).
    */

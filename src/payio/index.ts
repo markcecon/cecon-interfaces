@@ -44,6 +44,10 @@ export * from './tokens';
 
 export * from './user';
 
-export * from './vision-terminal';
+export * from './terminals';
 
 export * from './big-chef-config';
+
+export * from './activation-batch';
+
+export * from './preparation-place';

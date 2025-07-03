@@ -1,1 +1,1 @@
-export { EPayuioActivationStatus } from './activation-key-status.enum';
+export { EPayioActivationKeyStatus } from './activation-key-status.enum';

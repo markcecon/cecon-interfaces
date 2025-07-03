@@ -1,11 +1,10 @@
-export enum EPayuioActivationStatus {
-  NONE = 'NONE',
-  PENDING = 'PENDING',
-  IN_DISTRIBUTION = 'IN_DISTRIBUTION',
-  ACTIVE = 'ACTIVE',
-  EXPIRED = 'EXPIRED',
-  CANCELLED = 'CANCELLED',
-  REVOKED = 'REVOKED',
+export enum EPayioActivationKeyStatus {
+  AVAILABLE = 'AVAILABLE', // Disponível para ativação
+  PENDING = 'PENDING', // Pendente (pode estar sendo processada)
+  ACTIVE = 'ACTIVE', // Ativada e funcionando
+  EXPIRED = 'EXPIRED', // Expirada por tempo
+  REVOKED = 'REVOKED', // Revogada manualmente
+  NONE = 'NONE', // Status nulo (para casos especiais)
   TRIAL_7 = 'TRIAL_7',
   TRIAL_15 = 'TRIAL_15',
   TRIAL_30 = 'TRIAL_30',

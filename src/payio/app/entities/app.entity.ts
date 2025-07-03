@@ -1,7 +1,9 @@
-import { EPayioAppSlug } from '../enums';
+import { EAppActivationMode, EPayioAppSlug } from '../enums';
 import { IPayioApp } from '../interfaces/i-app';
 
 export class PayioAppEntity implements IPayioApp {
+  public accessToken: string | null = null;
+  public activationMode: EAppActivationMode = EAppActivationMode.DIRECT_1_TO_1;
   public active: boolean = false;
   public clientKey: string | null = null;
   public clientSecret: string | null = null;
@@ -17,7 +19,6 @@ export class PayioAppEntity implements IPayioApp {
   public secret: string = '';
   public slug: EPayioAppSlug = EPayioAppSlug.none;
   public tags: string[] = [];
-  public accessToken: string | null = null;
   public updatedAt: Date = new Date();
   public version: string = '0.0.1';
 
