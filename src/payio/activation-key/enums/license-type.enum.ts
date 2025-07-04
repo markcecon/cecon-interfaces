@@ -1,0 +1,6 @@
+export enum EPayioLicenseType {
+  TRIAL = 'TRIAL',
+  SUBSCRIPTION = 'SUBSCRIPTION',
+  PERPETUAL = 'PERPETUAL',
+  SANDBOX = 'SANDBOX',
+}
