@@ -3,7 +3,6 @@ export interface IPayioJwtPayloadApp {
 
   id: string;
   slug: string;
-  allowedDeviceIds: string[];
 
   // #endregion Properties (3)
 }

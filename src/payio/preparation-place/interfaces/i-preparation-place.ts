@@ -6,6 +6,7 @@ export interface IPayioPreparationPlace {
   mode: EPayioPreparationPlaceMode;
   name: string;
   notes: string;
+  tags: string[];
   updatedAt: Date;
   url: string;
 }

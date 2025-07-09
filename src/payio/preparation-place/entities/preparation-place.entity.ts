@@ -7,6 +7,7 @@ export class PayioPreparationPlaceEntity implements IPayioPreparationPlace {
   public mode: EPayioPreparationPlaceMode = EPayioPreparationPlaceMode.IP;
   public name: string = '';
   public notes: string = '';
+  public tags: string[] = [];
   public updatedAt: Date = new Date();
   public url: string = '';
 

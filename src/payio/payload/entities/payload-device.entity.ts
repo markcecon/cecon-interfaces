@@ -1,16 +1,14 @@
+import { EPayioActivationKeyStatus } from '../../activation-key/enums/activation-key-status.enum';
 import { IPayioJwtPayloadDevice } from '../interfaces/i-payload-device';
 
 export class PayioJwtPayloadDeviceEntity implements IPayioJwtPayloadDevice {
-  // #region Properties (4)
-
+  public activationKey: string | null = '';
+  public activationKeyId: string | null = '';
+  public activationStatus: EPayioActivationKeyStatus = EPayioActivationKeyStatus.NONE;
   public chefConfigId: string | null = '';
   public id: string = '';
   public name: string | null = '';
   public scheduleId: string | null = '';
-
-  // #endregion Properties (4)
-
-  // #region Constructors (1)
 
   constructor(data?: Partial<PayioJwtPayloadDeviceEntity>) {
     if (data) {
@@ -21,6 +19,4 @@ export class PayioJwtPayloadDeviceEntity implements IPayioJwtPayloadDevice {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

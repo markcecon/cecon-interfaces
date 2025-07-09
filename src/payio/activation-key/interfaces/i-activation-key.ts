@@ -1,39 +1,10 @@
-import { EPayioActivationKeyStatus } from '../enums/activation-key-status.enum';
-import { EPayioLicenseType } from '../enums/license-type.enum';
+import { EPayioActivationKeyStatus } from "../enums/activation-key-status.enum";
+import { EPayioLicenseType } from "../enums/license-type.enum";
 
 export interface IPayioActivationKey {
-  // Identificador único da chave (UUID)
-  id: string;
-
-  // A chave de ativação em si (ex.: "PAYIO-XXXXX-XXXXX-XXXXX")
-  key: string | null;
-
-  // Status da chave
-  status: EPayioActivationKeyStatus;
-
-  // === REFERÊNCIA AO LOTE (fonte das configurações) ===
-  // ID do lote que gerou esta licença
-  batchId: string;
-
-  // === DADOS COPIADOS DO LOTE (para performance) ===
-  // Tipo de licença (copiado do batch)
-  licenseType: EPayioLicenseType;
-
-  // Período de validade em meses (copiado do batch)
-  validityPeriodMonths: number;
-
-  // Dias de tolerância (copiado do batch)
-  gracePeriodDays: number;
-
-  // Versão do software (copiado do batch)
-  versionConstraint: string[];
-
   // === CAMPOS PREENCHIDOS NA ATIVAÇÃO ===
   // Data em que a chave foi ativada (null = não ativada)
-  activationDate: Date | null;
-
-  // Hash da máquina que consumiu a licença
-  hardwareFingerprint: string | null;
+  activationAt: Date | null;
 
   // === REFERÊNCIAS DO SISTEMA ===
   // ID do aplicativo (copiado do batch)
@@ -42,8 +13,17 @@ export interface IPayioActivationKey {
   // Slug do aplicativo (copiado do batch)
   appSlug: string | null;
 
+  // === REFERÊNCIA AO LOTE (fonte das configurações) ===
+  // ID do lote que gerou esta licença
+  batchId: string;
+
   // ID da empresa (preenchido na ativação)
   companyId: string | null;
+  companyName: string | null;
+
+  // === AUDITORIA ===
+  // Data de criação da chave
+  createdAt: Date;
 
   // ID do dispositivo (preenchido na ativação)
   deviceId: string | null;
@@ -52,16 +32,50 @@ export interface IPayioActivationKey {
   // ID do distribuidor
   distributorId: string;
 
-  // Data em que o lote foi entregue
-  distributionDate: Date;
+  // Nome do distribuidor
+  distributorName: string;
 
-  // === AUDITORIA ===
-  // Data de criação da chave
-  createdAt: Date;
+  // data de expiração da chave
+  expiresAt: Date | null;
+
+  // Dias de tolerância (copiado do batch)
+  gracePeriodDays: number;
+
+  // Hash da máquina que consumiu a licença
+  hardwareFingerprint: string | null;
+
+  // Identificador único da chave (UUID)
+  id: string;
+
+  // data da instalaçao do dispositivo
+  installationAt: Date | null;
+
+  // A chave de ativação em si (ex.: "PAYIO-XXXXX-XXXXX-XXXXX")
+  key: string | null;
+
+  // === DADOS COPIADOS DO LOTE (para performance) ===
+  // Tipo de licença (copiado do batch)
+  licenseType: EPayioLicenseType;
+
+  // Logs de ativação
+  logs: string[];
 
   // Metadados livres para suporte
   notes: string | null;
 
+  // Status da chave
+  status: EPayioActivationKeyStatus;
+
   // Tags para categorização
   tags: string[];
+
+  // Data de atualização da chave
+  updatedAt: Date;
+
+  // Período de validade em meses (copiado do batch)
+  validityPeriodMonths: number;
+  validityTrialPeriodDays: number;
+
+  // Versão do software (copiado do batch)
+  versionConstraint: string[];
 }

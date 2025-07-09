@@ -24,6 +24,9 @@ export interface IPayioActivationBatch {
   /** Período de validade da licença em meses (para definição comercial) */
   validityPeriodMonths: number;
 
+  /** Período de validade da licença do tipo trial em dias (para definição comercial) */
+  validityTrialPeriodDays: number;
+
   /** Prazo em dias para ativar as licenças (a partir da criação do lote) */
   activationDeadlineDays: number;
 

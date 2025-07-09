@@ -5,7 +5,6 @@ export class PayioJwtPayloadAppEntity implements IPayioJwtPayloadApp {
 
   public id: string = '';
   public slug: string = '';
-  public allowedDeviceIds: string[] = [];
   // #endregion Properties (3)
 
   // #region Constructors (1)

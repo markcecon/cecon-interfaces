@@ -1,9 +1,12 @@
+import { EPayioActivationKeyStatus } from '../../activation-key';
 import { EPayioVisionTerminalModel } from '../enum';
 import { EPayioVisionTerminalOperation } from '../enum/operation.enum';
 
 export interface IPayioTerminal {
   active: boolean;
   activationKeyId: string | null;
+  activationKeyStatus: EPayioActivationKeyStatus;
+  activationKey: string | null;
   appId: string;
   companyId: string;
   createdAt: Date;

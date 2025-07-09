@@ -1,10 +1,11 @@
-export interface IPayioJwtPayloadDevice {
-  // #region Properties (3)
+import { EPayioActivationKeyStatus } from '../../activation-key/enums/activation-key-status.enum';
 
+export interface IPayioJwtPayloadDevice {
+  activationKey: string | null;
+  activationKeyId: string | null;
+  activationStatus: EPayioActivationKeyStatus;
+  chefConfigId: string | null;
   id: string;
   name: string | null;
-  chefConfigId: string | null;
   scheduleId: string | null;
-
-  // #endregion Properties (3)
 }

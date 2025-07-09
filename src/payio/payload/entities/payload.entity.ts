@@ -1,4 +1,3 @@
-import { EPayioActivationKeyStatus } from '../../activation-key/enums/activation-key-status.enum';
 import { PayioPermissionEntity } from '../../permissions';
 import { EPayioJwtTokenType } from '../enums';
 import { IPayioJwtPayload } from '../interfaces/i-payload';
@@ -8,9 +7,6 @@ import { PayioJwtPayloadDeviceEntity } from './payload-device.entity';
 import { PayioJwtPayloadUserEntity } from './payload-user.entity';
 
 export class PayioJwtPayloadEntity implements IPayioJwtPayload {
-  // #region Properties (16)
-
-  public activationStatus: EPayioActivationKeyStatus = EPayioActivationKeyStatus.NONE;
   public app: IPayioJwtPayloadApp | null = null;
   public aud: string | string[] = '';
   public device: PayioJwtPayloadDeviceEntity | null = null;
@@ -25,10 +21,6 @@ export class PayioJwtPayloadEntity implements IPayioJwtPayload {
   public type: EPayioJwtTokenType | null = null;
   public user: PayioJwtPayloadUserEntity | null = null;
 
-  // #endregion Properties (16)
-
-  // #region Constructors (1)
-
   constructor(data?: Partial<PayioJwtPayloadEntity>) {
     if (data) {
       for (let key in data) {
@@ -38,6 +30,4 @@ export class PayioJwtPayloadEntity implements IPayioJwtPayload {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }
