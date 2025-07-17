@@ -32,7 +32,7 @@ export interface IPayioJwtPayload {
    */
   iss: string;
   jti: string;
-  permissions: IPayioPermission[];
+  permissions: string[];
   sub: string;
   type: EPayioJwtTokenType | null;
   user: IPayioJwtPayloadUser | null;

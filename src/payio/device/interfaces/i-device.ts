@@ -2,7 +2,7 @@ import { IPayioDeviceChef } from './i-device-chef';
 
 export interface IPayioDevice {
   activationKey: string | null;
-  activationKeyId: string | null;
+  activationId: string | null;
   active: boolean;
   chef: IPayioDeviceChef | null;
   companyId: string;

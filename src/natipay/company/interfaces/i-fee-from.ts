@@ -1,5 +1,5 @@
-import { EFrom } from '../../../general';
-import { EAmountMode, EOperationType } from '../../../transaction/enums';
+import { EAmountMode, EFrom } from '../../../general';
+import { EOperationType } from '../../../transaction/enums';
 import { EFeePayer } from '../../../transaction/enums/fee-payer.enum';
 
 export interface IFeeFrom {

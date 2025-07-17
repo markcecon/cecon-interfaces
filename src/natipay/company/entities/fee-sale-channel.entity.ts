@@ -1,7 +1,8 @@
-import { ENatipaySaleChannel } from "../..";
-import { EAmountMode, EOperationType } from "../../../transaction";
-import { EFeePayer } from "../../../transaction/enums/fee-payer.enum";
-import { IFeeSaleChannel } from "../interfaces";
+import { ENatipaySaleChannel } from '../..';
+import { EAmountMode } from '../../../general';
+import { EOperationType } from '../../../transaction';
+import { EFeePayer } from '../../../transaction/enums/fee-payer.enum';
+import { IFeeSaleChannel } from '../interfaces';
 
 export class FeeSaleChannelEntity implements IFeeSaleChannel {
   public amount: number = 0;

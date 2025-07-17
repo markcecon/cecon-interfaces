@@ -1,5 +1,5 @@
-import { EPayioActivationKeyStatus } from "../enums/activation-key-status.enum";
-import { EPayioLicenseType } from "../enums/license-type.enum";
+import { EPayioActivationKeyStatus } from '../enums/activation-key-status.enum';
+import { EPayioLicenseType } from '../enums/license-type.enum';
 
 export interface IPayioActivationKey {
   // === CAMPOS PREENCHIDOS NA ATIVAÇÃO ===
@@ -52,6 +52,7 @@ export interface IPayioActivationKey {
 
   // A chave de ativação em si (ex.: "PAYIO-XXXXX-XXXXX-XXXXX")
   key: string | null;
+  confirmationKey: boolean; // Utilizado para o tipo do cartão cartão de desconto
 
   // === DADOS COPIADOS DO LOTE (para performance) ===
   // Tipo de licença (copiado do batch)

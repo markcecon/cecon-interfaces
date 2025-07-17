@@ -1,4 +1,3 @@
-import { PayioPermissionEntity } from '../../permissions';
 import { EPayioJwtTokenType } from '../enums';
 import { IPayioJwtPayload } from '../interfaces/i-payload';
 import { IPayioJwtPayloadApp } from '../interfaces/i-payload-app';
@@ -16,7 +15,7 @@ export class PayioJwtPayloadEntity implements IPayioJwtPayload {
   public info: IPayioJwtPayloadInfo | null = null;
   public iss: string = '';
   public jti: string = '';
-  public permissions: PayioPermissionEntity[] = [];
+  public permissions: string[] = [];
   public sub: string = '';
   public type: EPayioJwtTokenType | null = null;
   public user: PayioJwtPayloadUserEntity | null = null;

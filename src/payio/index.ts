@@ -12,6 +12,8 @@ export * from './catalogs';
 
 export * from './company';
 
+export * from './consumers';
+
 export * from './device';
 
 export * from './distributors';
@@ -51,3 +53,7 @@ export * from './big-chef-config';
 export * from './activation-batch';
 
 export * from './preparation-place';
+
+export * from './cards';
+
+export * from './cards-transactions';

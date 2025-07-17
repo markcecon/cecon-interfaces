@@ -1,4 +1,4 @@
 export enum EAmountMode {
-  PERCENTAGE = 'percentage',
   FIXED = 'fixed',
+  PERCENTAGE = 'percentage',
 }

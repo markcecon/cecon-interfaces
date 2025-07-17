@@ -1,4 +1,4 @@
-import { EAmountMode } from '../../../transaction';
+import { EAmountMode } from '../../../general';
 import { INatipayCompanyExternalFee } from '../interfaces/i-company-external-fee';
 export class NatipayCompanyExternalFeeEntity implements INatipayCompanyExternalFee {
   public amount: number = 0;

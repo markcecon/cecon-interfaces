@@ -21,6 +21,7 @@ export class PayioActivationKeyEntity implements IPayioActivationKey {
   // ID da empresa (preenchido na ativação)
   public companyId: string | null = null;
   public companyName: string | null = null;
+  public confirmationKey: boolean = false;
 
   // === AUDITORIA ===
   // Data de criação da chave

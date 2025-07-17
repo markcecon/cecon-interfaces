@@ -2,7 +2,7 @@ import { IPayioDevice } from '../interfaces/i-device';
 import { PayioDeviceChefEntity } from './device-chef.entity';
 
 export class PayioDeviceEntity implements IPayioDevice {
-  public activationKeyId: string | null = null;
+  public activationId: string | null = null;
   public activationKey: string | null = null;
   public active: boolean = false;
   public chef: PayioDeviceChefEntity | null = null;

@@ -14,8 +14,6 @@ export { ETransactionResumesTargetType } from './transaction-resumes-target-type
 
 export { ETransactionStatus } from './transaction-status.enum';
 
-export { EAmountMode } from './amount-mode.enum';
-
 export { ETransactionProvider } from './provider.enum';
 
 export { ETransactionOperation } from './transaction-operation.enum';

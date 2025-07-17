@@ -1,4 +1,4 @@
-import { EAmountMode } from "../../../transaction";
+import { EAmountMode } from '../../../general';
 
 export interface INatipayCompanyExternalFee {
   amount: number;

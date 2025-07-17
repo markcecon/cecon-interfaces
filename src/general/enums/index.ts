@@ -1,26 +1,57 @@
 export { EFcmSkill } from '../../fcm-token-message/enums/skill.enum';
+
+export { EAmountMode } from './amount-mode.enum';
+
 export { EBankSlipStatus } from './bank-slip-status.enum';
+
 export { EBooleanString } from './boolean-string.enum';
+
 export { ECollectionsTypes } from './collections-types.enum';
-export { EFrom } from './from.enum';
+
+export { ECycle } from './cycle.enum';
+
 export { EDocType } from './doc-type.enum';
+
 export { EDiscountType } from './e-discount-type.enum';
+
 export { EFiscalDocModelCode } from './fiscal-doc-model-code.enum';
+
+export { EFrom } from './from.enum';
+
+export { EGender } from './gender.enum';
+
 export { EIntDocType } from './international-doc-type.enum';
+
 export { EIntervalType } from './interval-type.enum';
+
 export { EJwtStatus } from './jwt-status.enum';
+
 export { ELeadOrigin } from './lead-origin.enum';
+
 export { EOperator } from './operators.enum';
+
 export { EOs } from './os.enum';
+
 export { EPaymentChannel } from './payment-channel.enum';
+
 export { EPaymentMode } from './payment-mode.enum';
+
 export { EPaymentStatus } from './payment-status.enum';
+
 export { EPaymentType } from './payment-type.enum';
+
 export { ELegalEntiy } from './person-type.enum';
+
 export { EPixKeyType } from './pix-key.enum';
+
 export { EPlatform } from './platform.enum';
+
 export { EPaymentProvider } from './providers.enum';
+
 export { EPubSub } from './pubsub.enum';
+
 export { ERole } from './role.enum';
+
 export { ESponsorshipValues } from './sponsorship-values.enum';
+
 export { ESubsStatus } from './subscription-status.enum';

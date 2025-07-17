@@ -1,0 +1,7 @@
+export enum EPayioTransactionType {
+  DISCOUNT = 'DISCOUNT',
+  MANAGER_ACTION = 'MANAGER_ACTION',
+  DEPOSIT = 'DEPOSIT',
+  WITHDRAW = 'WITHDRAW',
+  PAYMENT = 'PAYMENT',
+}

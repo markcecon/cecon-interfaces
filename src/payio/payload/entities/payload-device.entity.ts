@@ -2,8 +2,8 @@ import { EPayioActivationKeyStatus } from '../../activation-key/enums/activation
 import { IPayioJwtPayloadDevice } from '../interfaces/i-payload-device';
 
 export class PayioJwtPayloadDeviceEntity implements IPayioJwtPayloadDevice {
+  public activationId: string | null = '';
   public activationKey: string | null = '';
-  public activationKeyId: string | null = '';
   public activationStatus: EPayioActivationKeyStatus = EPayioActivationKeyStatus.NONE;
   public chefConfigId: string | null = '';
   public id: string = '';
