@@ -19,7 +19,7 @@ export interface IPayioCardConfig {
   description?: string | null; // "Promoção de Verão" => SYSTEM || CUSTOMER
   mode: ECardMode; // Tipo de cartão => CUSTOMER
   label: string; // Exibiçao ou nome do cartão => SYSTEM || CUSTOMER || CONSUMER
-  password: string; // Senha do cartão => CUSTOMER || CONSUMER
+  password: string | null; // Senha do cartão => CUSTOMER || CONSUMER
   invoiceLogs: string[]; // => SYSTEM
   externalReference: string | null; // => CUSTOMER
   webhookUrls: string[]; // => CUSTOMER

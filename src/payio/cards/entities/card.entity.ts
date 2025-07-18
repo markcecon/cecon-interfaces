@@ -2,23 +2,21 @@ import { EPayioCardStatus } from '../enums';
 import { IPayioCardConfig } from '../interfaces';
 import { IPayioCard } from '../interfaces/i-card';
 import { PayioCardConfigEntity } from './card-config.entity';
+import { PayioCardDataEntity } from './card-data.entity';
 import { PayioCardInfoEntity } from './card-info.entity';
 
 export class PayioCardEntity implements IPayioCard {
   public activationId: string = '';
   public activationKey: string = '';
   public active: boolean = false;
-  public cardNumber: string = '';
-  public companiesIds: string[] = [];
   public config: IPayioCardConfig = new PayioCardConfigEntity();
-  public consumerId: string | null = null;
-  public consumerMetadata: string | null = null;
   public createdAt: Date = new Date();
-  public cvv: string = '';
+  public data: PayioCardDataEntity = new PayioCardDataEntity();
   public id: string = '';
   public info: PayioCardInfoEntity = new PayioCardInfoEntity();
   public logs: string[] = [];
   public status: EPayioCardStatus = EPayioCardStatus.PENDING;
+  public tags: string[] = [];
   public updatedAt: Date = new Date();
 
   constructor(data?: Partial<PayioCardEntity>) {

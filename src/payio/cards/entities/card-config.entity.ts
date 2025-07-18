@@ -20,7 +20,7 @@ export class PayioCardConfigEntity implements IPayioCardConfig {
   public invoiceLogs: string[] = [];
   public label: string = '';
   public mode: ECardMode = ECardMode.DISCOUNT;
-  public password: string = '';
+  public password: string | null = null;
   public webhookUrls: string[] = [];
 
   constructor(data?: Partial<PayioCardConfigEntity>) {
