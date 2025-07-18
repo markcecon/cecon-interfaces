@@ -1,9 +1,11 @@
 import { IPayioCardData } from '../interfaces';
 
 export class PayioCardDataEntity implements IPayioCardData {
-  public cardNumber: string = '';
   public cvv: string = '';
-  public maskedCardNumber: string = '';
+  public formattedNumber: string = '';
+  public isValid: boolean = false;
+  public maskedNumber: string = '';
+  public number: string = '';
   public validThru: string = '';
 
   constructor(data?: Partial<PayioCardDataEntity>) {

@@ -1,6 +1,8 @@
 export interface IPayioCardData {
-  cardNumber: string;
   cvv: string;
-  maskedCardNumber: string;
+  formattedNumber: string;
+  isValid: boolean;
+  maskedNumber: string;
+  number: string;
   validThru: string;
 }
