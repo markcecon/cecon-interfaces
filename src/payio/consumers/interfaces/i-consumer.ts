@@ -12,6 +12,8 @@ export interface IPayioConsumer {
   id: string;
   internationalCode: string;
   name: string;
+  phoneNumber: string;
+  imageUrl: string | null;
   sandbox: boolean;
   tags: string[];
   updatedAt: Date;

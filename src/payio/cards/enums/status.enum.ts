@@ -2,12 +2,8 @@ export enum EPayioCardStatus {
   ACTIVE = 'ACTIVE',
   REVOKED = 'REVOKED',
   INACTIVE = 'INACTIVE',
-  READY = 'READY',
-  DISPATCHED = 'DISPATCHED',
   CANCELLED = 'CANCELLED',
-  DELIVERED = 'DELIVERED',
-  PENDING = 'PENDING',
   BLOCKED = 'BLOCKED',
   SUSPENDED = 'SUSPENDED',
-  IN_PRODUCTION = 'IN_PRODUCTION',
+  LOCKED = 'LOCKED', // Status para cartão que nasce bloqueado, diferente de BLOCKED (fraude ou bloqueio necessário)
 }

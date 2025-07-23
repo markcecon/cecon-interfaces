@@ -1,0 +1,7 @@
+export enum ENatipayCardStatusProduction {
+  READY = 'READY',
+  DISPATCHED = 'DISPATCHED',
+  DELIVERED = 'DELIVERED',
+  PENDING = 'PENDING',
+  IN_PRODUCTION = 'IN_PRODUCTION',
+}

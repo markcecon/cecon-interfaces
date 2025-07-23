@@ -1,5 +1,5 @@
-import { EPayioActivationKeyStatus } from '../enums/activation-key-status.enum';
-import { EPayioLicenseType } from '../enums/license-type.enum';
+import { EPayioActivationKeyStatus } from "../enums/activation-key-status.enum";
+import { EPayioLicenseType } from "../enums/license-type.enum";
 
 export interface IPayioActivationKey {
   // === CAMPOS PREENCHIDOS NA ATIVAÇÃO ===
@@ -14,12 +14,12 @@ export interface IPayioActivationKey {
   appSlug: string | null;
 
   // === REFERÊNCIA AO LOTE (fonte das configurações) ===
-  // ID do lote que gerou esta licença
-  batchId: string;
+  batchId: string; // ID do lote que gerou esta licença
 
   // ID da empresa (preenchido na ativação)
   companyId: string | null;
   companyName: string | null;
+  confirmationKey: boolean; // Utilizado para exigir a key para validar
 
   // === AUDITORIA ===
   // Data de criação da chave
@@ -52,7 +52,6 @@ export interface IPayioActivationKey {
 
   // A chave de ativação em si (ex.: "PAYIO-XXXXX-XXXXX-XXXXX")
   key: string | null;
-  confirmationKey: boolean; // Utilizado para o tipo do cartão cartão de desconto
 
   // === DADOS COPIADOS DO LOTE (para performance) ===
   // Tipo de licença (copiado do batch)

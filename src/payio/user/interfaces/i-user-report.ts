@@ -9,12 +9,12 @@ export interface IPayioUserReport {
   data?: string;
   type: UserReportType;
   description: string;
-  evidences: IPayioUserReportEvidences[];
+  evidences: IPayioUserReportEvidence[];
   updatedAt: Date;
   userId: string;
 }
 
-export interface IPayioUserReportEvidences {
+export interface IPayioUserReportEvidence {
   type: UserReportEvidencesType;
   url?: string;
   base64?: string;

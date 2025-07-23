@@ -3,11 +3,12 @@ import { MemberRulesEnum, MemberTypeEnum } from '../enums';
 import { IMember } from '../interfaces';
 
 export class MemberEntity extends BaseEntity implements IMember {
-  // #region Properties (17)
+  // #region Properties (18)
 
   public active: boolean = true;
   public companyName: string = '';
   public containerName: string = '';
+  public developerId: string | null = null;
   public email: string = '';
   public imageUrl: string | null = '';
   public internationalCode: string = '55';
@@ -28,7 +29,7 @@ export class MemberEntity extends BaseEntity implements IMember {
    */
   public uid: string = '';
 
-  // #endregion Properties (17)
+  // #endregion Properties (18)
 
   // #region Constructors (1)
 
@@ -42,7 +43,6 @@ export class MemberEntity extends BaseEntity implements IMember {
       }
     }
   }
-  developerId: string | null;
 
   // #endregion Constructors (1)
 }

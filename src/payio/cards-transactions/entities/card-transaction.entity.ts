@@ -1,24 +1,18 @@
-import { EAmountMode } from '../../../general';
 import { EPayioTransactionType } from '../enums';
-import { IPayioCardTransaction, IPayioCardTransactionPayment } from '../interfaces';
+import { IPayioCardTransaction } from '../interfaces';
 
 export class PayioCardTransactionEntity implements IPayioCardTransaction {
-  public active: boolean = false;
-  public afterBalance: number = 0;
-  public beforeBalance: number = 0;
+  public active: boolean = true;
+  public amount: number = 0;
   public cardId: string = '';
+  public reference: string = '';
   public createdAt: Date = new Date();
-  public discountAmount: number = 0;
-  public discountAmountType: EAmountMode = EAmountMode.FIXED;
-  public externalReference: string = '';
   public finalCompanyId: string = '';
   public finalContainerId: string | null = null;
   public id: string = '';
   public metadata?: string | null | undefined;
-  public paymentTransaction: IPayioCardTransactionPayment = {} as IPayioCardTransactionPayment;
   public sandbox: boolean = false;
-  public tags: string[] = [];
-  public type: EPayioTransactionType = EPayioTransactionType.PAYMENT;
+  public type: EPayioTransactionType = EPayioTransactionType.DISCOUNT;
   public updatedAt: Date = new Date();
 
   constructor(data?: Partial<PayioCardTransactionEntity>) {

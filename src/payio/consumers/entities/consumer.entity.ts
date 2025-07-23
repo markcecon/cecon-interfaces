@@ -2,8 +2,6 @@ import { EDocType, EGender, IAddress } from '../../../general';
 import { IPayioConsumer } from '../interfaces/i-consumer';
 
 export class PayioConsumerEntity implements IPayioConsumer {
-  public activationId: string | null = null;
-  public activationKey: string | null = null;
   public active: boolean = false;
   public address: IAddress | null = null;
   public birthDate: Date | null = null;
@@ -13,8 +11,10 @@ export class PayioConsumerEntity implements IPayioConsumer {
   public email: string = '';
   public gender: EGender = EGender.NOT_INFORMED;
   public id: string = '';
+  public imageUrl: string | null = null;
   public internationalCode: string = '';
   public name: string = '';
+  public phoneNumber: string = '';
   public sandbox: boolean = false;
   public tags: string[] = [];
   public updatedAt: Date = new Date();

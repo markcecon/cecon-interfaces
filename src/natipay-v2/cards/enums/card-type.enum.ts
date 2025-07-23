@@ -1,0 +1,9 @@
+export enum ECardType {
+  DEBIT = 'DEBIT',
+  CREDIT = 'CREDIT',
+  PREPAID = 'PREPAID',
+  VIRTUAL = 'VIRTUAL',
+  BUSINESS = 'BUSINESS',
+  CORPORATE = 'CORPORATE',
+  CO_BRANDED = 'CO_BRANDED',
+}

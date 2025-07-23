@@ -1,4 +1,4 @@
-export interface IPayioCardData {
+export interface INatipayCardData {
   cvv: string;
   formattedNumber: string;
   isValid: boolean;

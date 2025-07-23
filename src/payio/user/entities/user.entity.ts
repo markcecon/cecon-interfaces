@@ -1,17 +1,17 @@
 import { UserEntity } from '../../../users';
 import { IPayioUserReport } from '../interfaces';
 import { IPayioUser } from '../interfaces/i-user';
+import { PayioUserSessionEntity } from './user-sessions.entity';
 
 export class PayioUserEntity extends UserEntity implements IPayioUser {
   public accessCode: string | null = null;
   public accessCodeExpiration: Date | null = null;
   public code: string | null = null;
-  public currentCompanyId: string | null = null;
-  public currentCompanyName: string | null = null;
   public faceId: string | null = null;
   public faceImage64: string | null = null;
   public faceLastUpdate: Date | null = null;
   public reports: IPayioUserReport[] = [];
+  public sessions: PayioUserSessionEntity[] = [];
 
   constructor(data?: Partial<PayioUserEntity>) {
     super();

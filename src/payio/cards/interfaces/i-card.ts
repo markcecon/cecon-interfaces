@@ -1,19 +1,19 @@
-import { EPayioCardStatus } from '../enums';
-import { IPayioCardConfig } from './i-card-config';
-import { IPayioCardData } from './i-card-data';
-import { IPayioCardInfo } from './i-card-info';
+import { ECardMode, EPayioCardStatus } from "../enums";
+import { IPayioCardConfig } from "./i-card-config";
 
 export interface IPayioCard {
-  activationId: string;
-  activationKey: string;
   active: boolean;
+  companyId: string;
   config: IPayioCardConfig;
+  containerId: string | null;
   createdAt: Date;
-  data: IPayioCardData;
   id: string; // ID único (pode ser QR code, número, etc.)
-  info: IPayioCardInfo;
+  label: string; // Exibiçao ou nome do cartão => SYSTEM || CUSTOMER || CONSUMER
   logs: string[];
+  mode: ECardMode; // Tipo de cartão => CUSTOMER
   status: EPayioCardStatus; // Se está ativo
   tags: string[];
+  unlockCode: string | null;
+  unlockedAt: Date | null;
   updatedAt: Date;
 }

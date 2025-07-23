@@ -1,5 +1,5 @@
 import { UserReportEvidencesType, UserReportType } from '../enums';
-import { IPayioUserReport, IPayioUserReportEvidences } from '../interfaces';
+import { IPayioUserReport, IPayioUserReportEvidence } from '../interfaces';
 
 export class PayioUserReportEntity implements IPayioUserReport {
   public createdAt: Date = new Date();
@@ -24,7 +24,7 @@ export class PayioUserReportEntity implements IPayioUserReport {
   }
 }
 
-export class PayioUserReportEvidenceEntity implements IPayioUserReportEvidences {
+export class PayioUserReportEvidenceEntity implements IPayioUserReportEvidence {
   public base64?: string;
   public caption?: string;
   public type: UserReportEvidencesType = UserReportEvidencesType.OTHER;

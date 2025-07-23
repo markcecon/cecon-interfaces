@@ -1,22 +1,22 @@
-import { EPayioCardStatus } from '../enums';
+import { ECardMode, EPayioCardStatus } from '../enums';
 import { IPayioCardConfig } from '../interfaces';
 import { IPayioCard } from '../interfaces/i-card';
 import { PayioCardConfigEntity } from './card-config.entity';
-import { PayioCardDataEntity } from './card-data.entity';
-import { PayioCardInfoEntity } from './card-info.entity';
 
 export class PayioCardEntity implements IPayioCard {
-  public activationId: string = '';
-  public activationKey: string = '';
   public active: boolean = false;
+  public companyId: string = '';
   public config: IPayioCardConfig = new PayioCardConfigEntity();
+  public containerId: string | null = null;
   public createdAt: Date = new Date();
-  public data: PayioCardDataEntity = new PayioCardDataEntity();
   public id: string = '';
-  public info: PayioCardInfoEntity = new PayioCardInfoEntity();
+  public label: string = '';
   public logs: string[] = [];
-  public status: EPayioCardStatus = EPayioCardStatus.PENDING;
+  public mode: ECardMode = ECardMode.HYBRID;
+  public status: EPayioCardStatus = EPayioCardStatus.BLOCKED;
   public tags: string[] = [];
+  public unlockCode: string | null = null;
+  public unlockedAt: Date | null = null;
   public updatedAt: Date = new Date();
 
   constructor(data?: Partial<PayioCardEntity>) {

@@ -1,6 +1,6 @@
-import { IPayioCardData } from '../interfaces';
+import { INatipayCardData } from '../interfaces';
 
-export class PayioCardDataEntity implements IPayioCardData {
+export class NatipayCardDataEntity implements INatipayCardData {
   public cvv: string = '';
   public formattedNumber: string = '';
   public isValid: boolean = false;
@@ -8,7 +8,7 @@ export class PayioCardDataEntity implements IPayioCardData {
   public number: string = '';
   public validThru: string = '';
 
-  constructor(data?: Partial<PayioCardDataEntity>) {
+  constructor(data?: Partial<NatipayCardDataEntity>) {
     if (data) {
       for (let key in data) {
         if (data.hasOwnProperty(key) && key in this) {

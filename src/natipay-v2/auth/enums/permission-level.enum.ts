@@ -1,0 +1,8 @@
+export enum EPermissionLevel {
+  READ_ONLY = 'READ_ONLY',
+  BASIC = 'BASIC',
+  STANDARD = 'STANDARD',
+  PREMIUM = 'PREMIUM',
+  ADMIN = 'ADMIN',
+  SUPER_ADMIN = 'SUPER_ADMIN'
+} 
