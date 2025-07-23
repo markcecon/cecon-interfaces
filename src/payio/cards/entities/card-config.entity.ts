@@ -12,7 +12,7 @@ export class PayioCardConfigEntity implements IPayioCardConfig {
   public discountAmountType: EAmountMode = EAmountMode.PERCENTAGE;
   public items: PayioCardItemEntity[] = [];
   public key: string | null = null;
-  public keyType: EPayioCardKeyType = EPayioCardKeyType.DOCUMENT;
+  public keyType: EPayioCardKeyType = EPayioCardKeyType.CPF;
   public password: string | null = null;
 
   constructor(data?: Partial<PayioCardConfigEntity>) {
