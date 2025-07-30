@@ -10,7 +10,6 @@ export class PayioCardEntity implements IPayioCard {
   public containerId: string | null = null;
   public createdAt: Date = new Date();
   public id: string = '';
-  public label: string = '';
   public logs: string[] = [];
   public mode: ECardMode = ECardMode.HYBRID;
   public status: EPayioCardStatus = EPayioCardStatus.BLOCKED;

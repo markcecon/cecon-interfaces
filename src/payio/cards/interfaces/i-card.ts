@@ -8,7 +8,6 @@ export interface IPayioCard {
   containerId: string | null;
   createdAt: Date;
   id: string; // ID único (pode ser QR code, número, etc.)
-  label: string; // Exibiçao ou nome do cartão => SYSTEM || CUSTOMER || CONSUMER
   logs: string[];
   mode: ECardMode; // Tipo de cartão => CUSTOMER
   status: EPayioCardStatus; // Se está ativo

@@ -1,4 +1,4 @@
-export { EPayioCardAccountProvider } from './account-provider.enum';
+export { EItemsRule } from './items-rule.enum';
 
 export { ECardMode } from './mode.enum';
 

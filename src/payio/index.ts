@@ -55,3 +55,5 @@ export * from './activation-batch';
 export * from './preparation-place';
 
 export * from './cards';
+
+export * from './vision-config';
