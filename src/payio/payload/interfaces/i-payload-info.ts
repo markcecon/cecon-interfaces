@@ -7,6 +7,8 @@ export interface IPayioJwtPayloadInfo {
   docType: EDocType | null;
   doc: string | null;
   companyName: string;
+  natipayPix: boolean;
+
   containerId: string | null;
   containerName: string | null;
   sandbox: boolean;

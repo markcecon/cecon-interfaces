@@ -2,10 +2,6 @@ export { PayioCatalogCategoryEntity } from './catalog-category.entity';
 
 export { PayioCatalogItemEntity } from './catalog-item.entity';
 
-export { PayioCatalogOptionGroupEntity } from './catalog-option-group.entity';
-
-export { PayioCatalogOptionEntity } from './catalog-option.entity';
-
 export { PayioCatalogPizzaCrustEntity } from './catalog-pizza-crust.entity';
 
 export { PayioCatalogPizzaEdgeEntity } from './catalog-pizza-edge.entity';

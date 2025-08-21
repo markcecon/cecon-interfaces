@@ -6,4 +6,7 @@ export enum ENatipayJwtTokenType {
   CHECKOUT = 'CHECKOUT',
   DEVICE = 'DEVICE',
   ACCESS_TOKEN = 'ACCESS_TOKEN',
+  SIGNOUT = 'SIGNOUT',
+  IOT = 'IOT',
+  DEVELOPER_APP = 'DEVELOPER_APP',
 }

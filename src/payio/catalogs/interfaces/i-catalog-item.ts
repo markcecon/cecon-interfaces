@@ -1,22 +1,17 @@
 import { EPayioScheduleSkill } from '../../schedules';
-import { EPayioCatalogStatus, EPayioEngines, EPayioImportStatus, EPayioMeasure } from '../enums';
-import { IPayioCatalogOptionGroup } from './i-catalog-option-group';
+import { EPayioCatalogStatus, EPayioEngines, EPayioMeasure } from '../enums';
 import { IPayioCatalogShift } from './i-catalog-shift';
 
 export interface IPayioCatalogItem {
-  autoImportStatus: EPayioImportStatus;
   catalogId: string;
   categoryId: string;
   companyId: string;
   containerId: string | null;
-  contextModifiers: string[];
   createdAt: Date;
-  customizationModifiers: string[];
   description: string;
   dietaryRestrictions: string[];
   engine: EPayioEngines;
   externalCode: string;
-  externalReference: string | null;
   hasOptionGroups: boolean;
   id: string;
   imageUrl: string;
@@ -24,10 +19,8 @@ export interface IPayioCatalogItem {
   name: string;
   measure: EPayioMeasure;
   productionPlaceId: string;
-  optionGroups: IPayioCatalogOptionGroup[];
+  optionGroupId: string[];
   price: number;
-  productId: string;
-  sequence: number;
   serving: string;
   skill: EPayioScheduleSkill;
   shifts: IPayioCatalogShift[];

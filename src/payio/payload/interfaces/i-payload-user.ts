@@ -1,13 +1,11 @@
-import { EPayioUserType } from '../enums/user-type.enum';
+import { EPayioUserType } from "../enums/user-type.enum";
 
 export interface IPayioJwtPayloadUser {
-  // #region Properties (3)
-
-  phoneNumber: string;
-  internationalCode: string;
   email: string | null;
   id: string;
+  internationalCode: string;
+  isAdmin: boolean;
   name: string;
+  phoneNumber: string;
   type: EPayioUserType | null;
-  // #endregion Properties (3)
 }

@@ -2,19 +2,14 @@ import { EDocType } from '../../../general';
 import { IPayioJwtPayloadInfo } from '../interfaces/i-payload-info';
 
 export class PayioJwtPayloadInfoEntity implements IPayioJwtPayloadInfo {
-  // #region Properties (4)
-
   public companyId: string = '';
   public companyName: string = '';
   public containerId: string | null = null;
   public containerName: string | null = null;
-  public sandbox: boolean = false;
-  public docType: EDocType | null = null;
   public doc: string | null = null;
-
-  // #endregion Properties (4)
-
-  // #region Constructors (1)
+  public docType: EDocType | null = null;
+  public natipayPix: boolean = false;
+  public sandbox: boolean = false;
 
   constructor(data?: Partial<PayioJwtPayloadInfoEntity>) {
     if (data) {
@@ -25,6 +20,4 @@ export class PayioJwtPayloadInfoEntity implements IPayioJwtPayloadInfo {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

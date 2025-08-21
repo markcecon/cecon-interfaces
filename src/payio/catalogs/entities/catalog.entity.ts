@@ -1,18 +1,14 @@
-import { EPayioCatalogContext, EPayioCatalogStatus, EPayioEngines } from "../enums";
-import { EPayioImportStatus } from "../enums/import-status.enum";
-import { IPayioCatalog } from "../interfaces";
-import { PayioCatalogCategoryEntity } from "./catalog-category.entity";
+import { EPayioCatalogStatus, EPayioEngines } from '../enums';
+import { IPayioCatalog } from '../interfaces';
+import { PayioCatalogCategoryEntity } from './catalog-category.entity';
 
 export class PayioCatalogEntity implements IPayioCatalog {
   public active: boolean = true;
-  public autoImportStatus: EPayioImportStatus = EPayioImportStatus.DISABLED;
   public categories: PayioCatalogCategoryEntity[] = [];
   public companyId: string = '';
   public containerId: string | null = null;
-  public context: EPayioCatalogContext[] = [EPayioCatalogContext.DEFAULT];
   public createdAt: Date = new Date();
   public engine: EPayioEngines = EPayioEngines.NONE;
-  public externalReference: string | null = null;
   public id: string = '';
   public name: string = '';
   public sandbox: boolean = false;

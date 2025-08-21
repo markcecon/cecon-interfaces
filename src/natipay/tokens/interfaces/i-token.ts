@@ -2,6 +2,7 @@ export interface INatipayToken {
   // #region Properties (11)
 
   // Data de criação do token
+  appId: string;
   createdAt: Date;
   // ID do dispositivo (se aplicável)
   deviceId: string | null;

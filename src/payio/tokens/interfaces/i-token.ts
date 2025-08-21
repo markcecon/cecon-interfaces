@@ -1,6 +1,7 @@
 export interface IPayioToken {
   // #region Properties (11)
 
+  appId: string;
   // Data de criação do token
   createdAt: Date;
   // ID do dispositivo (se aplicável)

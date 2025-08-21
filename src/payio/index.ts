@@ -56,4 +56,8 @@ export * from './preparation-place';
 
 export * from './cards';
 
+export * from './option-group';
+
 export * from './vision-config';
+
+export * from './ze-config';

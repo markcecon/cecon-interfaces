@@ -8,6 +8,7 @@ export class PayioJwtPayloadUserEntity implements IPayioJwtPayloadUser {
   public name: string = '';
   public phoneNumber: string = '';
   public type: EPayioUserType | null = null;
+  public isAdmin: boolean = false;
 
   constructor(data?: Partial<PayioJwtPayloadUserEntity>) {
     if (data) {
