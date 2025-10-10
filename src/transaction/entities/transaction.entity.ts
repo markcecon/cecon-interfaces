@@ -1,4 +1,4 @@
-import { DesenfilaInfoEntity, EFrom, IDesenfilaInfo, IInfo, IMobyoInfo, InfoEntity, MobyoInfoEntity } from '../../general';
+import { EFrom, IInfo, InfoEntity } from '../../general';
 import { ENatipaySaleChannel } from '../../natipay';
 import {
   EFeePayer,
@@ -7,7 +7,6 @@ import {
   EOperationType,
   EPaymentMethodId,
   EReleaseStatus,
-  ETransactionOperation,
   ETransactionProvider,
   ETransactionStatus,
 } from '../enums';
@@ -19,22 +18,14 @@ import { TransactionTotalEntity } from './transaction-total.entity';
 
 export class TransactionEntity implements ITransaction {
   public balance: TransactionBalanceEntity | null = null;
-  public card: {} = {};
   public createdAt: Date = new Date();
-  public dateApproved: Date | null = null;
-  public dateCreated: Date = new Date();
-  public dateLastUpdated: Date = new Date();
-  public dateOfExpiration: Date | null = null;
+  public data: string = '';
   public description: string = '';
-  public desenfilaInfo: IDesenfilaInfo | null = new DesenfilaInfoEntity(); // TODO: Verificar se é necessário
   public externalOrderReference: string = '';
   public feeDetails: FeeDetailEntity[] = [];
   public feePayer: EFeePayer = EFeePayer.PLATFORM;
   public from: EFrom = EFrom.NATIPAY;
   public id: string = '';
-  public installments: number = 0;
-  public liveMode: boolean = true;
-  public mobyoInfo: IMobyoInfo | null = new MobyoInfoEntity(); // TODO: Verificar se é necessário
   public moneyReleaseDate: Date | null = null;
   public moneyReleaseStatus: EReleaseStatus = EReleaseStatus.PENDING;
   public natiInfo: IInfo | null = new InfoEntity();
@@ -51,11 +42,7 @@ export class TransactionEntity implements ITransaction {
   public status: EMpStatus = EMpStatus.PENDING;
   public statusDetail: EMpStatusDetail = EMpStatusDetail.ACCREDITED;
   public total: TransactionTotalEntity | null = null;
-  public transactionAmount: number = 0;
-  public transactionAmountRefunded: number = 0;
-  public transactionOperation: ETransactionOperation = ETransactionOperation.STAMP_NEEDED;
   public transactionStatus: ETransactionStatus = ETransactionStatus.PROCESSING;
-  public transactionTraceIds: string[] = [];
   public updatedAt: Date = new Date();
 
   constructor(data?: Partial<TransactionEntity>) {
