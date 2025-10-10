@@ -1,6 +1,5 @@
 export enum EFrom {
   NATI = 'NATI',
-  
   AUTOMATION = 'AUTOMATION',
   NATIPAY = 'NATIPAY',
   PAYIO = 'PAYIO',

@@ -1,11 +1,11 @@
 import { IPayioDevice } from '../interfaces/i-device';
-import { PayioDeviceChefEntity } from './device-chef.entity';
+import { IPayioDeviceActivation } from '../interfaces/i-device-activation';
+import { IPayioDeviceConfig } from '../interfaces/i-device-config';
 
 export class PayioDeviceEntity implements IPayioDevice {
-  public activationId: string | null = null;
-  public activationKey: string | null = null;
+  public activations: IPayioDeviceActivation[] = [];
   public active: boolean = false;
-  public chef: PayioDeviceChefEntity | null = null;
+  public configs: IPayioDeviceConfig[] = [];
   public companyId: string = '';
   public containerId: string = '';
   public createdAt: Date = new Date();

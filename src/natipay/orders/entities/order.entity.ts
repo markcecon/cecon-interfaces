@@ -8,6 +8,7 @@ import { NatipayMercadoPagoEntity } from './mercado-pago.entity';
 export class NatipayOrderEntity implements INatipayOrder {
   public additionalFees: IOrderAdditionalFee[] = [];
   public benefits: IOrderBenefits[] = [];
+  public callbacks: string[] = [];
   public cancellation: IOrderCancellation | null = null;
   public companyId: string = '';
   public companyName: string = '';

@@ -7,6 +7,7 @@ import { INatipayMercadoPago } from './i-mercado-pago';
 export interface INatipayOrder {
   additionalFees: IOrderAdditionalFee[];
   benefits: IOrderBenefits[];
+  callbacks: string[];
   cancellation: IOrderCancellation | null;
   companyId: string;
   companyName: string;
