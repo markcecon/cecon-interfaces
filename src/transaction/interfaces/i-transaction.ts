@@ -1,18 +1,9 @@
 import { EFrom, IInfo } from '../../general';
 import { ENatipaySaleChannel } from '../../natipay/orders/enums';
-import {
-  EFeePayer,
-  EMpStatus,
-  EMpStatusDetail,
-  EOperationType,
-  EPaymentMethodId,
-  EReleaseStatus,
-  ETransactionProvider,
-  ETransactionStatus,
-} from '../enums';
+import { EFeePayer, EOperationType, EReleaseStatus, ETransactionProvider, ETransactionStatus } from '../enums';
 import { ITransactionBalance } from './i-balance';
 import { IFeeDetail } from './i-fee-detail';
-import { ITransactionPaymentMethod } from './i-payment-method';
+import { ITransactionPayer } from './i-payer';
 import { ITransactionTotal } from './i-total';
 
 export interface ITransaction {
@@ -32,21 +23,18 @@ export interface ITransaction {
   feePayer: EFeePayer;
   from: EFrom;
   id: string;
-  natiInfo: IInfo | null;
   moneyReleaseDate: Date | null;
   moneyReleaseStatus: EReleaseStatus;
+  natiInfo: IInfo | null;
   operationType: EOperationType;
-  payerInfo: IInfo | null;
-  paymentMethod: ITransactionPaymentMethod | null;
-  paymentMethodId: EPaymentMethodId;
+  payer: ITransactionPayer;
   posId: string;
   provider: ETransactionProvider;
   referenceId: 'goLive' | 'engine_mobyo_fee' | 'withdraw' | string; // Manter apenas string no futuro
   resumeVersion: string;
+  receipt: string | null;
   saleChannel: ENatipaySaleChannel;
   stamped: string | null;
-  status: EMpStatus; // status da origem
-  statusDetail: EMpStatusDetail; // status detalhado da origem
   total: ITransactionTotal | null;
   transactionStatus: ETransactionStatus;
   updatedAt: Date;

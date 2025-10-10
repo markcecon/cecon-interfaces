@@ -1,5 +1,7 @@
 export { FeeDetailEntity } from './fee-detail.entity';
 
+export { TransactionPayerEntity } from './payer.entity';
+
 export { FeeEntity } from './fee.entity';
 
 export { TransactionBalanceEntity } from './transaction-balance.entity';
