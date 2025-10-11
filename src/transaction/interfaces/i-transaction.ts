@@ -1,6 +1,6 @@
 import { EFrom, IInfo } from '../../general';
 import { ENatipaySaleChannel } from '../../natipay/orders/enums';
-import { EFeePayer, EOperationType, EReleaseStatus, ETransactionProvider, ETransactionStatus } from '../enums';
+import { EFeePayer, EOperationType, EReleaseStatus, ETax, ETransactionProvider, ETransactionStatus } from '../enums';
 import { ITransactionBalance } from './i-balance';
 import { IFeeDetail } from './i-fee-detail';
 import { ITransactionPayer } from './i-payer';
@@ -21,7 +21,7 @@ export interface ITransaction {
    * - PLATFORM: A taxa é paga pela plataforma.
    */
   feePayer: EFeePayer;
-  from: EFrom;
+  from: EFrom | ETax;
   id: string;
   moneyReleaseDate: Date | null;
   moneyReleaseStatus: EReleaseStatus;
@@ -30,7 +30,7 @@ export interface ITransaction {
   payer: ITransactionPayer;
   posId: string;
   provider: ETransactionProvider;
-  referenceId: 'goLive' | 'engine_mobyo_fee' | 'withdraw' | string; // Manter apenas string no futuro
+  referenceId: string; // Quando é um pagamento é a referencia do paymentProvider (a order é externalOrderReference), quando FIN_TAX a referencia é a transaçao originária
   resumeVersion: string;
   receipt: string | null;
   saleChannel: ENatipaySaleChannel;

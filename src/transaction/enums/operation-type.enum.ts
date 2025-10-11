@@ -2,7 +2,6 @@ export enum EOperationType {
   // mp enums :
   INVESTMENT = 'investment',
   REGULAR_PAYMENT = 'regular_payment',
-  MONEY_TRANSFER = 'money_transfer',
   RECURRING_PAYMENT = 'recurring_payment',
   ACCOUNT_FUND = 'account_fund',
   PAYMENT_ADDITION = 'payment_addition',

@@ -19,3 +19,4 @@ export { ETransactionProvider } from './provider.enum';
 export { ETransactionOperation } from './transaction-operation.enum';
 
 export { EFeePayer } from './fee-payer.enum';
+export { ETax } from './tax.enum';

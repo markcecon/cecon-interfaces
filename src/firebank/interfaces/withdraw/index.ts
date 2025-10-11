@@ -1,1 +1,1 @@
-export { IFirebankWithdrawPost, IFirebankWithdrawPostDetails, IFirebankWithdrawPostResponse } from './i-withdraw-post';
+export { IFirebankWithdraw, IFirebankWithdrawRecipient } from './i-withdraw';

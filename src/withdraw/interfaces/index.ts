@@ -1,1 +1,1 @@
-export { IWithdrawRequest } from './i-withdraw-request';
+export { IWithdrawRequest } from './i-withdraw';

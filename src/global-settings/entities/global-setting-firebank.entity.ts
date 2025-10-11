@@ -10,6 +10,12 @@ export class GlobalSettingFirebankEntity implements IGlobalSettingFirebank {
   public id: string = 'FIREBANK';
   public password: string = '';
   public userName: string = '';
+  public withDrawScheduledTax: number = 1.16;
+  public withDrawTax: number = 0.97;
+
+  // Interval in seconds (default to 300 seconds = 5 minutes)
+  public withdrawAutoInterval: number = 300;
+  public withdrawAutoMaxAmount: number = 0;
 
   constructor(data?: Partial<GlobalSettingFirebankEntity>) {
     if (data) {

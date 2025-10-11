@@ -140,8 +140,6 @@ export * from './token-jwt';
 
 export * from './transaction';
 
-export * from './transfer-request';
-
 export * from './users';
 
 export * from './verifier-token';

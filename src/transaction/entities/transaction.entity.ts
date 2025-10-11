@@ -1,6 +1,6 @@
 import { EFrom, IInfo, InfoEntity } from '../../general';
 import { ENatipaySaleChannel } from '../../natipay';
-import { EFeePayer, EOperationType, EReleaseStatus, ETransactionProvider, ETransactionStatus } from '../enums';
+import { EFeePayer, EOperationType, EReleaseStatus, ETax, ETransactionProvider, ETransactionStatus } from '../enums';
 import { ITransaction } from '../interfaces';
 import { FeeDetailEntity } from './fee-detail.entity';
 import { TransactionPayerEntity } from './payer.entity';
@@ -15,7 +15,7 @@ export class TransactionEntity implements ITransaction {
   public externalOrderReference: string = '';
   public feeDetails: FeeDetailEntity[] = [];
   public feePayer: EFeePayer = EFeePayer.PLATFORM;
-  public from: EFrom = EFrom.NATIPAY;
+  public from: EFrom | ETax = EFrom.NATIPAY;
   public id: string = '';
   public receipt: string | null = null;
   public moneyReleaseDate: Date | null = null;

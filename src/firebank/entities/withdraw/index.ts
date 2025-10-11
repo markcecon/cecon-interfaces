@@ -1,1 +1,1 @@
-export * from './withdraw-post.entity';
+export { FirebankWithdrawEntity, FirebankWithdrawRecipientEntity } from './withdraw.entity';
