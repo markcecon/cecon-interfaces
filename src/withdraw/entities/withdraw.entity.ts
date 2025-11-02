@@ -1,20 +1,26 @@
 import { IInfo, InfoEntity, PixKeyEntity } from '../../general';
-import { EPixValidation, EWithdrawStatus, EWithdrawType } from '../enums';
+import { EPixValidation, EWithdrawRecurrenceInterval, EWithdrawStatus, EWithdrawType } from '../enums';
 import { IWithdrawRequest } from '../interfaces/i-withdraw';
 
 export class WithDrawRequestEntity implements IWithdrawRequest {
   public amount: number = 0;
-  public approvedAt: Date | null = null;
+  public cancelledAt: Date | null = null;
+  public cancelledReason: string | null = null;
+  public completedAt: Date | null = null;
   public createdAt: Date = new Date();
   public data: string | null = null;
+  public failedAt: Date | null = null;
+  public failedReason: string | null = null;
   public id: string = '';
+  public isRecurring: boolean = false;
   public liveMode: boolean = false;
   public name: string = '';
   public natiInfo: IInfo = new InfoEntity();
   public pixKey: PixKeyEntity | null = null;
   public pixValidation: EPixValidation = EPixValidation.LOCKED;
-  public refusalReason: string | null = null;
-  public refusedAt: Date | null = null;
+  public recurrenceInterval?: EWithdrawRecurrenceInterval | undefined;
+  public recurrenceDay: Date | null = null;
+  public recurrenceEndAt: Date | null = null;
   public status: EWithdrawStatus = EWithdrawStatus.PROCESSING;
   public transactionId: string | null = null;
   public transferDocumentUrl: string | null = null;

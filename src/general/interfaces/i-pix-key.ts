@@ -7,7 +7,9 @@ export interface IPixKey {
 
   key: string;
   type: EPixKeyType;
-  description: string;
+  doc: string;
+  name: string;
+  description: string | null;
   isDefault: boolean;
   // #endregion Properties (7)
 }

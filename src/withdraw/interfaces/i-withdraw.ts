@@ -1,19 +1,34 @@
-import { IInfo, IPixKey } from "../../general";
-import { EPixValidation, EWithdrawStatus, EWithdrawType } from "../enums";
+import { IInfo, IPixKey } from '../../general';
+import { EPixValidation, EWithdrawRecurrenceInterval, EWithdrawStatus, EWithdrawType } from '../enums';
 
 export interface IWithdrawRequest {
   amount: number;
-  approvedAt: Date | null;
+  cancelledAt: Date | null;
+  cancelledReason: string | null;
+  completedAt: Date | null;
   createdAt: Date;
   data: string | null;
+  failedAt: Date | null;
+  failedReason: string | null;
   id: string;
+
+  /**
+   * Indica se o saque é recorrente, ou seja, será realizado sempre o mesmo saque na mesma data (ex: mensal).
+   */
+  isRecurring?: boolean;
   liveMode: boolean;
   name: string;
   natiInfo: IInfo;
   pixKey: IPixKey | null;
   pixValidation: EPixValidation;
-  refusalReason: string | null;
-  refusedAt: Date | null;
+
+  /**
+   * Intervalo de recorrência do saque (diário, semanal, quinzenal ou mensal).
+   * Obrigatório quando isRecurring for true.
+   */
+  recurrenceInterval?: EWithdrawRecurrenceInterval;
+  recurrenceEndAt?: Date | null;
+  recurrenceDay?: Date | null;
   status: EWithdrawStatus;
   transactionId: string | null;
   transferDocumentUrl: string | null;

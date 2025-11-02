@@ -4,8 +4,10 @@ import { IPixKey } from '../interfaces/i-pix-key';
 
 export class PixKeyEntity implements IPixKey {
   public description: string = '';
+  public doc: string = '';
   public isDefault: boolean = false;
   public key: string = '';
+  public name: string = '';
   public type: EPixKeyType = EPixKeyType.CPF;
 
   constructor(data?: Partial<PixKeyEntity>) {
