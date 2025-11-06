@@ -1,10 +1,11 @@
 // src/models/base.entity.ts
-import { EPixKeyType } from '../enums';
+import { EDocType, EPixKeyType } from '../enums';
 import { IPixKey } from '../interfaces/i-pix-key';
 
 export class PixKeyEntity implements IPixKey {
   public description: string = '';
   public doc: string = '';
+  public docType: EDocType = EDocType.CPF;
   public isDefault: boolean = false;
   public key: string = '';
   public name: string = '';

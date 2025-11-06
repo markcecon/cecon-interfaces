@@ -21,7 +21,7 @@ export class TransactionEntity implements ITransaction {
   public moneyReleaseDate: Date | null = null;
   public moneyReleaseStatus: EReleaseStatus = EReleaseStatus.PENDING;
   public natiInfo: IInfo | null = new InfoEntity();
-  public operationType: EOperationType = EOperationType.REGULAR_PAYMENT;
+  public operationType: EOperationType = EOperationType.NATIPAY;
   public payer: TransactionPayerEntity = new TransactionPayerEntity();
   public posId: string = '';
   public provider: ETransactionProvider = ETransactionProvider.DEFAULT;
