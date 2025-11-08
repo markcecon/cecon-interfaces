@@ -7,5 +7,5 @@ export enum EOperationType {
   NATIPAY_PIX = 'Natipay-PIX',
   FIN_TAX = 'Taxa financeira',
   WITHDRAW = 'Saque em conta',
+  REGULAR_PAYMENT = 'Pagamento de conta',
 }
-export { EOperationType as ESponsorIdentifier };
