@@ -2,7 +2,7 @@ export { EMpStatusDetail } from './mp-status-detail.enum';
 
 export { EMpStatus } from './mp-status.enum';
 
-export { EOperationType, ESponsorIdentifier } from './operation-type.enum';
+export { EOperationType } from './operation-type.enum';
 
 export { EPaymentMethodId } from './payment-method-id.enum';
 
