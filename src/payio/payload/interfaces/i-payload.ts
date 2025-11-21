@@ -1,4 +1,4 @@
-import { IPayioPermission } from '../../permissions';
+import { IPayioJwtPayloadActivation } from '../..';
 import { EPayioJwtTokenType } from '../enums';
 import { IPayioJwtPayloadApp } from './i-payload-app';
 import { IPayioJwtPayloadDevice } from './i-payload-device';
@@ -13,6 +13,7 @@ export interface IPayioJwtPayload {
    * Pode ser uma string única ou um array de strings para múltiplas audiências.
    */
   aud: string | string[];
+  activation?: IPayioJwtPayloadActivation | null;
   device: IPayioJwtPayloadDevice | null;
   distributorId: string | null;
 

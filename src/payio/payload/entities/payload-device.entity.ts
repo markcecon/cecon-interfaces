@@ -1,19 +1,9 @@
-import { EPayioActivationKeyStatus } from '../../activation-key/enums/activation-key-status.enum';
 import { IPayioJwtPayloadDevice } from '../interfaces/i-payload-device';
 
 export class PayioJwtPayloadDeviceEntity implements IPayioJwtPayloadDevice {
-  public activationExpiresAt: Date | null = null;
-  public activationId: string | null = '';
-  public activationKey: string | null = '';
-  public activationStatus: EPayioActivationKeyStatus = EPayioActivationKeyStatus.NONE;
-  public bigChefConfigId: string | null = '';
-  public cashConfigId: string | null = '';
-  public chefConfigId: string | null = '';
-  public zeConfigId: string | null = '';
   public id: string = '';
   public name: string | null = '';
-  public scheduleId: string | null = '';
-  public smartConfigId: string | null = '';
+  public uid: string | null = null;
 
   constructor(data?: Partial<PayioJwtPayloadDeviceEntity>) {
     if (data) {
