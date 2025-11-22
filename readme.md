@@ -81,7 +81,7 @@ Este pacote contém interfaces organizadas por domínios:
 
 ### 🔧 **Infraestrutura e Utilitários**
 - `app` - Configurações de aplicação
-- `device` - Dispositivos e instalações
+- `machine` - Dispositivos e instalações
 - `storage-files` - Arquivos e armazenamento
 - `monitor` - Monitoramento e logs
 - `pubsub` - Sistema de mensageria

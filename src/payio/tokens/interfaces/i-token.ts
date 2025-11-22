@@ -5,8 +5,9 @@ export interface IPayioToken {
   // Data de criação do token
   createdAt: Date;
 
-  // ID do dispositivo (se aplicável)
+  /** @deprecated use machineUid instead */
   deviceId: string | null;
+  machineUid: string | null;
 
   // Data de expiração do token
   expiresAt: Date;

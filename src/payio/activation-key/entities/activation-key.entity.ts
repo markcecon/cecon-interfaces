@@ -6,6 +6,7 @@ export class PayioActivationKeyEntity implements IPayioActivationKey {
   // === CAMPOS PREENCHIDOS NA ATIVAÇÃO ===
   // Data em que a chave foi ativada (null = não ativada)
   public activationAt: Date | null = null;
+  public allowMultipleTrialActivations: boolean = false;
 
   // === REFERÊNCIAS DO SISTEMA ===
   // ID do aplicativo (copiado do batch)
@@ -28,7 +29,7 @@ export class PayioActivationKeyEntity implements IPayioActivationKey {
   public createdAt: Date = new Date();
 
   // ID do dispositivo (preenchido na ativação)
-  public deviceId: string | null = null;
+  public machineUid: string | null = null;
 
   // === DADOS DE DISTRIBUIÇÃO (copiados do batch) ===
   // ID do distribuidor

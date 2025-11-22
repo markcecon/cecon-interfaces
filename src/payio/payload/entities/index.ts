@@ -11,3 +11,5 @@ export { PayioJwtPayloadSubscriptionEntity } from './payload-subscription.entity
 export { PayioJwtPayloadUserEntity } from './payload-user.entity';
 
 export { PayioJwtPayloadEntity } from './payload.entity';
+
+export { PayioJwtPayloadMachineEntity } from './payload-machine.entity';

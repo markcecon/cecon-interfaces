@@ -1,5 +1,5 @@
-import { EPayioActivationKeyStatus } from "../enums/activation-key-status.enum";
-import { EPayioLicenseType } from "../enums/license-type.enum";
+import { EPayioActivationKeyStatus } from '../enums/activation-key-status.enum';
+import { EPayioLicenseType } from '../enums/license-type.enum';
 
 export interface IPayioActivationKey {
   // === CAMPOS PREENCHIDOS NA ATIVAÇÃO ===
@@ -26,7 +26,7 @@ export interface IPayioActivationKey {
   createdAt: Date;
 
   // ID do dispositivo (preenchido na ativação)
-  deviceId: string | null;
+  machineUid: string | null;
 
   // === DADOS DE DISTRIBUIÇÃO (copiados do batch) ===
   // ID do distribuidor
@@ -75,6 +75,9 @@ export interface IPayioActivationKey {
   // Período de validade em meses (copiado do batch)
   validityPeriodMonths: number;
   validityTrialPeriodDays: number;
+
+  // Permite múltiplas ativações trial
+  allowMultipleTrialActivations: boolean;
 
   // Versão do software (copiado do batch)
   versionConstraint: string[];

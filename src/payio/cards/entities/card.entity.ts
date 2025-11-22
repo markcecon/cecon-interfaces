@@ -2,7 +2,7 @@ import { ECardMode, EPayioCardStatus } from '../enums';
 import { IPayioCardConfig } from '../interfaces';
 import { IPayioCard } from '../interfaces/i-card';
 import { PayioCardConfigEntity } from './card-config.entity';
-
+/** @deprecated use CardEntity from @arcnetdev/arcnet-payio-interfaces instead */
 export class PayioCardEntity implements IPayioCard {
   public active: boolean = false;
   public companyId: string = '';

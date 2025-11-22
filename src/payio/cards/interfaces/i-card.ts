@@ -1,6 +1,6 @@
 import { ECardMode, EPayioCardStatus } from "../enums";
 import { IPayioCardConfig } from "./i-card-config";
-
+/** @deprecated use ICard from @arcnetdev/arcnet-payio-interfaces instead */
 export interface IPayioCard {
   active: boolean;
   companyId: string;

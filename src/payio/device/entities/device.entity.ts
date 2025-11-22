@@ -1,11 +1,12 @@
 import { IPayioDevice } from '../interfaces/i-device';
-import { IPayioDeviceActivation } from '../interfaces/i-device-activation';
-import { IPayioDeviceConfig } from '../interfaces/i-device-config';
+import { PayioDeviceChefEntity } from './device-chef.entity';
+/** @deprecated use MachineEntity from @arcnetdev/arcnet-payio-interfaces instead */
 
 export class PayioDeviceEntity implements IPayioDevice {
-  public activations: IPayioDeviceActivation[] = [];
+  public activationKeyId: string | null = null;
+  public activationKey: string | null = null;
   public active: boolean = false;
-  public configs: IPayioDeviceConfig[] = [];
+  public chef: PayioDeviceChefEntity | null = null;
   public companyId: string = '';
   public containerId: string = '';
   public createdAt: Date = new Date();

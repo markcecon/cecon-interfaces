@@ -4,11 +4,13 @@ export class PayioTokenEntity implements IPayioToken {
   public appId: string = '';
   public companyId: string | null = null;
   public createdAt: Date = new Date();
+  /** @deprecated use machineUid instead */
   public deviceId: string | null = null;
   public expiresAt: Date = new Date();
   public id: string = '';
   public ipAddress: string | null = null;
   public isRevoked: boolean = false;
+  public machineUid: string | null = null;
   public refreshToken: string = '';
   public revokedAt: Date | null = null;
   public sandbox: boolean = false;

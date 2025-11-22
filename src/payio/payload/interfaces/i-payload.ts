@@ -3,6 +3,7 @@ import { EPayioJwtTokenType } from '../enums';
 import { IPayioJwtPayloadApp } from './i-payload-app';
 import { IPayioJwtPayloadDevice } from './i-payload-device';
 import { IPayioJwtPayloadInfo } from './i-payload-info';
+import { IPayioJwtPayloadMachine } from './i-payload-machine';
 import { IPayioJwtPayloadUser } from './i-payload-user';
 
 export interface IPayioJwtPayload {
@@ -14,6 +15,7 @@ export interface IPayioJwtPayload {
    */
   aud: string | string[];
   activation?: IPayioJwtPayloadActivation | null;
+  /** @deprecated use machine instead */
   device: IPayioJwtPayloadDevice | null;
   distributorId: string | null;
 
@@ -33,6 +35,7 @@ export interface IPayioJwtPayload {
    */
   iss: string;
   jti: string;
+  machine: IPayioJwtPayloadMachine | null;
   permissions: string[];
   sub: string;
   type: EPayioJwtTokenType | null;

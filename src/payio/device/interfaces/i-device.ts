@@ -1,14 +1,16 @@
-import { IPayioDeviceActivation } from './i-device-activation';
-import { IPayioDeviceConfig } from './i-device-config';
+import { IPayioDeviceChef } from './i-device-chef';
+/** @deprecated use IMachine from @arcnetdev/arcnet-payio-interfaces instead */
+
 export interface IPayioDevice {
-  activations: IPayioDeviceActivation[];
+  activationKey: string | null;
+  activationKeyId: string | null;
   active: boolean;
+  chef: IPayioDeviceChef | null;
   companyId: string;
   containerId: string;
   createdAt: Date;
   deviceId: string;
   id: string;
-  configs: IPayioDeviceConfig[];
   lastAccess: Date;
   name: string;
   sandbox: boolean;

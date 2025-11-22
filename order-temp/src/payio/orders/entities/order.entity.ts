@@ -6,7 +6,9 @@ import { PayioOrderIndoorEntity } from './indoor.entity';
 export class PayioOrderEntity extends OrderEntity implements IPayioOrder {
   public appId: string | null = null;
   public appSlug: EPayioAppSlug = EPayioAppSlug.none;
+  /** @deprecated use machineUid instead */
   public deviceId: string | null = null;
+  public machineUid: string | null = null;
   public indoor: PayioOrderIndoorEntity | null = null;
   public resumeVersion: string = '';
   public tags: string[] = [];
