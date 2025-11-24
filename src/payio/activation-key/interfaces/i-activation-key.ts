@@ -1,14 +1,20 @@
-import { EPayioActivationKeyStatus } from '../enums/activation-key-status.enum';
-import { EPayioLicenseType } from '../enums/license-type.enum';
+import { EPayioActivationKeyStatus } from "../enums/activation-key-status.enum";
+import { EPayioLicenseType } from "../enums/license-type.enum";
 
 export interface IPayioActivationKey {
   // === CAMPOS PREENCHIDOS NA ATIVAÇÃO ===
   // Data em que a chave foi ativada (null = não ativada)
-  activationAt: Date | null;
+  activatedAt: Date | null;
+
+  // Permite múltiplas ativações trial
+  allowMultipleTrialActivations: boolean;
+  allowMultipleTrialCount: number;
+  allowMultipleTrialLimit: number;
+  amount: number; // Valor da licença (copiado do lote ou adicionado por superadmin)
 
   // === REFERÊNCIAS DO SISTEMA ===
   // ID do aplicativo (copiado do batch)
-  appId: string | null;
+  appId: string;
 
   // Slug do aplicativo (copiado do batch)
   appSlug: string | null;
@@ -19,14 +25,10 @@ export interface IPayioActivationKey {
   // ID da empresa (preenchido na ativação)
   companyId: string | null;
   companyName: string | null;
-  confirmationKey: boolean; // Utilizado para exigir a key para validar
 
   // === AUDITORIA ===
   // Data de criação da chave
   createdAt: Date;
-
-  // ID do dispositivo (preenchido na ativação)
-  machineUid: string | null;
 
   // === DADOS DE DISTRIBUIÇÃO (copiados do batch) ===
   // ID do distribuidor
@@ -47,9 +49,6 @@ export interface IPayioActivationKey {
   // Identificador único da chave (UUID)
   id: string;
 
-  // data da instalaçao do dispositivo
-  installationAt: Date | null;
-
   // A chave de ativação em si (ex.: "PAYIO-XXXXX-XXXXX-XXXXX")
   key: string | null;
 
@@ -60,8 +59,17 @@ export interface IPayioActivationKey {
   // Logs de ativação
   logs: string[];
 
+  // ID do dispositivo (preenchido na ativação)
+  machineUid: string;
+
   // Metadados livres para suporte
   notes: string | null;
+
+  // Pago em
+  paidAt: Date | null;
+  paymentId: string | null; // ID do pagamento associado à licença
+  paymentMethod: string | null; // Método de pagamento utilizado na compra da licença
+  revokedAt: Date | null;
 
   // Status da chave
   status: EPayioActivationKeyStatus;
@@ -71,13 +79,7 @@ export interface IPayioActivationKey {
 
   // Data de atualização da chave
   updatedAt: Date;
-
-  // Período de validade em meses (copiado do batch)
-  validityPeriodMonths: number;
   validityTrialPeriodDays: number;
-
-  // Permite múltiplas ativações trial
-  allowMultipleTrialActivations: boolean;
 
   // Versão do software (copiado do batch)
   versionConstraint: string[];

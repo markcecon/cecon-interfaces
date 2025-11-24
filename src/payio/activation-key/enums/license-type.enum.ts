@@ -3,5 +3,4 @@ export enum EPayioLicenseType {
   SUBSCRIPTION = 'SUBSCRIPTION',
   PERPETUAL = 'PERPETUAL',
   SANDBOX = 'SANDBOX',
-  CARD = 'CARD',
 }

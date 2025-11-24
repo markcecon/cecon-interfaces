@@ -1,7 +1,7 @@
 import { IPayioJwtPayloadMachine } from '../interfaces/i-payload-machine';
 
 export class PayioJwtPayloadMachineEntity implements IPayioJwtPayloadMachine {
-  public id: string = '';
+  public id: number = 0;
   public name: string | null = '';
   public uid: string | null = null;
   public settings?: Record<string, string> = {};

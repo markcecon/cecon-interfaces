@@ -1,5 +1,5 @@
 export interface IPayioJwtPayloadMachine {
-  id: string | null;
+  id: number | null;
   name: string | null;
   uid: string | null;
   settings?: Record<string, string>;
