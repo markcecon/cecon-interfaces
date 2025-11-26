@@ -1,6 +1,6 @@
-import { EPayioLicenseType } from '../../activation-key/enums/license-type.enum';
-import { EPayioActivationBatchStatus } from '../enums/activation-batch-status.enum';
-import { IPayioActivationBatch } from '../interfaces/i-activation-batch';
+import { EPayioLicenseType } from "../../activation-key/enums/license-type.enum";
+import { EPayioActivationBatchStatus } from "../enums/activation-batch-status.enum";
+import { IPayioActivationBatch } from "../interfaces/i-activation-batch";
 
 export class PayioActivationBatchEntity implements IPayioActivationBatch {
   /** Prazo em dias para ativar as licenças (a partir da criação do lote) */

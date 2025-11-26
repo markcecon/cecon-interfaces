@@ -16,7 +16,7 @@ export interface IPayioJwtPayload {
   aud: string | string[];
   activation?: IPayioJwtPayloadActivation | null;
   /** @deprecated use machine instead */
-  device: IPayioJwtPayloadDevice | null;
+  device?: IPayioJwtPayloadDevice | null;
   distributorId: string | null;
 
   /**

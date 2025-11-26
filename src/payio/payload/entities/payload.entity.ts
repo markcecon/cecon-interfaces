@@ -10,7 +10,7 @@ export class PayioJwtPayloadEntity implements IPayioJwtPayload {
   public app: PayioJwtPayloadAppEntity | null = null;
   public aud: string | string[] = '';
   /** @deprecated use machine instead */
-  public device: PayioJwtPayloadDeviceEntity | null = null;
+  public device?: PayioJwtPayloadDeviceEntity | null = null;
   public distributorId: string | null = null;
   public exp?: number = 0;
   public iat: number = 0;
