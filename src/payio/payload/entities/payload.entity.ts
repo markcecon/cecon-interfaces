@@ -4,7 +4,7 @@ import { IPayioJwtPayload } from '../interfaces/i-payload';
 import { PayioJwtPayloadDeviceEntity } from './payload-device.entity';
 import { PayioJwtPayloadMachineEntity } from './payload-machine.entity';
 import { PayioJwtPayloadUserEntity } from './payload-user.entity';
-
+/** @deprecated use PayioJwtPayloadEntity from @arcnet-payio-interfaces instead */
 export class PayioJwtPayloadEntity implements IPayioJwtPayload {
   public activation?: PayioJwtPayloadActivationEntity | null | undefined;
   public app: PayioJwtPayloadAppEntity | null = null;

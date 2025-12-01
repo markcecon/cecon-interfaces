@@ -5,7 +5,7 @@ import { IPayioJwtPayloadDevice } from './i-payload-device';
 import { IPayioJwtPayloadInfo } from './i-payload-info';
 import { IPayioJwtPayloadMachine } from './i-payload-machine';
 import { IPayioJwtPayloadUser } from './i-payload-user';
-
+/** @deprecated use IPayioJwtPayload from @arcnet-payio-interfaces instead */
 export interface IPayioJwtPayload {
   app: IPayioJwtPayloadApp | null;
 

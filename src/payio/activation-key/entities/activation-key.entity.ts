@@ -18,10 +18,6 @@ export class PayioActivationKeyEntity implements IPayioActivationKey {
   // Slug do aplicativo (copiado do batch)
   public appSlug: string | null = null;
 
-  // === REFERÊNCIA AO LOTE (fonte das configurações) ===
-  // ID do lote que gerou esta licença
-  public batchId: string = '';
-
   // ID da empresa (preenchido na ativação)
   public companyId: string | null = null;
   public companyName: string | null = null;
@@ -29,24 +25,13 @@ export class PayioActivationKeyEntity implements IPayioActivationKey {
   // === AUDITORIA ===
   // Data de criação da chave
   public createdAt: Date = new Date();
-
-  // === DADOS DE DISTRIBUIÇÃO (copiados do batch) ===
-  // ID do distribuidor
-  public distributorId: string = '';
-  public distributorName: string = '';
-  public expiresAt: Date | null = null;
+  public expiredAt: Date | null = null;
 
   // Dias de tolerância (copiado do batch)
   public gracePeriodDays: number = 0;
 
-  // Hash da máquina que consumiu a licença
-  public hardwareFingerprint: string | null = null;
-
   // Identificador único da chave (UUID)
   public id: string = '';
-
-  // data da instalaçao do dispositivo
-  public installationAt: Date | null = null;
 
   // A chave de ativação em si (ex.: "PAYIO-XXXXX-XXXXX-XXXXX")
   public key: string | null = null;
@@ -64,6 +49,7 @@ export class PayioActivationKeyEntity implements IPayioActivationKey {
   public paidAt: Date | null = null;
   public paymentId: string | null = null;
   public paymentMethod: string | null = null;
+  public periodDays: number = 15; // 15 dias;
   public revokedAt: Date | null = null;
 
   // Status da chave
@@ -72,10 +58,6 @@ export class PayioActivationKeyEntity implements IPayioActivationKey {
   // Tags para categorização
   public tags: string[] = [];
   public updatedAt: Date = new Date();
-  public validityTrialPeriodDays: number = 15; // 15 dias;
-
-  // Versão do software (copiado do batch)
-  public versionConstraint: string[] = [];
 
   constructor(data?: Partial<PayioActivationKeyEntity>) {
     if (data) {

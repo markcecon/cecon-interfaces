@@ -1,5 +1,5 @@
-import { EPayioActivationKeyStatus } from "../enums/activation-key-status.enum";
-import { EPayioLicenseType } from "../enums/license-type.enum";
+import { EPayioActivationKeyStatus } from '../enums/activation-key-status.enum';
+import { EPayioLicenseType } from '../enums/license-type.enum';
 
 export interface IPayioActivationKey {
   // === CAMPOS PREENCHIDOS NA ATIVAÇÃO ===
@@ -19,9 +19,6 @@ export interface IPayioActivationKey {
   // Slug do aplicativo (copiado do batch)
   appSlug: string | null;
 
-  // === REFERÊNCIA AO LOTE (fonte das configurações) ===
-  batchId: string; // ID do lote que gerou esta licença
-
   // ID da empresa (preenchido na ativação)
   companyId: string | null;
   companyName: string | null;
@@ -30,21 +27,11 @@ export interface IPayioActivationKey {
   // Data de criação da chave
   createdAt: Date;
 
-  // === DADOS DE DISTRIBUIÇÃO (copiados do batch) ===
-  // ID do distribuidor
-  distributorId: string;
-
-  // Nome do distribuidor
-  distributorName: string;
-
   // data de expiração da chave
-  expiresAt: Date | null;
+  expiredAt: Date | null;
 
   // Dias de tolerância (copiado do batch)
   gracePeriodDays: number;
-
-  // Hash da máquina que consumiu a licença
-  hardwareFingerprint: string | null;
 
   // Identificador único da chave (UUID)
   id: string;
@@ -79,8 +66,5 @@ export interface IPayioActivationKey {
 
   // Data de atualização da chave
   updatedAt: Date;
-  validityTrialPeriodDays: number;
-
-  // Versão do software (copiado do batch)
-  versionConstraint: string[];
+  periodDays: number;
 }
