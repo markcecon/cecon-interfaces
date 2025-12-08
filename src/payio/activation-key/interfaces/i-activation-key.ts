@@ -29,6 +29,7 @@ export interface IPayioActivationKey {
 
   // data de expiração da chave
   expiredAt: Date | null;
+  expiresAt: Date | null;
 
   // Dias de tolerância (copiado do batch)
   gracePeriodDays: number;

@@ -1,6 +1,6 @@
-import { EPayioActivationKeyStatus } from "../enums/activation-key-status.enum";
-import { EPayioLicenseType } from "../enums/license-type.enum";
-import { IPayioActivationKey } from "../interfaces/i-activation-key";
+import { EPayioActivationKeyStatus } from '../enums/activation-key-status.enum';
+import { EPayioLicenseType } from '../enums/license-type.enum';
+import { IPayioActivationKey } from '../interfaces/i-activation-key';
 
 export class PayioActivationKeyEntity implements IPayioActivationKey {
   // === CAMPOS PREENCHIDOS NA ATIVAÇÃO ===
@@ -26,6 +26,7 @@ export class PayioActivationKeyEntity implements IPayioActivationKey {
   // Data de criação da chave
   public createdAt: Date = new Date();
   public expiredAt: Date | null = null;
+  public expiresAt: Date | null = null;
 
   // Dias de tolerância (copiado do batch)
   public gracePeriodDays: number = 0;
