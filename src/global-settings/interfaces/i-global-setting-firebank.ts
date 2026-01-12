@@ -1,6 +1,8 @@
 export interface IGlobalSettingFirebank {
   active: boolean;
   apiKey: string;
+  clientId: string;
+  clientSecret: string;
   baseUrl: string;
   basicAuth64: string;
   fee: number;

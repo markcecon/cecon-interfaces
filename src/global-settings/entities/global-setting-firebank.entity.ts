@@ -5,6 +5,8 @@ export class GlobalSettingFirebankEntity implements IGlobalSettingFirebank {
   public apiKey: string = '';
   public baseUrl: string = '';
   public basicAuth64: string = '';
+  public clientId: string = '';
+  public clientSecret: string = '';
   public fee: number = 0;
   public feeMode: 'PERCENTAGE' | 'FIXED' = 'FIXED';
   public id: string = 'FIREBANK';
