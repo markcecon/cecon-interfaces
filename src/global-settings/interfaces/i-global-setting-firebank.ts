@@ -1,14 +1,18 @@
 export interface IGlobalSettingFirebank {
+  access_token: string;
   active: boolean;
   apiKey: string;
-  clientId: string;
-  clientSecret: string;
   baseUrl: string;
   basicAuth64: string;
+  certificate: string;
+  clientId: string;
+  clientSecret: string;
+  expires_in: number;
   fee: number;
   feeMode: 'PERCENTAGE' | 'FIXED';
   id: string;
   password: string;
+  token_type: string;
   userName: string;
   withDrawScheduledTax: number;
   withDrawTax: number;

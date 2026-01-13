@@ -1,16 +1,20 @@
 import { IGlobalSettingFirebank } from '../interfaces/i-global-setting-firebank';
 
 export class GlobalSettingFirebankEntity implements IGlobalSettingFirebank {
+  public access_token: string = '';
   public active: boolean = false;
   public apiKey: string = '';
   public baseUrl: string = '';
   public basicAuth64: string = '';
+  public certificate: string = '';
   public clientId: string = '';
   public clientSecret: string = '';
+  public expires_in: number = 0;
   public fee: number = 0;
   public feeMode: 'PERCENTAGE' | 'FIXED' = 'FIXED';
   public id: string = 'FIREBANK';
   public password: string = '';
+  public token_type: string = '';
   public userName: string = '';
   public withDrawScheduledTax: number = 1.16;
   public withDrawTax: number = 0.97;
