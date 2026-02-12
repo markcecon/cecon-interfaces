@@ -4,6 +4,7 @@ import { EFeePayer, EOperationType, EReleaseStatus, ETax, ETransactionProvider, 
 import { ITransactionBalance } from './i-balance';
 import { IFeeDetail } from './i-fee-detail';
 import { ITransactionPayer } from './i-payer';
+import { ITransactionResumeData } from './i-resume-data';
 import { ITransactionTotal } from './i-total';
 
 export interface ITransaction {
@@ -21,6 +22,7 @@ export interface ITransaction {
    * - PLATFORM: A taxa é paga pela plataforma.
    */
   feePayer: EFeePayer;
+  resume: ITransactionResumeData[];
   from: EFrom | ETax;
   id: string;
   moneyReleaseDate: Date | null;
@@ -30,9 +32,9 @@ export interface ITransaction {
   payer: ITransactionPayer;
   posId: string;
   provider: ETransactionProvider;
+  receipt: string | null;
   referenceId: string; // Quando é um pagamento é a referencia do paymentProvider (a order é externalOrderReference), quando FIN_TAX a referencia é a transaçao originária
   resumeVersion: string;
-  receipt: string | null;
   saleChannel: ENatipaySaleChannel;
   stamped: string | null;
   total: ITransactionTotal | null;

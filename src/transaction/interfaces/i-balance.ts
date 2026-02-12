@@ -1,5 +1,4 @@
 export interface ITransactionBalance {
-    before: number;
-    after: number;
-  };
-  
+  after: number;
+  before: number;
+}

@@ -1,10 +1,8 @@
-import { ITransactionBalance } from '../interfaces';
+import { ITransactionBalance } from "../interfaces";
 
 export class TransactionBalanceEntity implements ITransactionBalance {
-
-  public before: number = 0;
   public after: number = 0;
-
+  public before: number = 0;
 
   constructor(data?: Partial<TransactionBalanceEntity>) {
     if (data) {
@@ -15,6 +13,4 @@ export class TransactionBalanceEntity implements ITransactionBalance {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

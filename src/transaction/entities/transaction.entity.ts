@@ -5,6 +5,7 @@ import { ITransaction } from '../interfaces';
 import { FeeDetailEntity } from './fee-detail.entity';
 import { TransactionPayerEntity } from './payer.entity';
 import { TransactionBalanceEntity } from './transaction-balance.entity';
+import { TransactionResumeDataEntity } from './transaction-resume-data.entity';
 import { TransactionTotalEntity } from './transaction-total.entity';
 
 export class TransactionEntity implements ITransaction {
@@ -17,7 +18,6 @@ export class TransactionEntity implements ITransaction {
   public feePayer: EFeePayer = EFeePayer.PLATFORM;
   public from: EFrom | ETax = EFrom.NATIPAY;
   public id: string = '';
-  public receipt: string | null = null;
   public moneyReleaseDate: Date | null = null;
   public moneyReleaseStatus: EReleaseStatus = EReleaseStatus.PENDING;
   public natiInfo: IInfo | null = new InfoEntity();
@@ -25,7 +25,9 @@ export class TransactionEntity implements ITransaction {
   public payer: TransactionPayerEntity = new TransactionPayerEntity();
   public posId: string = '';
   public provider: ETransactionProvider = ETransactionProvider.DEFAULT;
+  public receipt: string | null = null;
   public referenceId: string = '';
+  public resume: TransactionResumeDataEntity[] = [];
   public resumeVersion: string = '';
   public saleChannel: ENatipaySaleChannel = ENatipaySaleChannel.NATI_PDV;
   public stamped: string | null = null;

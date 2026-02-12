@@ -15,3 +15,5 @@ export { TransactionResumeEntity } from './transaction-resume.entity';
 export { TransactionTotalEntity } from './transaction-total.entity';
 
 export { TransactionEntity } from './transaction.entity';
+
+export { TransactionResumeDataEntity } from './transaction-resume-data.entity';
