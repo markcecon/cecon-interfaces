@@ -1,5 +1,6 @@
 export enum EOperationType {
   // arcnet enums :
+  FEE_PLATFORM = 'Taxa da plataforma',
   FEE_SHIPPING = 'Taxa de entrega',
   FEE_CONVENIENCE = 'Taxa de conveniência',
   NATIPAY_TRANSFER = 'Transferência',
