@@ -6,6 +6,9 @@ export class TransactionResumeDataEntity implements ITransactionResumeData {
   public amountDay: number = 0;
   public amountMonth: number = 0;
   public amountYear: number = 0;
+  public countDay: number = 0;
+  public countMonth: number = 0;
+  public countYear: number = 0;
   public date: Date = new Date();
   public operationType: EOperationType = EOperationType.NATIPAY;
   public period: string = '';

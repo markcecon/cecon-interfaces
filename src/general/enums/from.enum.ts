@@ -6,5 +6,6 @@ export enum EFrom {
   DESENFILA = 'DESENFILA',
   NATIST = 'NATIST',
   MOBYO = 'MOBYO',
+  BET77 = 'BET77',
   DEFAULT = 'DEFAULT', // outras fontes não mapeadas
 }
