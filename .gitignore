@@ -1,3 +1,7 @@
+# secrets
+.env
+.npmrc
+
 # compiled output
 dist/
 node_modules/
