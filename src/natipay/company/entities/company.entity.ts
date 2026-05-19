@@ -36,6 +36,11 @@ export class NatipayCompanyEntity implements INatipayCompany {
   public updatedAt: Date = new Date();
   public version: string = '';
 
+  /**
+   * Valor do limite de crédito da conta (null se não houver limite)
+   */
+  public creditLimit: number | null = 0;
+
   constructor(data?: Partial<NatipayCompanyEntity>) {
     if (data) {
       for (let key in data) {

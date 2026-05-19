@@ -9,4 +9,5 @@ export enum EOperationType {
   FIN_TAX = 'Taxa financeira',
   WITHDRAW = 'Saque em conta',
   REGULAR_PAYMENT = 'Pagamento de conta',
+  AUTOMATIC_DEBIT = 'Débito automático',
 }

@@ -38,6 +38,10 @@ export interface INatipayCompany {
   pixKeys: IPixKey[];
   sandbox: boolean;
   shortName: string;
+  /**
+   * Valor do limite de crédito da conta (null se não houver limite)
+   */
+  creditLimit: number | null;
   sponsorFees: INatipaySponsorFee[];
 
   //Nome comercial ou fantasia
