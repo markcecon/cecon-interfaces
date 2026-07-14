@@ -48,4 +48,9 @@ export interface INatipayCompany {
   tags: string[];
   updatedAt: Date;
   version: string;
+
+  /**
+   * Habilita o módulo de conta assinada (venda fiado) para esta loja.
+   */
+  tabAccountEnabled: boolean;
 }

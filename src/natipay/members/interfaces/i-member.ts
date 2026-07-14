@@ -3,6 +3,7 @@ import { NatipayMemberTypeEnum } from '../enums/member-type.enum';
 
 export interface INatipayMember {
   active: boolean;
+  authCodeHash: string | null;
   companyId: string;
   companyName: string | null;
   containerId: string;
@@ -13,6 +14,7 @@ export interface INatipayMember {
   imageUrl: string | null;
   internationalCode: string;
   name: string;
+  permissions: string[];
   phoneNumber: string;
   rule: NatipayMemberRulesEnum;
   tags: string[];

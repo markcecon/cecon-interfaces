@@ -41,6 +41,11 @@ export class NatipayCompanyEntity implements INatipayCompany {
    */
   public creditLimit: number | null = 0;
 
+  /**
+   * Habilita o módulo de conta assinada (venda fiado) para esta loja.
+   */
+  public tabAccountEnabled: boolean = false;
+
   constructor(data?: Partial<NatipayCompanyEntity>) {
     if (data) {
       for (let key in data) {

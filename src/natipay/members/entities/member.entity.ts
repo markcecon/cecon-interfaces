@@ -4,6 +4,7 @@ import { INatipayMember } from '../interfaces';
 
 export class NatipayMemberEntity implements INatipayMember {
   public active: boolean = true;
+  public authCodeHash: string | null = null; // NOVO
   public companyId: string = '';
   public companyName: string = '';
   public containerId: string = '';
@@ -14,6 +15,7 @@ export class NatipayMemberEntity implements INatipayMember {
   public imageUrl: string | null = '';
   public internationalCode: string = '55';
   public name: string = '';
+  public permissions: string[] = []; // NOVO
   public phoneNumber: string = '';
   public rule: NatipayMemberRulesEnum = NatipayMemberRulesEnum.USER;
   public tags: string[] = [];

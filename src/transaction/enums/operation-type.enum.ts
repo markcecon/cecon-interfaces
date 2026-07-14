@@ -10,4 +10,5 @@ export enum EOperationType {
   WITHDRAW = 'Saque em conta',
   REGULAR_PAYMENT = 'Pagamento de conta',
   AUTOMATIC_DEBIT = 'Débito automático',
+  TAB_INVOICE_PAYMENT = 'Recebimento de fatura',
 }

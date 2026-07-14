@@ -1,3 +1,17 @@
 # .npmignore
 src/
 *.log
+
+# secrets
+.env
+.npmrc
+
+# IDE / tooling
+.claude/
+.vscode/
+.prettierrc
+
+# scratch / temp
+temp.md
+order-temp/
+order-temp.zip
