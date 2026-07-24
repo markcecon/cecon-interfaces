@@ -68,6 +68,7 @@ export class TabCustomerEntity implements ITabCustomer {
     public name: string = '';
     public doc: string = '';
     public docType: EDocType = EDocType.CPF;
+    public externalRef: string | null = null;
     public email: string | null = null;
     public phoneNumber: string | null = null;
     public internationalCode: string | null = null;

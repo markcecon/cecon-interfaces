@@ -40,6 +40,12 @@ export interface ITabCustomer {
     name: string;
     doc: string;
     docType: EDocType;
+    /**
+     * Referência do cliente no sistema do parceiro/integrador (ex.: id do
+     * cliente na base deles). Opcional, usada só para reconciliação externa —
+     * não substitui `doc` como chave de busca interna.
+     */
+    externalRef: string | null;
     email: string | null;
     phoneNumber: string | null;
     internationalCode: string | null;
