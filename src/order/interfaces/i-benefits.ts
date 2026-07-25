@@ -10,5 +10,4 @@ export interface IOrderBenefits {
   value: number;
   description: string;
   referenceId: string;
-
 }

@@ -1,32 +1,27 @@
-import { EPayuioActivationStatus } from '../../activation-key/enums/activation-key-status.enum';
-import { PayioPermissionEntity } from '../../permissions';
+import { PayioJwtPayloadActivationEntity, PayioJwtPayloadAppEntity, PayioJwtPayloadInfoEntity } from '../..';
+import { EPayioJwtTokenType } from '../enums';
 import { IPayioJwtPayload } from '../interfaces/i-payload';
-import { IPayioJwtPayloadApp } from '../interfaces/i-payload-app';
-import { IPayioJwtPayloadInfo } from '../interfaces/i-payload-info';
 import { PayioJwtPayloadDeviceEntity } from './payload-device.entity';
+import { PayioJwtPayloadMachineEntity } from './payload-machine.entity';
 import { PayioJwtPayloadUserEntity } from './payload-user.entity';
-
+/** @deprecated use PayioJwtPayloadEntity from @arcnet-payio-interfaces instead */
 export class PayioJwtPayloadEntity implements IPayioJwtPayload {
-  // #region Properties (16)
-
-  public activationStatus: EPayuioActivationStatus = EPayuioActivationStatus.NONE;
-  public app: IPayioJwtPayloadApp | null = null;
-  public aud: string = '';
-  public device: PayioJwtPayloadDeviceEntity | null = null;
+  public activation?: PayioJwtPayloadActivationEntity | null | undefined;
+  public app: PayioJwtPayloadAppEntity | null = null;
+  public aud: string | string[] = '';
+  /** @deprecated use machine instead */
+  public device?: PayioJwtPayloadDeviceEntity | null = null;
   public distributorId: string | null = null;
   public exp?: number = 0;
   public iat: number = 0;
-  public info: IPayioJwtPayloadInfo | null = null;
+  public info: PayioJwtPayloadInfoEntity | null = null;
   public iss: string = '';
   public jti: string = '';
-  public permissions: PayioPermissionEntity[] = [];
+  public machine: PayioJwtPayloadMachineEntity | null = null;
+  public permissions: string[] = [];
   public sub: string = '';
-  public type: string | null = null;
+  public type: EPayioJwtTokenType | null = null;
   public user: PayioJwtPayloadUserEntity | null = null;
-
-  // #endregion Properties (16)
-
-  // #region Constructors (1)
 
   constructor(data?: Partial<PayioJwtPayloadEntity>) {
     if (data) {
@@ -37,6 +32,4 @@ export class PayioJwtPayloadEntity implements IPayioJwtPayload {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

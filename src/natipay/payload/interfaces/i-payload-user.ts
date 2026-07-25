@@ -1,3 +1,5 @@
+import { NatipayMemberRulesEnum } from '../../members';
+
 export interface INatipayJwtPayloadUser {
   // #region Properties (3)
 
@@ -6,5 +8,6 @@ export interface INatipayJwtPayloadUser {
   email: string | null;
   id: string;
   name: string;
+  memberRule: NatipayMemberRulesEnum | null;
   // #endregion Properties (3)
 }

@@ -1,46 +1,43 @@
-import { EFrom, IDesenfilaInfo, IInfo, IMobyoInfo } from '../../general';
-import { EMpStatus, EMpStatusDetail, EOperationType, EPaymentMethodId, EReleaseStatus, ETransactionStatus } from '../enums';
+import { EFrom, IInfo } from '../../general';
+import { ENatipaySaleChannel } from '../../natipay/orders/enums';
+import { EFeePayer, EOperationType, EReleaseStatus, ETax, ETransactionProvider, ETransactionStatus } from '../enums';
 import { ITransactionBalance } from './i-balance';
 import { IFeeDetail } from './i-fee-detail';
-import { ITransactionPaymentMethod } from './i-payment-method';
+import { ITransactionPayer } from './i-payer';
+import { ITransactionResumeData } from './i-resume-data';
 import { ITransactionTotal } from './i-total';
 
 export interface ITransaction {
-  // #region Properties (33)
-
   balance: ITransactionBalance | null;
-  card: {};
   createdAt: Date;
-  dateApproved: Date | null;
-  dateCreated: Date;
-  dateLastUpdated: Date;
-  dateOfExpiration: Date | null;
+  data: string; // Raw da transaction
   description: string;
-  desenfilaInfo: IDesenfilaInfo | null;
   externalOrderReference: string;
   feeDetails: IFeeDetail[];
-  from: EFrom;
+
+  /**
+   * @description Define quem paga a taxa (fee) da transação.
+   *
+   * - MERCHANT: A taxa é paga pelo lojista.
+   * - PLATFORM: A taxa é paga pela plataforma.
+   */
+  feePayer: EFeePayer;
+  resume: ITransactionResumeData[];
+  from: EFrom | ETax;
   id: string;
-  installments: number;
-  liveMode: boolean;
-  mobyoInfo: IMobyoInfo | null;
   moneyReleaseDate: Date | null;
   moneyReleaseStatus: EReleaseStatus;
   natiInfo: IInfo | null;
   operationType: EOperationType;
-  paymentMethod: ITransactionPaymentMethod | null;
-  paymentMethodId: EPaymentMethodId;
+  payer: ITransactionPayer;
   posId: string;
-  referenceId: 'goLive' | 'engine_mobyo_fee' | 'withdraw' | string;
+  provider: ETransactionProvider;
+  receipt: string | null;
+  referenceId: string; // Quando é um pagamento é a referencia do paymentProvider (a order é externalOrderReference), quando FIN_TAX a referencia é a transaçao originária
   resumeVersion: string;
+  saleChannel: ENatipaySaleChannel;
   stamped: string | null;
-  status: EMpStatus;
-  statusDetail: EMpStatusDetail;
   total: ITransactionTotal | null;
-  transactionAmount: number;
-  transactionAmountRefunded: number;
   transactionStatus: ETransactionStatus;
   updatedAt: Date;
-
-  // #endregion Properties (33)
 }

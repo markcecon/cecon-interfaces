@@ -1,7 +1,4 @@
-export { ResumeCollectionEntity } from './resume-collection.entity';
-export { ResumeDayEntity } from './resume-day.entity';
-export { ResumeHourEntity } from './resume-hour.entity';
-export { ResumeMonthEntity } from './resume-month.entity';
-export { ResumeTotalEntity } from './resume-total.entity';
-export { ResumeYearEntity } from './resume-year.entity';
+export { OrderResumeGeneralInfoEntity } from './general-info.entity';
+export { OrderResumePartEntity } from './part.entity';
 export { ResumeEntity } from './resume.entity';
+export { OrderResumeSaleChannelEntity } from './sales-channel.entity';

@@ -13,6 +13,8 @@ export interface IPayioMember {
   imageUrl: string | null;
   lastAccessAt: Date | null;
   name: string;
+  password?: string | undefined;
+  member_code?: string | undefined;
   permissions: IPayioPermission[];
   sandbox: boolean;
   tags: string[];

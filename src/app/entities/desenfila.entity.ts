@@ -1,4 +1,4 @@
-import { EPixKeyTypes } from '../../company';
+import { EPixKeyType } from '../../general/enums';
 import { IDesenfila, IDesenfilaFee } from '../interfaces';
 import { DesenfilaConfigEntity } from './desenfila-config.entity';
 import { DesenfilaTokenEntity } from './desenfila-token.entity';
@@ -14,7 +14,7 @@ export class DesenfilaEntity implements IDesenfila {
   public goLive: boolean = false;
   public merchantId: string = '';
   public pixKey: string = '';
-  public pixKeyType: EPixKeyTypes = EPixKeyTypes.RANDOM_KEY;
+  public pixKeyType: EPixKeyType = EPixKeyType.RANDOM_KEY;
   public provider: 'FIREBANKING' | 'NATIPAY' = 'NATIPAY';
   public token: DesenfilaTokenEntity | null = null;
 

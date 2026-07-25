@@ -1,9 +1,10 @@
 import { IPayioDevice } from '../interfaces/i-device';
 import { PayioDeviceChefEntity } from './device-chef.entity';
+/** @deprecated use MachineEntity from @arcnetdev/arcnet-payio-interfaces instead */
 
 export class PayioDeviceEntity implements IPayioDevice {
-  // #region Properties (12)
-
+  public activationKeyId: string | null = null;
+  public activationKey: string | null = null;
   public active: boolean = false;
   public chef: PayioDeviceChefEntity | null = null;
   public companyId: string = '';
@@ -17,10 +18,6 @@ export class PayioDeviceEntity implements IPayioDevice {
   public tags: string[] = [];
   public updatedAt: Date = new Date();
 
-  // #endregion Properties (12)
-
-  // #region Constructors (1)
-
   constructor(data?: Partial<PayioDeviceEntity>) {
     if (data) {
       for (let key in data) {
@@ -30,6 +27,4 @@ export class PayioDeviceEntity implements IPayioDevice {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

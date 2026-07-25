@@ -1,4 +1,4 @@
-export { WithDrawRequestEntity } from './withdraw-request.entity';
+export { WithDrawRequestEntity } from './withdraw.entity';
 
 
 

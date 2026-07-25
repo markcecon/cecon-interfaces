@@ -1,0 +1,15 @@
+export enum UserReportType {
+  INAPPROPRIATE_BEHAVIOR = 'Comportamento Inadequado',
+  FRAUD_ATTEMPT = 'Tentativa de Fraude',
+  UNAUTHORIZED_ACCESS = 'Acesso Não Autorizado',
+  RULE_VIOLATION = 'Violação de Regras',
+  PAYMENT_ISSUE = 'Problemas com Pagamento',
+  UNWANTED_RECURRENCE = 'Reincidência Indesejada',
+  SPACE_MISUSE = 'Uso Indevido de Espaço',
+  THEFT_SUSPICION = 'Suspeita de Roubo',
+  RESERVATION_PROBLEM = 'Problemas com Reservas',
+  TEMPORARY_BAN = 'Proibição Temporária',
+  PERMANENT_BAN = 'Proibição Permanente',
+  WARNING = 'Aviso Prévio',
+  OTHER = 'Outros',
+}

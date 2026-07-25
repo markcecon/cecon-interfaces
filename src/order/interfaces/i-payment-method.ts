@@ -10,7 +10,7 @@ export interface IOrderPaymentMethod {
   card?: IOrderPaymentCard | null;
   cash?: IOrderPaymentCash | null;
   code: string;
-  currency: 'BRL';
+  currency: 'BRL' | 'BTC';
   id: string;
   method: EPaymentType;
   pix?: IOrderPaymentPix | null;

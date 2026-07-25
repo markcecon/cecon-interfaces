@@ -1,6 +1,7 @@
 import { EFrom } from '../../general';
+import { ENatipaySaleChannel } from '../../natipay';
 
 export interface IFee {
-  type: EFrom;
+  type: EFrom | ENatipaySaleChannel;
   value: number;
 }

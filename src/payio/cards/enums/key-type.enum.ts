@@ -1,0 +1,7 @@
+export enum EPayioCardKeyType {
+  CPF = 'CPF',
+  CNPJ = 'CNPJ',
+  PHONE = 'PHONE',
+  EMAIL = 'EMAIL',
+  RANDOM = 'RANDOM',
+}

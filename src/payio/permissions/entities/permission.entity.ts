@@ -1,8 +1,9 @@
-import { EPayioRole } from "../enums";
-import { IPayioPermission } from "../interfaces/i-permission";
+import { EPayioRole } from '../enums';
+import { IPayioPermission } from '../interfaces/i-permission';
 
 export class PayioPermissionEntity implements IPayioPermission {
   public active: boolean = true;
+  public appId?: string | undefined;
   public code: string = '';
   public createdAt: Date = new Date();
   public description: string = '';

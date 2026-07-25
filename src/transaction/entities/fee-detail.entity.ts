@@ -1,11 +1,10 @@
 import { IFeeDetail } from '../interfaces';
 
 export class FeeDetailEntity implements IFeeDetail {
-
   public amount: number = 0;
   public feePayer: 'collector' | string = '';
-  public type: 'mercadopago_fee' | 'application_fee' | string = '';
-  
+  public type: 'mercadopago_fee' | 'plattform_fee' | 'firebank_fee' | string = '';
+  public description?: string = '';
 
   constructor(data?: Partial<FeeDetailEntity>) {
     if (data) {

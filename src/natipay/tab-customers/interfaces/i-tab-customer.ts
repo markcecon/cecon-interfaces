@@ -1,0 +1,96 @@
+import { EDocType } from '../../../general';
+import { INatipayAddress } from '../../company';
+import { ETabBillingCycle } from '../enums/tab-billing-cycle.enum';
+
+export interface ITabCustomerNotificationChannelPreferences {
+    newSale: boolean;
+    payment: boolean;
+    dueDate: boolean;
+}
+
+export interface ITabCustomerNotificationPreferences {
+    whatsapp: ITabCustomerNotificationChannelPreferences;
+    email: ITabCustomerNotificationChannelPreferences;
+}
+
+/**
+ * Exceção de desconto/acréscimo por item: sempre que uma venda [set-conta]
+ * contiver um item com esse `productId`, o ajuste é aplicado automaticamente
+ * na fatura (um novo ITabInvoiceEntry de categoria ADJUSTMENT). Use
+ * `discountPercent` (0-100) OU `discountAmount` (R$ fixo) para desconto —
+ * se ambos vierem, `discountPercent` prevalece. Mesma regra para
+ * `surchargePercent`/`surchargeAmount` (acréscimo).
+ */
+export interface ITabCustomerItemDiscount {
+    productId: number;
+    discountPercent: number | null;
+    discountAmount: number | null;
+    surchargePercent: number | null;
+    surchargeAmount: number | null;
+}
+
+/**
+ * Um endpoint que o parceiro/integrador quer ser notificado via HTTP POST
+ * sempre que uma fatura desse cliente mudar de status (ver ETabInvoiceStatus,
+ * `tab-invoices/enums`). Vetor pra permitir mais de um destino por cliente.
+ */
+export interface ITabCustomerCallback {
+    url: string;
+}
+
+/**
+ * Cliente cadastrado numa loja para o módulo de conta assinada (venda fiado).
+ * Coleção Firestore: containers/{containerId}/companies/{companyId}/tab-customers
+ */
+export interface ITabCustomer {
+    id: string;
+    containerId: string;
+    companyId: string;
+    name: string;
+    doc: string;
+    docType: EDocType;
+    /**
+     * Referência do cliente no sistema do parceiro/integrador (ex.: id do
+     * cliente na base deles). Opcional, usada só para reconciliação externa —
+     * não substitui `doc` como chave de busca interna.
+     */
+    externalRef: string | null;
+    email: string | null;
+    phoneNumber: string | null;
+    internationalCode: string | null;
+    address: INatipayAddress | null;
+    billingCycle: ETabBillingCycle;
+    creditLimit: number;
+    requiresAuthCode: boolean;
+    authCodeHash: string | null;
+    blocked: boolean;
+    blockedReason: string | null;
+    /**
+     * Desconto (%) aplicado automaticamente no saldo total da fatura no
+     * momento do fechamento (0-100, 0 = sem desconto).
+     */
+    discountPercent: number;
+    /**
+     * Acréscimo (%) aplicado automaticamente no saldo total da fatura no
+     * momento do fechamento (0-100, 0 = sem acréscimo).
+     */
+    surchargePercent: number;
+    /**
+     * Exceções de desconto por item, aplicadas em toda venda [set-conta] que
+     * contiver o item correspondente.
+     */
+    itemDiscounts: ITabCustomerItemDiscount[];
+    notificationPreferences: ITabCustomerNotificationPreferences;
+    /**
+     * Callbacks de mudança de status de fatura (webhook pro parceiro/integrador
+     * atualizar a base dele) — POST em cada URL sempre que uma fatura desse
+     * cliente mudar de status. Vazio = nenhum callback configurado.
+     */
+    callbacks: ITabCustomerCallback[];
+    activeInvoiceId: string | null;
+    invoiceSequence: number;
+    tags: string[];
+    active: boolean;
+    createdAt: Date;
+    updatedAt: Date;
+}

@@ -1,19 +1,15 @@
 import { OrderEntity } from '../../../order';
-import { EPayuioAppSlug } from '../../app';
+import { EPayioAppSlug } from '../../app';
 import { IPayioOrder } from '../interfaces';
 import { PayioOrderIndoorEntity } from './indoor.entity';
 
 export class PayioOrderEntity extends OrderEntity implements IPayioOrder {
-  // #region Properties (4)
-
   public appId: string | null = null;
-  public appSlug: EPayuioAppSlug = EPayuioAppSlug.none;
+  public appSlug: EPayioAppSlug = EPayioAppSlug.none;
   public deviceId: string | null = null;
   public indoor: PayioOrderIndoorEntity | null = null;
-
-  // #endregion Properties (4)
-
-  // #region Constructors (1)
+  public resumeVersion: string = '';
+  public tags: string[] = [];
 
   constructor(data?: Partial<PayioOrderEntity>) {
     super();
@@ -25,6 +21,4 @@ export class PayioOrderEntity extends OrderEntity implements IPayioOrder {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

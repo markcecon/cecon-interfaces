@@ -1,13 +1,14 @@
 {
     "name": "cecon-interfaces",
-    "version": "1.7.29",
+    "version": "2.0.64",
     "description": "Interfaces de Projetos Cecon",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "private": false,
     "scripts": {
         "packagr": "ng-packagr -p ng-package.json",
-        "build": "tsc src/index.ts --outDir dist",
+        "clean-dist": "rimraf dist/package.json dist/README.md",
+        "build": "tsc src/index.ts --outDir dist && npm run clean-dist",
         "test": "echo \"Error: no test specified\" && exit 1",
         "deploy": "npm run packagr && npm run build && npm publish"
     },
@@ -29,6 +30,7 @@
     },
     "homepage": "https://github.com/markcecon/cecon-interfaces#readme",
     "devDependencies": {
-        "ng-packagr": "^16.2.0"
+        "ng-packagr": "^16.2.0",
+        "rimraf": "^6.0.1"
     }
 }

@@ -1,17 +1,20 @@
-import { IEnvelopeArray } from './i-envelope-array';
-
-// #region Functions (1)
+import { IEnvelopeArray } from "./i-envelope-array";
 
 // Creates an envelope containing an array of items with pagination support
-export function factoryEnvelopeArrayPagination<T>(items: T[], offSet: number, limit: number, total?: number): IEnvelopeArray<T> {
+export function factoryEnvelopeArrayPagination<T>(
+  items: T[],
+  offSet: number,
+  limit: number,
+  total?: number,
+  lastId?: string
+): IEnvelopeArray<T> {
   const data: IEnvelopeArray<T> = {
     offSet,
     limit,
     itemsTotal: items.length,
     total: total || items.length,
     items,
+    lastId: lastId,
   };
   return data; // Consider returning a frozen copy for immutability
 }
-
-// #endregion Functions (1)

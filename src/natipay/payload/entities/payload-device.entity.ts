@@ -3,10 +3,8 @@ import { INatipayJwtPayloadDevice } from '../interfaces/i-payload-device';
 export class NatipayJwtPayloadDeviceEntity implements INatipayJwtPayloadDevice {
   // #region Properties (4)
 
-  public chefConfigId: string | null = '';
   public id: string = '';
   public name: string | null = '';
-  public scheduleId: string | null = '';
 
   // #endregion Properties (4)
 

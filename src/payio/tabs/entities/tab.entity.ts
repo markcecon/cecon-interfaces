@@ -1,3 +1,4 @@
+import { EPayioTabStatus } from '../enums';
 import { IPayioTab } from '../interfaces/i-tab';
 
 export class PayioTabEntity implements IPayioTab {
@@ -5,6 +6,8 @@ export class PayioTabEntity implements IPayioTab {
   public createdAt: Date = new Date();
   public id: string = '';
   public name: string = '';
+  public status: EPayioTabStatus = EPayioTabStatus.AVAILABLE;
+  public statusReason: string | null = null;
   public tags: string[] = [];
   public updatedAt: Date = new Date();
 

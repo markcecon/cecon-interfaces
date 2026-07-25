@@ -1,17 +1,16 @@
 // src/models/base.entity.ts
 
-import { EPixKey } from '../enums';
+import { EPixKeyType, EDocType } from '../enums';
 
 export interface IPixKey {
   // #region Properties (7)
 
-  active: boolean;
   key: string;
-  type: EPixKey;
-  createdAt: Date;
-  id: string;
-  updatedAt: Date;
-  description: string;
+  type: EPixKeyType;
+  doc: string;
+  docType: EDocType;
+  name: string;
+  description: string | null;
   isDefault: boolean;
   // #endregion Properties (7)
 }

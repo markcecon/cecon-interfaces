@@ -8,7 +8,7 @@ export class NatipayJwtPayloadEntity implements INatipayJwtPayload {
   // #region Properties (16)
 
   public app: INatipayJwtPayloadApp | null = null;
-  public aud: string = '';
+  public aud: string | string[] = '';
   public device: NatipayJwtPayloadDeviceEntity | null = null;
   public exp?: number = 0;
   public iat: number = 0;

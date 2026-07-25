@@ -1,4 +1,4 @@
-import { EPixKeyTypes } from '../../company';
+import { EPixKeyType } from '../../general/enums';
 import { IDesenfilaConfig } from './i-desenfila-config';
 import { IDesenfilaFee } from './i-desenfila-fee';
 import { IDesenfilaToken } from './i-desenfila-token';
@@ -15,7 +15,7 @@ export interface IDesenfila {
   fees: IDesenfilaFee[];
   config: IDesenfilaConfig | null;
   provider: 'FIREBANKING' | 'NATIPAY';
-  pixKeyType: EPixKeyTypes;
+  pixKeyType: EPixKeyType;
   pixKey: string;
   docType: 'CPF' | 'CNPJ';
   doc: string;

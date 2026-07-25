@@ -1,40 +1,71 @@
-import { EPayuioActivationStatus } from '../enums/activation-key-status.enum';
+import { EPayioActivationKeyStatus } from '../enums/activation-key-status.enum';
+import { EPayioLicenseType } from '../enums/license-type.enum';
 
 export interface IPayioActivationKey {
-  // #region Properties (18)
+  // === CAMPOS PREENCHIDOS NA ATIVAÇÃO ===
+  // Data em que a chave foi ativada (null = não ativada)
+  activatedAt: Date | null;
 
-  // Data em que a chave foi usada (se já foi ativada)
-  activationDate: Date | null;
-  activationReleasedId: string;
-  appId: string | null;
+  // Permite múltiplas ativações trial
+  allowMultipleTrialActivations: boolean;
+  allowMultipleTrialCount: number;
+  allowMultipleTrialLimit: number;
+  amount: number; // Valor da licença (copiado do lote ou adicionado por superadmin)
+
+  // === REFERÊNCIAS DO SISTEMA ===
+  // ID do aplicativo (copiado do batch)
+  appId: string;
+
+  // Slug do aplicativo (copiado do batch)
   appSlug: string | null;
-  // A chave de ativação em si (ex.: "LIC-XXXXX-XXXXX-XXXXX")
-  clientKey: string | null;
+
+  // ID da empresa (preenchido na ativação)
   companyId: string | null;
   companyName: string | null;
-  // Data de criação do token
+
+  // === AUDITORIA ===
+  // Data de criação da chave
   createdAt: Date;
-  // Data de geração da chave
-  createdBy: string | null;
-  sandbox: boolean;
-  deviceId: string | null;
-  // ID do distribuidor que adquiriu o pacote (se aplicável)
-  distributorId: string | null;
-  // Chave do distribuidor que gerou a chave (se aplicável)
-  distributorKey: string | null;
-  distributorName: string | null;
-  // Data de expiração da chave
-  expirationDate: Date | null;
+
+  // data de expiração da chave
+  expiredAt: Date | null;
+  expiresAt: Date | null;
+
+  // Dias de tolerância (copiado do batch)
+  gracePeriodDays: number;
+
   // Identificador único da chave (UUID)
   id: string;
-  logs: string[];
-  // Status da chave
-  status: EPayuioActivationStatus;
-  // Quantidade máxima de ativações permitidas para esta chave
-  usageLimit: number;
-  // Quantidade de vezes que a chave já foi usada
-  usedCount: number;
 
-  // #endregion Properties (18)
-  // Usuário ou sistema que gerou a chave
+  // A chave de ativação em si (ex.: "PAYIO-XXXXX-XXXXX-XXXXX")
+  key: string | null;
+
+  // === DADOS COPIADOS DO LOTE (para performance) ===
+  // Tipo de licença (copiado do batch)
+  licenseType: EPayioLicenseType;
+
+  // Logs de ativação
+  logs: string[];
+
+  // ID do dispositivo (preenchido na ativação)
+  machineUid: string;
+
+  // Metadados livres para suporte
+  notes: string | null;
+
+  // Pago em
+  paidAt: Date | null;
+  paymentId: string | null; // ID do pagamento associado à licença
+  paymentMethod: string | null; // Método de pagamento utilizado na compra da licença
+  revokedAt: Date | null;
+
+  // Status da chave
+  status: EPayioActivationKeyStatus;
+
+  // Tags para categorização
+  tags: string[];
+
+  // Data de atualização da chave
+  updatedAt: Date;
+  periodDays: number;
 }

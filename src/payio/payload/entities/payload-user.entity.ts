@@ -1,17 +1,14 @@
+import { EPayioUserType } from '../enums/user-type.enum';
 import { IPayioJwtPayloadUser } from '../interfaces/i-payload-user';
 
 export class PayioJwtPayloadUserEntity implements IPayioJwtPayloadUser {
-  // #region Properties (6)
-
   public email: string | null = null;
   public id: string = '';
   public internationalCode: string = '';
   public name: string = '';
   public phoneNumber: string = '';
-
-  // #endregion Properties (6)
-
-  // #region Constructors (1)
+  public type: EPayioUserType | null = null;
+  public isAdmin: boolean = false;
 
   constructor(data?: Partial<PayioJwtPayloadUserEntity>) {
     if (data) {
@@ -22,6 +19,4 @@ export class PayioJwtPayloadUserEntity implements IPayioJwtPayloadUser {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

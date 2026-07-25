@@ -4,6 +4,7 @@ export class PayioGlobalProductEntity implements IPayioGlobalProduct {
   public active: boolean = true;
   public avgPrice: number = 0;
   public brand: string = '';
+  public cest: string | null = null;
   public code: string = '';
   public createdAt: Date = new Date();
   public id: string = '';

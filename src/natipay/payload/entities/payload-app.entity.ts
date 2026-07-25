@@ -1,14 +1,10 @@
 import { INatipayJwtPayloadApp } from '../interfaces/i-payload-app';
 
 export class NatipayJwtPayloadAppEntity implements INatipayJwtPayloadApp {
-  // #region Properties (3)
-
+  public developerId: string | null = null;
   public id: string = '';
+  public name: string | null = null;
   public slug: string = '';
-
-  // #endregion Properties (3)
-
-  // #region Constructors (1)
 
   constructor(data?: Partial<NatipayJwtPayloadAppEntity>) {
     if (data) {
@@ -19,6 +15,4 @@ export class NatipayJwtPayloadAppEntity implements INatipayJwtPayloadApp {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }

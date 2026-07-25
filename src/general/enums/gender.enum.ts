@@ -1,0 +1,7 @@
+export enum EGender {
+  MALE = 'MALE',
+  FEMALE = 'FEMALE',
+  OTHER = 'OTHER',
+  NOT_INFORMED = 'NOT_INFORMED',
+  NOT_APPLICABLE = 'NOT_APPLICABLE',
+}

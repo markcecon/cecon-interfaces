@@ -3,8 +3,6 @@ export interface INatipayJwtPayloadDevice {
 
   id: string;
   name: string | null;
-  chefConfigId: string | null;
-  scheduleId: string | null;
 
   // #endregion Properties (3)
 }

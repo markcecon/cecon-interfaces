@@ -1,7 +1,7 @@
-export enum EPixKey {
-  CNPJ = 'cnpj',
-  CPF = 'cpf',
-  EMAIL = 'email',
-  PHONE = 'phone',
-  RANDOM = 'random',
+export enum EPixKeyType {
+  PHONE = 'PHONE',
+  EMAIL = 'EMAIL',
+  CPF = 'CPF',
+  CNPJ = 'CNPJ',
+  RANDOM_KEY = 'RANDOM_KEY',
 }
