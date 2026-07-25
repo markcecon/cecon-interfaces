@@ -1,0 +1,8 @@
+export enum ETabInvoiceStatus {
+  OPEN = 'OPEN',
+  CLOSED = 'CLOSED',
+  OVERDUE = 'OVERDUE',
+  PARTIALLY_PAID = 'PARTIALLY_PAID',
+  PAID = 'PAID',
+  CANCELLED = 'CANCELLED',
+}

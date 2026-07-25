@@ -30,6 +30,15 @@ export interface ITabCustomerItemDiscount {
 }
 
 /**
+ * Um endpoint que o parceiro/integrador quer ser notificado via HTTP POST
+ * sempre que uma fatura desse cliente mudar de status (ver ETabInvoiceStatus,
+ * `tab-invoices/enums`). Vetor pra permitir mais de um destino por cliente.
+ */
+export interface ITabCustomerCallback {
+    url: string;
+}
+
+/**
  * Cliente cadastrado numa loja para o módulo de conta assinada (venda fiado).
  * Coleção Firestore: containers/{containerId}/companies/{companyId}/tab-customers
  */
@@ -72,6 +81,12 @@ export interface ITabCustomer {
      */
     itemDiscounts: ITabCustomerItemDiscount[];
     notificationPreferences: ITabCustomerNotificationPreferences;
+    /**
+     * Callbacks de mudança de status de fatura (webhook pro parceiro/integrador
+     * atualizar a base dele) — POST em cada URL sempre que uma fatura desse
+     * cliente mudar de status. Vazio = nenhum callback configurado.
+     */
+    callbacks: ITabCustomerCallback[];
     activeInvoiceId: string | null;
     invoiceSequence: number;
     tags: string[];

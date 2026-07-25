@@ -4,5 +4,6 @@ export * from './members';
 export * from './orders';
 export * from './payload';
 export * from './tab-customers';
+export * from './tab-invoices';
 export * from './tokens';
 export * from './user';

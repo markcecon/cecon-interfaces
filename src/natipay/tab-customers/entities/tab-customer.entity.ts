@@ -3,6 +3,7 @@ import { INatipayAddress } from '../../company';
 import { ETabBillingCycle } from '../enums/tab-billing-cycle.enum';
 import {
     ITabCustomer,
+    ITabCustomerCallback,
     ITabCustomerItemDiscount,
     ITabCustomerNotificationChannelPreferences,
     ITabCustomerNotificationPreferences,
@@ -83,6 +84,7 @@ export class TabCustomerEntity implements ITabCustomer {
     public surchargePercent: number = 0;
     public itemDiscounts: ITabCustomerItemDiscount[] = [];
     public notificationPreferences: ITabCustomerNotificationPreferences = new TabCustomerNotificationPreferencesEntity();
+    public callbacks: ITabCustomerCallback[] = [];
     public activeInvoiceId: string | null = null;
     public invoiceSequence: number = 0;
     public tags: string[] = [];
